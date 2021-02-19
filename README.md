@@ -1,8 +1,7 @@
 # Tombola
-Tombolasorsolás szervező webalkalmazás készítése
+###### Csoportfeladat Projektmunka 1. (GKNB_INTM004) tárgyból.<br/>Készítik: Borsodi Zoltán (B7PK8Z), Eszenyi Ákos Zsolt (OJY3FB), Tenk Norbert (DZYKCM)<br/>mérnökinformatika BSC, Széchenyi István Egyetem
 
-## Feladat kiírása
-A szervezők tudjanak sorsolást hirdetni, nyereményeket hozzárendelni, tombolákat kiosztani a résztvevőknek, nyerteseket sorsolni, átadás állapotát adminisztrálni, stb. A résztvevők lássák, hogy mennyi tombolájuk van, összesen hány tombola vesz részt a sorsoláson, kapjanak értesítést a nyereményükről, stb. További követelmények félév közben, iteratív fejlesztési folyamat során.
+Tombolasorsolás szervező webalkalmazás készítése. A szervezők tudjanak sorsolást hirdetni, nyereményeket hozzárendelni, tombolákat kiosztani a résztvevőknek, nyerteseket sorsolni, átadás állapotát adminisztrálni, stb. A résztvevők lássák, hogy mennyi tombolájuk van, összesen hány tombola vesz részt a sorsoláson, kapjanak értesítést a nyereményükről, stb. További követelmények félév közben, iteratív fejlesztési folyamat során.
 
 ## 1. Mit tud?
 Az alkalmazás egy általános tombolajáték-szervező platform, ahol a jákét *szervezői* létre tudnak hozni *tombolasorsolási alkalmakat*, amelyekre pedig a *játékosok* benevezhetnek.
