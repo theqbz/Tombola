@@ -22,6 +22,7 @@ Egy *tombolasorsolási alkalom* létrehozásakor meg kell adni:
   - meghívásos: Ebbe tartozik az összes nem nyilvános *alkalom*, amelyhez csak a szervezők meghívására lehet csatlakozni. Technikailag ide tartozik az is, amikor pl. egy nyugta sorszámával regisztrál valaki. Ebben az esetben a szervező meghívója a nyugtára kinyomtatott kód. De ide tartozhat egy cég csapatépítőjén rendezett és a platform segítségével lebonyolított tombolajáték is.
 - a nyereményeket
 - a részvétel feltételét (pl. tombolaszelvény árának kifizetése)
+- az egy játékos által megvásárolható szelvények száma
 
 Minden *alkalom* rendelkezik a megadott paraméterek alapján automatikusan generált címoldallal, amelyen keresztül a játékosok regisztrálhatnak.
 
