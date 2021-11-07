@@ -16,7 +16,7 @@
                     <a class="nav-link" href="#eventcreate}">Új játék</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#prifleindex">Profil/beállítások</a>
+                    <a class="nav-link" href="{{route('profile.index')}}">Profil/beállítások</a>
                 </li>
                 <li class="nav-item d-md-none">
                     <a class="nav-link" href="{{route('logout')}}">Kijelentkezés</a>

@@ -204,9 +204,9 @@ class RegisterController extends Controller
 
     private function generateAccesses(User &$user)
     {
-        $accessCode = "U".strtolower(substr($user->first_name,0,3).substr($user->last_name,0,3).substr(time(),-1,3));
+        $accessCode = "U-".strtolower(substr($user->first_name,0,3).substr($user->last_name,0,3).substr(time(),0,3));
         $user->access_code =$accessCode;
-        QrCode::generate($accessCode, '../public/qrcodes/'.$user->id.'.svg');
+        QrCode::generate($accessCode, '../public/qrcodes/users/'.$user->id.'.svg');
     }
 
 }

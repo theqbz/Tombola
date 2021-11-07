@@ -53,4 +53,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'exp_date'=>'datetime',
         'date_of_birth'
     ];
+
+    public function getAccessCode() {
+       return $this->access_code;
+    }
 }

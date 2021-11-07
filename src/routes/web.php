@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\auth\ResendEmailController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,10 @@ Route::get('/verified', [PageController::class, 'getPage'])->name('verified');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profile',[UserController::class,'index'])->name('profile.index');
+    Route::get('/profile/edit',[UserController::class,'edit'])->name('profile.edit');
+    Route::post('/profile/update',[UserController::class,'update'])->name('profile.update');
+
 });
 
 
