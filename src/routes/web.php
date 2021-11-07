@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\auth\ResendEmailController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +18,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[PageController::class,'index'])->name('home');
+Route::get('/', [PageController::class, 'index'])->name('home');
 
 Auth::routes(['verify' => true]);
-Route::get('/logout',[LoginController::class,'logout']);
+
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::post('/resendemail', [ResendEmailController::class, 'resend'])->name('resendemail');
+Route::get('/verified', [PageController::class, 'getPage'])->name('verified');
+
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+});
+
+
+Route::get('/dashboard/{hash}', [PageController::class, 'dashboardTemp'])->name('dashboardtemp');
+
+
+Route::get('/qrcoderegister', [RegisterController::class, 'showTempRegistrationForm'])->name('qrcodereg');
+Route::post('/qrcoderegister', [RegisterController::class, 'registerTemp'])->name('registerTemp');
+
+
+Route::get('/terms-and-conditions', [PageController::class, 'getPage'])->name('terms-and-conditions');
+
+

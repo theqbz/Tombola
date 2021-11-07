@@ -5,7 +5,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            {{ __('Login') }}
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a class="btn btn-link" href="{{route('qrcodereg')}}">
+                                {{ __('Login with QR code') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

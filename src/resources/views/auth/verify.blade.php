@@ -16,8 +16,11 @@
 
                     {{ __('Before proceeding, please check your email for a verification link.') }}
                     {{ __('If you did not receive the email') }},
-                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                    <form class="d-inline" method="POST" action="{{ route('resendemail') }}">
                         @csrf
+                        @isset($id)
+                            <input name="id" type="hidden" value="{{$id}}">
+                        @endisset
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
                     </form>
                 </div>

@@ -30,4 +30,26 @@ class PageController extends Controller
         return abort(404);
     }
 
+    public function dashboard()
+    {
+        return view('pages.dashboard')->with('user',Auth::user());
+    }
+
+    public function dashboardTemp(Request $request)
+    {
+        $hash = $request->route('hash');
+        $user = User::where('hash', $hash)->first();
+        if ($user) {
+            return view('pages.dashboardTemp')->with('user', $user);
+        } else {
+            return abort(404);
+        }
+    }
+
+
+    public function verified()
+    {
+        return view('auth.verified');
+    }
+
 }
