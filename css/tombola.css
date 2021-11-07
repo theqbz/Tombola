@@ -1,0 +1,32 @@
+/* TICKETTO custom colors for Bootstrap 5 */
+ 
+/* SZÍNEK
+ * twinner: nyertes
+ * ttoday: egy napon belül esedékes játék
+ * tactive: aktív játék egy napnál később
+ * texpired: lejárt, nyeretlen játék
+ * tlight: ticketto világos háttér
+ */
+
+
+.bg-twinner{
+    background-color:#7fd8db;
+}
+.bg-ttoday{
+    background-color:#eb9f88;
+}
+.bg-tactive{
+    background-color:#b9db7f;
+}
+.bg-texpired{
+    background-color:#d6d6d6;
+}
+.bg-tlight{
+    background-color:#faf3e1;
+}
+.border-ttoday{
+    border-color:#eb9f88; 
+}
+.border-tactive{
+    border-color:#b9db7f;
+}
