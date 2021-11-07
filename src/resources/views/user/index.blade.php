@@ -23,64 +23,41 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            {{Form::model($user, array('route' => array('profile.update', $user->id)))}}
                             <div class="form-group row">
-                                {{Form::label('email', __('Email'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
+                                <p class="col-md-4 col-form-label text-md-right">{{__('Email')}}</p>
                                 <div class="col-md-6">
-
-                                    {{Form::text('email', old('email'),array('class'=>'form-control','readonly'=>'true'))}}
-
+                                    <p class="badge badge-secondary p-2" style="font-size: 16px;">{{$user->email}}</p>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                {{Form::label('first_name', __('First Name'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
+                                <p class="col-md-4 col-form-label text-md-right">{{__('First Name')}}</p>
                                 <div class="col-md-6">
-
-                                    {{Form::text('first_name', old('first_name'),array('class'=>"form-control",'readonly'=>'true'))}}
-
+                                    <p class="badge badge-secondary p-2" style="font-size: 16px;">{{$user->first_name}}</p>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                {{Form::label('last_name', __('Last Name'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
+                                <p class="col-md-4 col-form-label text-md-right">{{__('Last Name')}}</p>
                                 <div class="col-md-6">
-
-                                    {{Form::text('last_name', old('last_name'),array('class'=>"form-control",'readonly'=>'true'))}}
-
+                                    <p class="badge badge-secondary p-2" style="font-size: 16px;">{{$user->last_name}}</p>
                                 </div>
                             </div>
 
 
                             <div class="form-group row">
-                                {{Form::label('address', __('Address'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
+                                <p class="col-md-4 col-form-label text-md-right">{{__('Address')}}</p>
                                 <div class="col-md-6">
-
-                                    {{Form::text('address', old('address'),array('class'=>"form-control"))}}
-
+                                    <p class="badge badge-secondary p-2" style="font-size: 16px;">{{$user->address}}</p>
                                 </div>
-                                @error('address')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
 
                             <div class="form-group row">
-                                {{Form::label('date_of_birth', __('Date Of Birth'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
+                                <p class="col-md-4 col-form-label text-md-right">{{__('Date Of Birth')}}</p>
                                 <div class="col-md-6">
-
-                                    {{Form::text('date_of_birth', old('date_of_birth'),array('class'=>"form-control"))}}
-
+                                    <p class="badge badge-secondary p-2" style="font-size: 16px;">{{$user->date_of_birth }}</p>
                                 </div>
-                                @error('date_of_birth')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
-                            {{ Form::close() }}
-
                         </div>
                     </div>
 
