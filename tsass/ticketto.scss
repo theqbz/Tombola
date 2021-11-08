@@ -1,0 +1,16 @@
+
+@import "../scss/_functions.scss";
+@import "../scss/_variables.scss";
+
+$ticketto-theme-colors: (
+    "ticketto": #ffc107,
+    "tlight": #faf3e1,
+    "winner": #7fd8db,
+    "activenow": #eb9f88,
+    "active": #b9db7f,
+    "expired": #d6d6d6,
+);
+
+$theme-colors: map-merge($ticketto-theme-colors, $theme-colors);
+
+@import '../scss/bootstrap.scss';
