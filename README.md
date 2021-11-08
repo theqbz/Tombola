@@ -4,7 +4,7 @@
 ## Ticketto témaszínek
 
 | szín leírása                                            | css class | színkód |
----------------------------------------------------------------------------------
+|---------------------------------------------------------|-----------|---------|
 | Ticketto aranysárga                                     | ticketto  | #ffc107 |
 | Világos sárga háttérhez                                 | tlight    | #faf3e1 |
 | Ciánkék (nyertes dolgok)                                | winner    | #7fd8db |
