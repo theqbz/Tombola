@@ -3,12 +3,13 @@
 @import "../scss/_variables.scss";
 
 $ticketto-theme-colors: (
-    "ticketto": #ffc107,
-    "tlight": #faf3e1,
-    "winner": #7fd8db,
-    "activenow": #eb9f88,
-    "active": #b9db7f,
-    "expired": #d6d6d6,
+    "ticketto": #FFC107,
+    "tlight": #ffecb3,
+    "winner": #9fe3e3,
+    "activenow":#e3d09f,
+    "active": #d3e39f,
+    "expired": #e3e3e3, 
+    "tgray": #fafafa,
 );
 
 $theme-colors: map-merge($ticketto-theme-colors, $theme-colors);
