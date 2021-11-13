@@ -23,12 +23,22 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            @isset($error)
+                                <div class="alert alert-danger">
+                                    {{ $error}}
+                                </div>
+                            @endif
+                            @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('success') }}
+                                </div>
+                            @endif
                             {{Form::model($user, array('route' => array('profile.update', $user->id)))}}
                             <div class="form-group row">
                                 {{Form::label('email', __('Email'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
                                 <div class="col-md-6">
 
-                                    {{Form::text('email', old('email'),array('class'=>'form-control','readonly'=>'true'))}}
+                                    {{Form::text('email', $user->email,array('class'=>'form-control','readonly'=>'true'))}}
 
                                 </div>
                             </div>
@@ -37,7 +47,7 @@
                                 {{Form::label('first_name', __('First Name'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
                                 <div class="col-md-6">
 
-                                    {{Form::text('first_name', old('first_name'),array('class'=>"form-control",'readonly'=>'true'))}}
+                                    {{Form::text('first_name', $user->first_name,array('class'=>"form-control",'readonly'=>'true'))}}
 
                                 </div>
                             </div>
@@ -46,7 +56,7 @@
                                 {{Form::label('last_name', __('Last Name'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
                                 <div class="col-md-6">
 
-                                    {{Form::text('last_name', old('last_name'),array('class'=>"form-control",'readonly'=>'true'))}}
+                                    {{Form::text('last_name', $user->last_name,array('class'=>"form-control",'readonly'=>'true'))}}
 
                                 </div>
                             </div>
@@ -56,7 +66,7 @@
                                 {{Form::label('address', __('Address'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
                                 <div class="col-md-6">
 
-                                    {{Form::text('address', old('address'),array('class'=>"form-control"))}}
+                                    {{Form::text('address',$user->address,array('class'=>"form-control",'readonly'=>'true'))}}
 
                                 </div>
                                 @error('address')
@@ -69,8 +79,11 @@
                             <div class="form-group row">
                                 {{Form::label('date_of_birth', __('Date Of Birth'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
                                 <div class="col-md-6">
+                                    @php
+                                    $dobOld = isset($user->date_of_birth)?date('Y. m.d',strtotime($user->date_of_birth)):"";
 
-                                    {{Form::text('date_of_birth', old('date_of_birth'),array('class'=>"form-control"))}}
+                                    @endphp
+                                    {{Form::text('date_of_birth', $dobOld,array('class'=>"form-control",'readonly'=>'true'))}}
 
                                 </div>
                                 @error('date_of_birth')

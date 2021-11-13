@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\auth\ResendEmailController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -25,6 +27,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::post('/resendemail', [ResendEmailController::class, 'resend'])->name('resendemail');
+Route::post('/resendemail/temp', [ResendEmailController::class, 'resendTempEmail'])->name('resendtemp');
 Route::get('/verified', [PageController::class, 'getPage'])->name('verified');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -33,8 +36,17 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/profile/edit',[UserController::class,'edit'])->name('profile.edit');
     Route::post('/profile/update',[UserController::class,'update'])->name('profile.update');
 
+    Route::get('/events',[EventController::class,'index'])->name('event.index');
+    Route::get('/profile/create',[EventController::class,'create'])->name('event.create');
+
+    Route::post('/profile/store',[EventController::class,'store'])->name('event.store');
+
+//    Route::post('ckeditor/upload', [CKEditorController::class,'upload'])->name('ckeditor.image-upload');
+    Route::post('prize/add',[AjaxController::class,'addPrize'])->name('prize.add');
+
 });
 
+Route::get('/event/{id}',[EventController::class,'show'])->name('event.show');
 
 Route::get('/dashboard/{hash}', [PageController::class, 'dashboardTemp'])->name('dashboardtemp');
 

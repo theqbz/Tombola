@@ -57,4 +57,13 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getAccessCode() {
        return $this->access_code;
     }
+
+    public function userEvents()
+    {
+        return $this->hasMany(UserEvent::class);
+    }
+
+    public function canCreateEvent() {
+        return $this->status === self::FILLED;
+    }
 }

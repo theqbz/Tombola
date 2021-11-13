@@ -12,3 +12,7 @@ header {
         max-width: 120px;
     }
 }
+
+.custom-file-label::after {
+    content:"Betölt";
+}

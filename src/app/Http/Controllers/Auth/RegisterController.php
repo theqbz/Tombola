@@ -96,7 +96,8 @@ class RegisterController extends Controller
         try {
             $user->save();
             event(new TemporaryRegistered($user));
-            return redirect('/dashboard/' . $user->hash);
+            //return redirect('/dashboard/' . $user->hash);
+            return view('auth.verifyTemp')->with('id',$user->id);
         } catch (Exception $e) {
             return back()->with(['error' => __('An error occured.Please try again!')]);
         }
