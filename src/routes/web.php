@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::get('/events',[EventController::class,'index'])->name('event.index');
     Route::get('/event/create',[EventController::class,'create'])->name('event.create');
+    Route::get('/event/edit/{id}',[EventController::class,'edit'])->name('event.edit');
     Route::get('/event/myevents',[EventController::class,'myEvents'])->name('event.myevents');
 
     Route::post('/event/store',[EventController::class,'store'])->name('event.store');
