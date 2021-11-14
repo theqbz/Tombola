@@ -11,7 +11,7 @@
                     <img class="card-img-top" src="{{asset('assets/mockimage.svg')}}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"> {{$event->title}}</h5>
-                        <p class="card-text"> {!! $event->description !!}</p>
+                        <p class="card-text"> {!! $event->getDescriptionShort() !!}</p>
                         <a href="{{route('event.show',['id'=>$event->id])}}" class="btn btn-primary">Részletek</a>
                     </div>
                 </div>

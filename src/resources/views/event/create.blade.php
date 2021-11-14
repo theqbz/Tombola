@@ -24,7 +24,7 @@
 
                     <div class="form-group">
                         {{Form::label('title', __('Title'), array('class' => ' col-form-label text-md-right'))}}
-                        {{Form::text('title', old('email'),array('class'=>"form-control"))}}
+                        {{Form::text('title', old('title'),array('class'=>"form-control"))}}
                         @error('title')
                         <span class="alert d-block alert-danger" role="alert"><strong>{{ $message }}</strong> </span>
                         @enderror
@@ -44,16 +44,16 @@
                     <div class="row">
                         <div class="col-md-6">
                             {{Form::datePicker(['id'=>'dt_start','value'=>old('dt_start'),'name'=>'dt_start','label'=>__('Start Date'),'needTime'=>true])}}
+                            @error('dt_start_full')
+                            <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             {{Form::datePicker(['id'=>'dt_end','value'=>old('dt_end'),'name'=>'dt_end','label'=>__('End Date'),'needTime'=>true])}}
+                            @error('dt_end_full')
+                            <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+                            @enderror
                         </div>
-                        @error('dt_start_full')
-                        <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
-                        @enderror
-                        @error('dt_end_full')
-                        <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
-                        @enderror
                     </div>
                     <div class="row">
                         <div class="col-md-2">
@@ -103,12 +103,12 @@
                                         <p>{{$image['description']}}</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <img id="prize" src="{{$image['image']}}" alt="{{$image['title']}}" title="{{$image['title']}}" width="250">
+                                        <img style="max-width: 100px;" id="prize" src="{{asset('temp/events/'.$image['image'])}}" alt="{{$image['title']}}" title="{{$image['title']}}" width="250">
                                     </div>
                                     <div class="d-none">
-                                        <input name="prize_item_title_{{ $loop->index }}" value="{{$image['title']}}">
-                                        <input name="prize_item_description_{{ $loop->index }}" value="{{$image['description']}}">
-                                        <input name="prize_item_image_{{ $loop->index }}" value="{{$image['image']}}">
+                                        <input type="text" name="prize_item_title_{{ $loop->index }}" value="{{$image['title']}}">
+                                        <input type="text" name="prize_item_description_{{ $loop->index }}" value="{{$image['description']}}">
+                                        <input type="text" name="prize_item_image_{{ $loop->index }}" value="{{$image['image']}}">
                                     </div>
                                 </div>
                             @endforeach
@@ -169,7 +169,7 @@
                                     'src': e.target.result,
                                     'alt': title,
                                     'title': title,
-                                    'width': 250
+                                    'width': 100
                                 });
 
                                 $('#prize_error').hide();

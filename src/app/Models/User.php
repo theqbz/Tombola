@@ -63,6 +63,15 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(UserEvent::class);
     }
 
+    public function getOwnEvents() {
+        $userEvents = UserEvent::where(['user_id'=>$this->id,'access_type'=>1])->get();
+        $events = array();
+        foreach ($userEvents as $userEvent) {
+            $events[] = Event::find($userEvent->event_id);
+        }
+        return $events;
+    }
+
     public function canCreateEvent() {
         return $this->status === self::FILLED;
     }

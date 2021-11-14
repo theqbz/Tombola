@@ -126,11 +126,20 @@ return [
     'url'                  => 'A(z) :attribute érvénytelen link.',
     'uuid'                 => ':attribute érvényes UUID-val kell rendelkezzen.',
     'custom'               => [
-        'attribute-name' => [
-            'first_name' => 'Vezetéknév',
-            'lastname'=>'Keresztnév',
-            'password'=>'Jelszó',
-            'email'=>'E-mail'
-        ],
+        'attributes' => [],
+    ],
+    'attributes' => [
+        'first_name' => 'Vezetéknév',
+        'lastname'=>'Keresztnév',
+        'password'=>'Jelszó',
+        'email'=>'E-mail',
+        'dt_start_full' =>'Kezdő dátum',
+        'dt_end_full' =>'Befejezés dátuma',
+        'title'=>'Cím',
+        'location'=>'Helyszín',
+        'description'=>'Leírás',
+
+
+
     ],
 ];
