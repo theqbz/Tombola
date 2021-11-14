@@ -42,7 +42,11 @@ class FormMacros extends FormBuilder {
                     $('#" . $this->attr['id'] . "').ckeditor({
                     language:'hu',
                     skin:'n1theme',
-                    inline:'content',
+                    filebrowserUploadUrl: '".route('ckeditor.image-upload', ['_token' => csrf_token() ])."',
+                    filebrowserUploadMethod: 'form',
+                     customConfig: 'custom_conf.js',
+                     filebrowserBrowseUrl:'',
+                     filebrowserImageBrowseUrl:''
                     });
                 });</script>";
 

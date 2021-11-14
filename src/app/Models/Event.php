@@ -24,6 +24,14 @@ class Event extends Model
         return $this->hasMany(UserEvent::class);
     }
 
+    public function eventTicketGroups() {
+        return $this->hasMany(EventTicketGroup::class);
+    }
+
+    public function prizes() {
+        return $this->hasMany(EventTicketGroup::class);
+    }
+
     /**
      * The attributes that should be cast.
      *

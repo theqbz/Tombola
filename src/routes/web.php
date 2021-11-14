@@ -4,6 +4,7 @@ use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\auth\ResendEmailController;
+use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
@@ -37,11 +38,12 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/profile/update',[UserController::class,'update'])->name('profile.update');
 
     Route::get('/events',[EventController::class,'index'])->name('event.index');
-    Route::get('/profile/create',[EventController::class,'create'])->name('event.create');
+    Route::get('/event/create',[EventController::class,'create'])->name('event.create');
+    Route::get('/event/myevents',[EventController::class,'myEvents'])->name('event.myevents');
 
-    Route::post('/profile/store',[EventController::class,'store'])->name('event.store');
+    Route::post('/event/store',[EventController::class,'store'])->name('event.store');
 
-//    Route::post('ckeditor/upload', [CKEditorController::class,'upload'])->name('ckeditor.image-upload');
+    Route::post('ckeditor/upload', [CKEditorController::class,'upload'])->name('ckeditor.image-upload');
     Route::post('prize/add',[AjaxController::class,'addPrize'])->name('prize.add');
 
 });

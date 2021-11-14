@@ -5,7 +5,6 @@
         <div class="container">
             <div class="card">
                 {{Form::open(array('route' => 'event.store','enctype'=>"multipart/form-data"))}}
-
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-6">
@@ -49,10 +48,10 @@
                         <div class="col-md-6">
                             {{Form::datePicker(['id'=>'dt_end','value'=>old('dt_end'),'name'=>'dt_end','label'=>__('End Date'),'needTime'=>true])}}
                         </div>
-                        @error('dt_start')
-                        <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong> </span>
+                        @error('dt_start_full')
+                        <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
                         @enderror
-                        @error('dt_end')
+                        @error('dt_end_full')
                         <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
                         @enderror
                     </div>
@@ -107,10 +106,15 @@
                                         <img id="prize" src="{{$image['image']}}" alt="{{$image['title']}}" title="{{$image['title']}}" width="250">
                                     </div>
                                     <div class="d-none">
-                                        <input name="update" value="1">
+                                        <input name="prize_item_title_{{ $loop->index }}" value="{{$image['title']}}">
+                                        <input name="prize_item_description_{{ $loop->index }}" value="{{$image['description']}}">
+                                        <input name="prize_item_image_{{ $loop->index }}" value="{{$image['image']}}">
                                     </div>
                                 </div>
                             @endforeach
+                                <div class="d-none">
+                                    <input name="update" value="1">
+                                </div>
                         @endif
                         @error('prize')
                         <span class="alert alert-danger" role="alert"><strong>{{ $message }}</strong> </span>

@@ -13,6 +13,9 @@
                     <a class="nav-link" href="{{route('event.index')}}">Publikus játékok</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('event.myevents')}}">Játékaim</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('event.create')}}">Új játék</a>
                 </li>
                 <li class="nav-item">
