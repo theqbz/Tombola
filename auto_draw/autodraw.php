@@ -12,13 +12,14 @@ $mail=new PHPMailer(true);
 $mail->setLanguage('hu','PHPMailer/language/');
 
 $mail->SMTPDebug='2';
+$mail->CharSet = 'UTF-8';
 $mail->isSMTP();
 require_once 'ticketto_auth_data.php';
 $mail->SMTPAuth=true;
 $mail->SMTPSecure=PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port=465;
 
-$mail->setFrom('admin@ticketto.hu', 'Felado');
+$mail->setFrom('admin@ticketto.hu', 'Ticketto Admin');
 $mail->addAddress('borsodi.zoltan@gmail.com');
 
 $mail->Subject='uzenet targya';
