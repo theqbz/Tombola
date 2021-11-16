@@ -72,6 +72,15 @@ class User extends Authenticatable implements MustVerifyEmail
         return $events;
     }
 
+    public function isEditor($id) {
+        $userEvent = UserEvent::where(['user_id'=>$this->id,'event_id'=>$id,'access_type'=>1])->first();
+        if($userEvent) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
     public function canCreateEvent() {
         return $this->status === self::FILLED;
     }

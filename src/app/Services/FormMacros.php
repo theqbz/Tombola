@@ -66,7 +66,7 @@ class FormMacros extends FormBuilder {
             <input type="date" placeholder="' . date("Y.m.d") . '" id="' . $this->attr['id'] . '" class="datepicker ' . $this->attr['class'] . '" name="' . $this->attr['name'] . '"/>';
         if (isset($this->attr['needTime'])) {
             $html       .= '<input type="time" placeholder="' . date("H:i") . '" id="' . $this->attr['id'] . '_time" class="datepicker ' . $this->attr['class'] . '" name="' . $this->attr['name'] . '_time"/>';
-            $value_time = (isset($this->attr['value_time'])) ? $this->attr['value_time'] : date('H:i');
+            $value_time = (isset($this->attr['valueTime'])) ? $this->attr['valueTime'] : date('H:i');
             $html       .= '<script>$("#' . $this->attr['id'] . '_time").val("' . $value_time . '")</script>';
         }
         $html  .= '</div></div>';
@@ -90,8 +90,7 @@ class FormMacros extends FormBuilder {
         $checkedValue = (isset($this->attr['checked'])) ? $this->attr['checked'] : '';
         foreach ($attributes['radios'] as $label => $value) {
             $checked = '';
-
-            if ($checkedValue && $checkedValue === $value) {
+            if ($checkedValue && $checkedValue == $value) {
                 $checked = ' checked ';
             }
             $html .= '<div class="form-control mb-1"><span>' . $label . '</span>&nbsp;<input ' . $checked . ' id="' . ($this->attr["name"] . "_" . $idx) . '" class="radio-list-item" type="radio" name="' . $this->attr["name"] . '" value="' . $value . '"></div>';

@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/event/myevents',[EventController::class,'myEvents'])->name('event.myevents');
 
     Route::post('/event/store',[EventController::class,'store'])->name('event.store');
+    Route::post('/event/update/{id}',[EventController::class,'update'])->name('event.update');
 
     Route::post('ckeditor/upload', [CKEditorController::class,'upload'])->name('ckeditor.image-upload');
     Route::post('prize/add',[AjaxController::class,'addPrize'])->name('prize.add');

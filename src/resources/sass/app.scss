@@ -13,6 +13,17 @@ header {
     }
 }
 
-.custom-file-label::after {
-    content:"Betölt";
+.custom-file-label {
+    cursor:pointer;
+    &:focus,&:hover {
+        &::after {
+            box-shadow: inset 0 0 10px #0000003d;
+        }
+    }
+    &::after {
+        content: "Betölt";
+    }
+
 }
+
+

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
+use Mockery\Exception;
 
 class EventController extends Controller {
 
@@ -35,7 +36,7 @@ class EventController extends Controller {
         if ($user->canCreateEvent()) {
             return view('event.create');
         } else {
-            return view('user.index', $user)->with(['error' => 'You need to fill all data to create Event!',
+            return view('user.index', $user)->with(['error' => __('You need to fill all data to create Event!'),
                                                     'user'  => $user]);
         }
     }
@@ -105,7 +106,7 @@ class EventController extends Controller {
         } else {
             $errors = array_merge($this->validator($request->all())->errors()
                                        ->messages(), ['prize' => __('At least one prize needed')]);
-
+            $request->flash();
             return back()->with($request->all())->withErrors($errors)->with(['images' => $upladedFiles]);
         }
 
@@ -148,6 +149,8 @@ class EventController extends Controller {
 
         UserEvent::create(['user_id' => Auth::user()->id, 'event_id' => $event->id, 'access_type' => 1]);
 
+        return redirect()->route('event.show', ['id' =>$event->id])->with(['event'=>$event]);
+
 
     }
 
@@ -159,7 +162,8 @@ class EventController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
-        //
+        $event = Event::find($id);
+        return view('event.show',['event'=>$event]);
     }
 
     /**
@@ -170,8 +174,8 @@ class EventController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
-        $event = Event::find($id);
 
+        $event = Event::find($id);
         return view('event.edit', ['event' => $event]);
     }
 
@@ -184,7 +188,24 @@ class EventController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
-        //
+        $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
+                         'dt_end_full'   => $request->input('dt_end') . ' ' . $request->input('dt_end_time')]);
+        $this->validator($request->all())->validate();
+        try {
+            $event = Event::find($id);
+            $event->update(['title'       => $request->input('title'),
+                            'description' => $request->input('description'),
+                            'location'    => $request->input('location'),
+                            'dt_start'    => $request->input('dt_start_full'),
+                            'dt_end'      => $request->input('dt_end_full'),
+                            'is_public'   => $request->input('is_public'),
+                            'auto_ticket' => $request->input('auto_ticket')]);
+        } catch (Exception $e) {
+            return back()->with(['error' => __('Failed Save')]);
+        }
+
+
+        return back()->with(['success' => __('Saved')]);
     }
 
     public function myEvents() {

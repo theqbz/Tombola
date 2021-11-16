@@ -30,7 +30,7 @@ class Event extends Model
     }
 
     public function prizes() {
-        return $this->hasMany(EventTicketGroup::class);
+        return $this->hasMany(Prize::class);
     }
 
     public function getDescriptionShort($limit=30) {
