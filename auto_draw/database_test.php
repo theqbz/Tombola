@@ -7,10 +7,7 @@
 <body>
 
     <?php
-$tserver="localhost";
-$tdbname="ticketto";
-$tdbuser="tdbtester";
-$tdbpassword="WRb4dKaeuSQKm7Q";
+require_once 'db_auth_data.php';
 
 $dbconnect=new mysqli($tserver,$tdbuser,$tdbpassword,$tdbname);
 
