@@ -1,0 +1,6 @@
+
+
+2021.11.18 22:59:10 +01:00 - Start Ticketto AutoDraw
+2021.11.18 22:59:10 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.18 22:59:10 +01:00 - QBZ 2 Új rekord felvétele sikeres.
+2021.11.18 22:59:10 +01:00 - Exit AutoDraw
