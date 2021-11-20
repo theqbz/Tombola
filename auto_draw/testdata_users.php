@@ -13,17 +13,19 @@ if ($dbconnect->connect_error) {
 }
 addToLogger("Adatbázis: sikeres csatlakozás.", INFO);
 
-//prize javítás
-
-for ($i = 1; $i < 61; $i++)
+for ($i = 1; $i < 15; $i++)
 {
-    $prizename=$i.". tesztnyeremény";
-    $prizedescription="A(z) ".$i." nyeremény leírása";
-    $updateprize='UPDATE prizes SET prize_name='$='$prizename'
-    , prize_description
+    $name=$i.". felhasznalo";
+    $email='borsodi.zoltan@gmail.com';
 
-
-
+    $newuser="INSERT INTO users (first_name, email, password) VALUES ('$name', '$email', 'jelszo')";
+    if ($dbconnect->query($newuser)===true)
+    {
+        $userid=$dbconnect->insert_id;
+        addToLogger("A(z) ".$i.". user felvétele sikeres. ID=".$userid, INFO);
+    }
+    else { addToLogger("Hiba az adatok hozzáadásában: ". $newuser . "\n" . $dbconnect->error, ERROR); }
+}
 
 writeLog();
 

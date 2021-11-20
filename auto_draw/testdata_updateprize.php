@@ -18,10 +18,16 @@ addToLogger("Adatbázis: sikeres csatlakozás.", INFO);
 for ($i = 1; $i < 61; $i++)
 {
     $prizename=$i.". tesztnyeremény";
-    $prizedescription="A(z) ".$i." nyeremény leírása";
-    $updateprize='UPDATE prizes SET prize_name='$='$prizename'
-    , prize_description
+    $prizedescription="A(z) ".$i.". nyeremény leírása";
 
+    $updateprize="UPDATE prizes SET prize_name='$prizename', prize_description='$prizedescription' WHERE id='$i'";
+
+    if ($dbconnect->query($updateprize)===true) {
+        //$prizeid=$dbconnect->insert_id;
+        addToLogger("A(z) ".$i.". nyeremény frissítése sikeres.", INFO);
+    }
+    else { addToLogger("Hiba az adatok hozzáadásában: ". $updateprize . "\n" . $dbconnect->error, ERROR); }
+}
 
 
 

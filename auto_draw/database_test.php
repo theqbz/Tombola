@@ -46,22 +46,6 @@
 
 
 
-    /* old
-    $title="Ennek sikerülnie kellene elvileg";
-    $startdate=date('Y-m-d H:m:s');
-    $drawtime=date('Y-m-d H:m:s');
-    $description="Az első tesztesemeny reszletes leírasa";
-    $ispub=(int)'0';
-    $autoticket=(int)'0';
-    $location="Szombathely";
-    $hash="EVENTHASH_1";
-
-    //$toadd="INSERT INTO ticketcolors (color_name) VALUES ('kek')";
-    $sql="INSERT INTO events (title, start_time, draw_time, description, is_public, auto_ticket, location, hash) VALUES ('$title', '$startdate', '$drawtime', '$description', '$ispub', '$autoticket', '$location', '$hash')";
-
-    if ($dbconnect->query($sql)===true) { addToLogger("Új rekord felvétele sikeres.", INFO); }
-    else { addToLogger("Hiba az adatok hozzáadásában: ". $sql . "\n" . $dbconnect->error, ERROR); }
-    */
 
     ?>
 </body>
