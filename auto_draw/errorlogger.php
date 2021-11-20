@@ -19,6 +19,7 @@ function writeLog()
 {
     global $logtext;
     $success=file_put_contents('./tdrawlog.txt',$logtext,FILE_APPEND);
+    echo($logtext);
 }
 
 
