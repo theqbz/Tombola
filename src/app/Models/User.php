@@ -31,6 +31,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'address',
         'date_of_birth',
         'password',
+        'status'
     ];
 
     /**
@@ -50,21 +51,18 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'exp_date'=>'datetime',
+        'exp_date' => 'datetime',
         'date_of_birth'
     ];
-
-    public function getAccessCode() {
-       return $this->access_code;
-    }
 
     public function userEvents()
     {
         return $this->hasMany(UserEvent::class);
     }
 
-    public function getOwnEvents() {
-        $userEvents = UserEvent::where(['user_id'=>$this->id,'access_type'=>1])->get();
+    public function getOwnEvents()
+    {
+        $userEvents = UserEvent::where(['user_id' => $this->id, 'access_type' => 1])->get();
         $events = array();
         foreach ($userEvents as $userEvent) {
             $events[] = Event::find($userEvent->event_id);
@@ -72,16 +70,50 @@ class User extends Authenticatable implements MustVerifyEmail
         return $events;
     }
 
-    public function isEditor($id) {
-        $userEvent = UserEvent::where(['user_id'=>$this->id,'event_id'=>$id,'access_type'=>1])->first();
-        if($userEvent) {
+    public function isEditor($id)
+    {
+        $userEvent = UserEvent::where(['user_id' => $this->id, 'event_id' => $id, 'access_type' => 1])->first();
+        if ($userEvent) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
 
-    public function canCreateEvent() {
+    public function canCreateEvent()
+    {
         return $this->status === self::FILLED;
+    }
+
+    public function listTickets($ticketStatus = 'active')
+    {
+        $tickets = array();
+        $userEvents = UserEvent::where('user_id', $this->id)->get()->all();
+        foreach ($userEvents as $userEvent) {
+            switch ($ticketStatus) {
+                case 'active':
+                    $event = Event::find($userEvent->event_id)->whereDate('dt_end', '>', date('Y-m-d H:i'))->first();
+                    break;
+                case 'inactive':
+                    $event = Event::find($userEvent->event_id)->whereDate('dt_end', '<', date('Y-m-d H:i'))->first();
+                    break;
+            }
+            if (isset($event)) {
+                $tickets[] = array(
+                    'event' => $event,
+                    'tickets' => $userEvent->tickets->all()
+                );
+            }
+        }
+        return $tickets;
+    }
+
+    /**
+     * @return string $hash
+     */
+
+    public function getAccessCode()
+    {
+        return $this->hash;
     }
 }

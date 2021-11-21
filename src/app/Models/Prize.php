@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prize extends Model
 {
     use HasFactory;
+
     public $timestamps = false;
     protected $fillable = [
         'event_id',
@@ -20,7 +21,13 @@ class Prize extends Model
 
     ];
 
-    public function event() {
+    public function event()
+    {
         return $this->belongsTo(Event::class);
+    }
+
+    public function getImageUrl()
+    {
+        return asset('uploads/events/'.$this->prize_img_url);
     }
 }

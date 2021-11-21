@@ -8,22 +8,26 @@ use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 
-class FormMacros extends FormBuilder {
+class FormMacros extends FormBuilder
+{
 
     private $attr = array();
 
-    public function __construct(HtmlBuilder $html, UrlGenerator $url, Factory $view, $csrfToken, Request $request = null) {
+    public function __construct(HtmlBuilder $html, UrlGenerator $url, Factory $view, $csrfToken, Request $request = null)
+    {
         parent::__construct($html, $url, $view, $csrfToken, $request);
 
     }
 
-    private function setData($attributes = array()) {
-        $this->attr = array_merge(['name'  => strtolower(debug_backtrace()[1]['function']) . '-' . uniqid(),
-                                   'id'    => strtolower(debug_backtrace()[1]['function']) . '-' . uniqid(),
-                                   'class' => 'form-control', 'containerClass' => 'form-group'], $attributes);
+    private function setData($attributes = array())
+    {
+        $this->attr = array_merge(['name' => strtolower(debug_backtrace()[1]['function']) . '-' . uniqid(),
+            'id' => strtolower(debug_backtrace()[1]['function']) . '-' . uniqid(),
+            'class' => 'form-control', 'containerClass' => 'form-group'], $attributes);
     }
 
-    public function WyswygEditor($attributes = array()) {
+    public function WyswygEditor($attributes = array())
+    {
 
         $this->setData($attributes);
 
@@ -42,7 +46,7 @@ class FormMacros extends FormBuilder {
                     $('#" . $this->attr['id'] . "').ckeditor({
                     language:'hu',
                     skin:'n1theme',
-                    filebrowserUploadUrl: '".route('ckeditor.image-upload', ['_token' => csrf_token() ])."',
+                    filebrowserUploadUrl: '" . route('ckeditor.image-upload', ['_token' => csrf_token()]) . "',
                     filebrowserUploadMethod: 'form',
                      customConfig: 'custom_conf.js',
                      filebrowserBrowseUrl:'',
@@ -53,7 +57,8 @@ class FormMacros extends FormBuilder {
         return $this->toHtmlString($html);
     }
 
-    public function datePicker($attributes = array()) {
+    public function datePicker($attributes = array())
+    {
         $this->setData($attributes);
 
         $html = '<div class="' . $this->attr['containerClass'] . '">';
@@ -62,14 +67,18 @@ class FormMacros extends FormBuilder {
             $html .= '<label for="' . $this->attr["name"] . '">' . $this->attr["label"] . '</label>';
         }
 
+        if (isset($this->attr['placeholder']) && !$this->attr['value']) {
+            $this->attr['value'] = 'ÉÉÉÉ-HH-NN';
+        }
+
         $html .= '<div class="input-group date">
             <input type="date" placeholder="' . date("Y.m.d") . '" id="' . $this->attr['id'] . '" class="datepicker ' . $this->attr['class'] . '" name="' . $this->attr['name'] . '"/>';
         if (isset($this->attr['needTime'])) {
-            $html       .= '<input type="time" placeholder="' . date("H:i") . '" id="' . $this->attr['id'] . '_time" class="datepicker ' . $this->attr['class'] . '" name="' . $this->attr['name'] . '_time"/>';
+            $html .= '<input type="time" placeholder="' . date("H:i") . '" id="' . $this->attr['id'] . '_time" class="datepicker ' . $this->attr['class'] . '" name="' . $this->attr['name'] . '_time"/>';
             $value_time = (isset($this->attr['valueTime'])) ? $this->attr['valueTime'] : date('H:i');
-            $html       .= '<script>$("#' . $this->attr['id'] . '_time").val("' . $value_time . '")</script>';
+            $html .= '<script>$("#' . $this->attr['id'] . '_time").val("' . $value_time . '")</script>';
         }
-        $html  .= '</div></div>';
+        $html .= '</div></div>';
         $value = (isset($this->attr['value'])) ? $this->attr['value'] : date('Y-m-d');
 
         $html .= '<script>$("#' . $this->attr['id'] . '").val("' . $value . '")</script>';
@@ -77,7 +86,8 @@ class FormMacros extends FormBuilder {
         return $this->toHtmlString($html);
     }
 
-    public function radioList($attributes = array()) {
+    public function radioList($attributes = array())
+    {
         $this->setData($attributes);
 
         $html = '<div class="input-group">';
@@ -85,12 +95,12 @@ class FormMacros extends FormBuilder {
             $html .= '<label style="display:block;width:100%" for="' . $this->attr["name"] . '">' . $this->attr["label"] . '</label>';
 
         }
-        $html         .= '<div class="radio-list ">';
-        $idx          = 0;
-        $checkedValue = (isset($this->attr['checked'])) ? $this->attr['checked'] : '';
+        $html .= '<div class="radio-list ">';
+        $idx = 0;
+        $checkedValue = (isset($this->attr['checked'])) ? $this->attr['checked'] : null;
         foreach ($attributes['radios'] as $label => $value) {
             $checked = '';
-            if ($checkedValue && $checkedValue == $value) {
+            if (!is_null($checkedValue) && $checkedValue == $value) {
                 $checked = ' checked ';
             }
             $html .= '<div class="form-control mb-1"><span>' . $label . '</span>&nbsp;<input ' . $checked . ' id="' . ($this->attr["name"] . "_" . $idx) . '" class="radio-list-item" type="radio" name="' . $this->attr["name"] . '" value="' . $value . '"></div>';
@@ -99,6 +109,39 @@ class FormMacros extends FormBuilder {
         $html .= '</div>';
 
         $html .= '</div>';
+
+        return $this->toHtmlString($html);
+    }
+
+    public function QrCodeReader($attributes = array())
+    {
+        $this->setData($attributes);
+
+
+        $html = '<script src='.asset('js/html5-qrcode.min.js').'></script>';
+
+        $html .= '<div class="' . $this->attr['containerClass'] . '">';
+        $html .= '<div style="width: 100%" id="reader"></div>';
+
+        if (isset($this->attr['label'])) {
+            $html .= '<label for="' . $this->attr["name"] . '">' . $this->attr["label"] . '</label>';
+        }
+        $html .= '<input type="text" id="' . $this->attr['id'] . '" class="' . $this->attr['class'] . '" name="' . $this->attr['name'] . '">';
+        $html .='</div>';
+        $html .= '<script>var html5QrcodeScanner = new Html5QrcodeScanner(
+                "reader", { fps: 10, qrbox: 250 });
+        
+            function onScanSuccess(decodedText, decodedResult) {
+                document.getElementById("' . $this->attr['id'] . '").value = decodedText;
+                console.log(`Scan result: ${decodedText}`, decodedResult);
+                html5QrcodeScanner.clear();
+            }
+            
+            function onScanError(errorMessage) {
+                // handle on error condition, with error message
+                }
+            
+            html5QrcodeScanner.render(onScanSuccess);</script>';
 
         return $this->toHtmlString($html);
     }

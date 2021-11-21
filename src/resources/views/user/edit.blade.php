@@ -93,7 +93,7 @@
                                 {{Form::label('date_of_birth', __('Date Of Birth'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
                                 <div class="col-md-6">
 
-                                    {{Form::datePicker(['id'=>'date_of_birth','value'=>old('date_of_birth'),'name'=>'date_of_birth'])}}
+                                    {{Form::datePicker(['id'=>'date_of_birth','value'=>old('date_of_birth'),'name'=>'date_of_birth','placeholder'=>true])}}
 
 
                                 </div>

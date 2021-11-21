@@ -18,7 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('location');
-            $table->string('hash');
+            $table->string('hash')->nullable();
             $table->string('dt_start')->useCurrent();
             $table->string('dt_end')->useCurrent();
             $table->boolean('is_public');

@@ -43,6 +43,30 @@ class Event extends Model
         return "https://ui-avatars.com/api/?name=Event+".$titleParts[0];
     }
 
+    public function getEndDate() {
+        return $this->dt_end->format('Y.m.d H:i');
+    }
+
+    public function countTickets() {
+        $tickets = array();
+        $userEvents = $this->userEvents->all();
+        foreach ($userEvents as $userEvent) {
+            $tickets = array_merge($tickets,$userEvent->tickets->all());
+        }
+        return count($tickets);
+    }
+
+    public function hasMoreTickets() {
+        $eventTicketGroup = $this->eventTicketGroups->first();
+        $limit = $eventTicketGroup->limit;
+
+        return $this->countTickets() < $limit;
+    }
+
+    public function isAvailable() {
+        return  $this->dt_end > date('Y-m-d H:i');
+    }
+
     /**
      * The attributes that should be cast.
      *

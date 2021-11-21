@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                @include('user.left');
+                @include('user.left')
                 </div>
                 <div class="col-md-8">
                     <div class="card">

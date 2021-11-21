@@ -8,7 +8,9 @@ use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -88,16 +90,14 @@ class RegisterController extends Controller
             ]);
         }
 
-        if (!$user->hash) {
-            $hash = base64_encode(Hash::make(now()));
-            $user->hash = $hash;
-        }
-
         try {
-            $user->save();
+            if (!$user->hash) {
+                $this->generateAccesses($user);
+            }
+
             event(new TemporaryRegistered($user));
             //return redirect('/dashboard/' . $user->hash);
-            return view('auth.verifyTemp')->with('id',$user->id);
+            return view('auth.verifyTemp')->with('id', $user->id);
         } catch (Exception $e) {
             return back()->with(['error' => __('An error occured.Please try again!')]);
         }
@@ -115,7 +115,7 @@ class RegisterController extends Controller
         }
 
 
-        $user = $this->checkiIfExists([
+        $user = $this->checkIfExists([
             'email', $request->input('email')
         ]);
 
@@ -136,7 +136,7 @@ class RegisterController extends Controller
 
     private function updateFinalAccount(Request $request)
     {
-        $user = $this->checkiIfExists(array(
+        $user = $this->checkIfExists(array(
             [
                 'id' => $request->input('id'), 'status' => 0
             ]
@@ -154,20 +154,20 @@ class RegisterController extends Controller
 
 
         $user->first_name = $request->input('first_name');
-        $user->last_name = $request->input('layt_name');
+        $user->last_name = $request->input('last_name');
         $user->password = Hash::make($request->input('password'));
         $user->status = 1;
         $user->hash = null;
         $user->exp_date = null;
         $user->email_verified_at = null;
 
-        $user-> save();
+        $user->save();
 
 
         event(new Registered($user));
 
 
-        return view('auth.verify')->with('id',$user->id);
+        return view('auth.verify')->with('id', $user->id);
 
 
     }
@@ -185,29 +185,39 @@ class RegisterController extends Controller
         }
 
         $user = User::create([
-           'email'=>$request->input('re-email'),
-           'first_name'=>$request->input('first_name'),
-           'last_name'=>$request->input('last_name'),
-           'password'=> Hash::make($request->input('password')),
-           'status'=>1,
+            'email' => $request->input('re-email'),
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
+            'password' => Hash::make($request->input('password')),
+            'status' => 1,
         ]);
+
+        if (!$user->hash) {
+            $this->generateAccesses($user);
+        }
 
 
         event(new Registered($user));
-        return view('auth.verify')->with('id',$user->id);
+        return view('auth.verify')->with('id', $user->id);
 
     }
 
-    private function checkiIfExists(array $params)
+    private function checkIfExists(array $params)
     {
         return User::where([$params])->first();
     }
 
     private function generateAccesses(User &$user)
     {
-        $accessCode = "U-".strtolower(substr($user->first_name,0,3).substr($user->last_name,0,3).substr(time(),0,3));
-        $user->access_code =$accessCode;
-        QrCode::generate($accessCode, '../public/qrcodes/users/'.$user->id.'.svg');
+        $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), 0, 3));
+        $user->hash = $accessCode;
+        $user->save();
+        $path = public_path('/qrcodes/users');
+        if (!File::exists($path)) {
+            File::makeDirectory($path, 0755, true, true);
+        }
+        QrCode::generate($accessCode, $path . '/' . $user->id . '.svg');
+
     }
 
 }

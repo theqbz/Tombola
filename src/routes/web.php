@@ -32,6 +32,8 @@ Route::post('/resendemail/temp', [ResendEmailController::class, 'resendTempEmail
 Route::get('/verified', [PageController::class, 'getPage'])->name('verified');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::get('/event/mytickets',[EventController::class,'myTickets'])->name('event.mytickets');
+
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::get('/profile',[UserController::class,'index'])->name('profile.index');
     Route::get('/profile/edit',[UserController::class,'edit'])->name('profile.edit');
@@ -46,11 +48,15 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/event/update/{id}',[EventController::class,'update'])->name('event.update');
 
     Route::post('ckeditor/upload', [CKEditorController::class,'upload'])->name('ckeditor.image-upload');
-    Route::post('prize/add',[AjaxController::class,'addPrize'])->name('prize.add');
 
+
+    Route::get('/event/ticket/{id}',[EventController::class,'showTicketForm'])->name('event.ticket');
+    Route::post('/event/addticket',[EventController::class,'addTicket'])->name('event.addticket');
+
+    Route::get('/event/{id}',[EventController::class,'show'])->name('event.show')->where('id', '[0-9]+');
 });
 
-Route::get('/event/{id}',[EventController::class,'show'])->name('event.show');
+Route::get('/event/landing/{hash}', [EventController::class, 'showByHash'])->name('event.show.hash');
 
 Route::get('/dashboard/{hash}', [PageController::class, 'dashboardTemp'])->name('dashboardtemp');
 
