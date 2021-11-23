@@ -20,31 +20,134 @@
     }
     addToLogger("Adatbázis: sikeres csatlakozás.", INFO);
 
-    /* TICKETTO AUTODRAW
-     * folyamat
-     *     |SORSOLÁS|
-     * 1 - Eventek tábla lekérdezése: sorsolás időpontja aktuális-e
-     * 2 - Az aktuális sorsolási időponttal rendelkező eventek kigyűjtése tömbbe
-     * 3 - Az aktuális sorsolási időponttal rendelkező eventekre szóló tickettek kigyűjtése egy tömbbe
-     * 4 - Egyesével iterálni a tömböt és vizsgálni, hogy a hozzá tartozó nyeremények elkeltek-e
-     * 4 - Szabad nyeremény esetén a ticket tömbből random választani nyertes szelvényt
-     * 5 - A nyeremény táblába felvenni a nyertes szelvény ID-t
-     * 6 - A ticket táblába felvenni a nyeremény ID-t
-     * 7 - Email a nyertes szelvény tulajdonosának: |Nyertesek értesítése|
-     * 8 - Ha van még nyeretlen szelvény, akkor folytatás a 4-es ponttal
-     */
+    $wasDraw = false;
+    $wasError = false;
+
+    echo ("Pontos idő: ".date('Y-m-d H:i:s', time())."<br>");
+
+    srand();
+    $sqlEvents = "SELECT `id`, `draw_time`
+        FROM `events`
+        WHERE `flag`<> 3
+        AND `draw_time` < NOW();";
+    $toDraw = $dbconnect->query($sqlEvents);
+
+    if ($toDraw->num_rows > 0) {
+        while ($row = $toDraw->fetch_assoc()) {
+            $drawableEvents[]=$row;
+        }
+
+        /*
+        echo ("drawableEvents: <pre>");
+        var_dump($drawableEvents);
+        echo ("</pre><br>");
+         */
+
+        foreach ($drawableEvents as $event) {
+
+            /*
+            echo("<br>Esemény: ");
+            var_dump($event);
+             */
+
+            $eventId = intval($event["id"]);
+            $sqlPrizes = "SELECT `id`, `event`
+                FROM `prizes`
+                WHERE `event` = '$eventId'
+                AND `winner_ticket_id` IS NULL;";
+
+            $eventsPrizes = $dbconnect->query($sqlPrizes);
+
+            if ($eventsPrizes->num_rows > 0) {
+                while ($row = $eventsPrizes->fetch_assoc()) {
+                    $drawablePrizes[]=$row;
+                }
+                
+                /*
+                echo("<br>EventId: ");
+                var_dump($eventId);
+                echo ("<br>drawablePrizes: <pre>");
+                var_dump($drawablePrizes);
+                echo ("</pre><br>");
+                 */
+
+                foreach ($drawablePrizes as $prize) {
+
+                    /*
+                    echo("<br>    Nyeremény: ");
+                    var_dump($prize);
+                     */
+
+                    $sqlTickets = "SELECT `tickets`.`id`, `userevents`.`user`
+                        FROM `tickets`, `userevents`
+                        WHERE `userevents`.`event` = '$eventId'
+                        AND `tickets`.`userevents` = `userevents`.`id`
+                        AND `tickets`.`won_prize_id` IS NULL;";
+
+                    $eventsTickets = $dbconnect->query($sqlTickets);
+
+                    if ($eventsTickets->num_rows > 0) {
+                        while ($row = $eventsTickets->fetch_assoc()) {
+                            $drawableTickets[]=$row;
+                        }
+                        $prizeId = intval($prize["id"]);
 
 
-    require_once('testdata.php');
+                        /*
+                        echo("<br>PrizeID: ");
+                        var_dump($prizeId);
+                        echo ("<br>drawableTickets: <pre>");
+                        var_dump($drawableTickets);
+                        echo ("</pre><br>");
+                         */
+
+                        $toWin = rand(0, (count($drawableTickets)));
+                        $winnerTicket = intval($drawableTickets[$toWin]["id"]);
+                        $winnerUser = intval($drawableTickets[$toWin]["user"]);
+
+                        $addPrizeToTicket = "UPDATE `tickets` SET `won_prize_id`='$prizeId' WHERE `id`='$winnerTicket'";
+                        if ($dbconnect->query($addPrizeToTicket)===true) {
+                            addToLogger("A(z) ".$winnerTicket." Id-jű tickethez a ".$prizeId." Id-jú nyeremény hozzáadva.", INFO); }
+                        else { addToLogger("Hiba a szelvény frissítésekor: ".$addPrizeToTicket."\n".$dbconnect->error, ERROR); }
+
+                        $addTicketToPrize = "UPDATE `prizes` SET `winner_ticket_id`='$winnerTicket' WHERE `id`='$prizeId'";
+                        if ($dbconnect->query($addTicketToPrize)===true) {
+                            addToLogger("A(z) ".$prizeId." Id-jű nyereményhez a ".$winnerTicket." Id-jú ticket hozzáadva.", INFO); }
+                        else { addToLogger("Hiba a nyeremény frissítésekor: ".$addTicketToPrize."\n".$dbconnect->error, ERROR); }
+
+                        $setEventDrawed = "UPDATE `events` SET `flag` = '3' WHERE `id`='$eventId';";
+                        if ($dbconnect->query($setEventDrawed)===true) {
+                            addToLogger("A(z) ".$eventId." Id-jú esemény átállítva SORSOLVA állapotra", INFO); }
+                        else { addToLogger("Hiba az esemény frissítésekor: ".$addTicketToPrize."\n".$dbconnect->error, ERROR); }
+
+                        addToLogger("Sorsolás: Esemény ID=".$eventId."; Nyeremény ID=".$prizeId."; Ticket ID=".$winnerTicket, INFO);
+
+                        /*
+                        echo ("<br>ToWin: ");
+                        var_dump($toWin);
+                        echo ("<br>winnerTicket ID: ");
+                        var_dump($winnerTicket);
+                        echo ("<br>winnerUser ID: ");
+                        var_dump($winnerUser);
+                         */
+                    }
+                    //echo("<br>UNSET: drawableTickets");
+                    unset($drawableTickets);
+                }
+                echo("<br>Nincs több szabad nyeremény erre az eseményre");
+            }
+            //echo("<br>UNSET: drawablePrizes");
+            unset($drawablePrizes);
+        }
+        echo("<br>Nincs több sorsolásra váró esemény<br><br>");
+    }
+    
 
     $dbconnect->close();
 
     addToLogger("Exit AutoDraw", INFO);
     writeLog();
-    echo($logtext);
-
-
-
+    //echo($logtext);
 
 
     ?>

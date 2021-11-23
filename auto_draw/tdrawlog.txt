@@ -1612,3 +1612,267 @@ You have an error in your SQL syntax; check the manual that corresponds to your 
 2021.11.20 22:25:25 +01:00 - A ticket l�trehoz�sa sikeres. ID=41
 2021.11.20 22:25:25 +01:00 - A UserEvent felv�tele sikeres. ID=42
 2021.11.20 22:25:25 +01:00 - A ticket l�trehoz�sa sikeres. ID=42
+
+2021.11.22 23:25:28 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:25:29 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:25:29 +01:00 - Exit AutoDraw
+
+2021.11.22 23:29:13 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:29:13 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:29:13 +01:00 - Exit AutoDraw
+
+2021.11.22 23:29:33 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:29:33 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:29:34 +01:00 - Exit AutoDraw
+
+2021.11.22 23:32:35 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:32:35 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:32:36 +01:00 - Exit AutoDraw
+
+2021.11.22 23:32:51 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:32:51 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:32:51 +01:00 - Exit AutoDraw
+
+2021.11.22 23:34:55 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:34:55 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:34:55 +01:00 - Exit AutoDraw
+
+2021.11.22 23:41:33 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:41:33 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:41:34 +01:00 - Exit AutoDraw
+
+2021.11.22 23:46:34 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:46:34 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:46:35 +01:00 - Exit AutoDraw
+
+2021.11.22 23:47:04 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:47:04 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:47:05 +01:00 - Exit AutoDraw
+
+2021.11.22 23:48:36 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:48:36 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:48:36 +01:00 - Exit AutoDraw
+
+2021.11.22 23:50:59 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:50:59 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:50:59 +01:00 - Exit AutoDraw
+
+2021.11.22 23:51:24 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:51:24 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.22 23:51:24 +01:00 - Exit AutoDraw
+
+2021.11.23 00:44:57 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:44:57 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 00:44:57 +01:00 - Exit AutoDraw
+
+2021.11.23 00:46:31 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:46:31 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 00:46:31 +01:00 - Exit AutoDraw
+
+2021.11.23 00:52:24 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:52:24 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 00:52:24 +01:00 - Exit AutoDraw
+
+2021.11.23 00:57:07 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:57:07 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 00:57:07 +01:00 - Exit AutoDraw
+
+2021.11.23 01:18:58 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:18:58 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:18:58 +01:00 - Exit AutoDraw
+
+2021.11.23 01:20:28 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:20:28 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:20:28 +01:00 - Exit AutoDraw
+
+2021.11.23 01:22:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:22:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:22:03 +01:00 - Exit AutoDraw
+
+2021.11.23 01:33:17 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:33:17 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:33:17 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=16
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jű tickethez a Array Id-jú nyeremény hozzáadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:33:17 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=22
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jű tickethez a Array Id-jú nyeremény hozzáadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:33:17 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=20
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jű tickethez a Array Id-jú nyeremény hozzáadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:33:17 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=2
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jű tickethez a Array Id-jú nyeremény hozzáadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:33:17 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=12
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jű tickethez a Array Id-jú nyeremény hozzáadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:33:17 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=33
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jű tickethez a Array Id-jú nyeremény hozzáadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:33:17 +01:00 - Exit AutoDraw
+
+2021.11.23 01:42:19 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:42:19 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:42:19 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=31
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jű tickethez a 17 Id-jú nyeremény hozzáadva.
+2021.11.23 01:42:19 +01:00 - A(z) 17 Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:42:19 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=4
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jű tickethez a 18 Id-jú nyeremény hozzáadva.
+2021.11.23 01:42:19 +01:00 - A(z) 18 Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:42:19 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=26
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jű tickethez a 19 Id-jú nyeremény hozzáadva.
+2021.11.23 01:42:19 +01:00 - A(z) 19 Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:42:19 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=29
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jű tickethez a 20 Id-jú nyeremény hozzáadva.
+2021.11.23 01:42:19 +01:00 - A(z) 20 Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:42:19 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=30
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jű tickethez a 21 Id-jú nyeremény hozzáadva.
+2021.11.23 01:42:19 +01:00 - A(z) 21 Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:42:19 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=3
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jű tickethez a 22 Id-jú nyeremény hozzáadva.
+2021.11.23 01:42:19 +01:00 - A(z) 22 Id-jű nyereményhez a  Id-jú ticket hozzáadva.
+2021.11.23 01:42:19 +01:00 - Exit AutoDraw
+
+2021.11.23 01:44:01 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:44:01 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:44:01 +01:00 - Exit AutoDraw
+
+2021.11.23 01:48:22 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:48:22 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:48:22 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=40
+2021.11.23 01:48:22 +01:00 - A(z) 40 Id-jű tickethez a 17 Id-jú nyeremény hozzáadva.
+2021.11.23 01:48:22 +01:00 - A(z) 17 Id-jű nyereményhez a 40 Id-jú ticket hozzáadva.
+2021.11.23 01:48:22 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=25
+2021.11.23 01:48:22 +01:00 - A(z) 25 Id-jű tickethez a 18 Id-jú nyeremény hozzáadva.
+2021.11.23 01:48:22 +01:00 - A(z) 18 Id-jű nyereményhez a 25 Id-jú ticket hozzáadva.
+2021.11.23 01:48:22 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=38
+2021.11.23 01:48:22 +01:00 - A(z) 38 Id-jű tickethez a 19 Id-jú nyeremény hozzáadva.
+2021.11.23 01:48:22 +01:00 - A(z) 19 Id-jű nyereményhez a 38 Id-jú ticket hozzáadva.
+2021.11.23 01:48:22 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=14
+2021.11.23 01:48:22 +01:00 - A(z) 14 Id-jű tickethez a 20 Id-jú nyeremény hozzáadva.
+2021.11.23 01:48:22 +01:00 - A(z) 20 Id-jű nyereményhez a 14 Id-jú ticket hozzáadva.
+2021.11.23 01:48:22 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=3
+2021.11.23 01:48:22 +01:00 - A(z) 3 Id-jű tickethez a 21 Id-jú nyeremény hozzáadva.
+2021.11.23 01:48:22 +01:00 - A(z) 21 Id-jű nyereményhez a 3 Id-jú ticket hozzáadva.
+2021.11.23 01:48:22 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=33
+2021.11.23 01:48:22 +01:00 - A(z) 33 Id-jű tickethez a 22 Id-jú nyeremény hozzáadva.
+2021.11.23 01:48:22 +01:00 - A(z) 22 Id-jű nyereményhez a 33 Id-jú ticket hozzáadva.
+2021.11.23 01:48:22 +01:00 - Exit AutoDraw
+
+2021.11.23 01:49:47 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:49:47 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:49:47 +01:00 - Exit AutoDraw
+
+2021.11.23 01:58:24 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:58:24 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 01:58:24 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=28
+2021.11.23 01:58:24 +01:00 - A(z) 28 Id-jű tickethez a 17 Id-jú nyeremény hozzáadva.
+2021.11.23 01:58:24 +01:00 - A(z) 17 Id-jű nyereményhez a 28 Id-jú ticket hozzáadva.
+2021.11.23 01:58:24 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=4
+2021.11.23 01:58:24 +01:00 - A(z) 4 Id-jű tickethez a 18 Id-jú nyeremény hozzáadva.
+2021.11.23 01:58:24 +01:00 - A(z) 18 Id-jű nyereményhez a 4 Id-jú ticket hozzáadva.
+2021.11.23 01:58:24 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=23
+2021.11.23 01:58:24 +01:00 - A(z) 23 Id-jű tickethez a 19 Id-jú nyeremény hozzáadva.
+2021.11.23 01:58:24 +01:00 - A(z) 19 Id-jű nyereményhez a 23 Id-jú ticket hozzáadva.
+2021.11.23 01:58:24 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=11
+2021.11.23 01:58:24 +01:00 - A(z) 11 Id-jű tickethez a 20 Id-jú nyeremény hozzáadva.
+2021.11.23 01:58:24 +01:00 - A(z) 20 Id-jű nyereményhez a 11 Id-jú ticket hozzáadva.
+2021.11.23 01:58:24 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=3
+2021.11.23 01:58:24 +01:00 - A(z) 3 Id-jű tickethez a 21 Id-jú nyeremény hozzáadva.
+2021.11.23 01:58:24 +01:00 - A(z) 21 Id-jű nyereményhez a 3 Id-jú ticket hozzáadva.
+2021.11.23 01:58:24 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=33
+2021.11.23 01:58:24 +01:00 - A(z) 33 Id-jű tickethez a 22 Id-jú nyeremény hozzáadva.
+2021.11.23 01:58:24 +01:00 - A(z) 22 Id-jű nyereményhez a 33 Id-jú ticket hozzáadva.
+2021.11.23 01:58:24 +01:00 - Exit AutoDraw
+
+2021.11.23 02:04:24 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:04:24 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 02:04:24 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=28
+2021.11.23 02:04:24 +01:00 - A(z) 28 Id-jű tickethez a 17 Id-jú nyeremény hozzáadva.
+2021.11.23 02:04:24 +01:00 - A(z) 17 Id-jű nyereményhez a 28 Id-jú ticket hozzáadva.
+2021.11.23 02:04:24 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=22
+2021.11.23 02:04:24 +01:00 - A(z) 22 Id-jű tickethez a 18 Id-jú nyeremény hozzáadva.
+2021.11.23 02:04:24 +01:00 - A(z) 18 Id-jű nyereményhez a 22 Id-jú ticket hozzáadva.
+2021.11.23 02:04:24 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=2
+2021.11.23 02:04:24 +01:00 - A(z) 2 Id-jű tickethez a 19 Id-jú nyeremény hozzáadva.
+2021.11.23 02:04:24 +01:00 - A(z) 19 Id-jű nyereményhez a 2 Id-jú ticket hozzáadva.
+2021.11.23 02:04:24 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=8
+2021.11.23 02:04:24 +01:00 - A(z) 8 Id-jű tickethez a 20 Id-jú nyeremény hozzáadva.
+2021.11.23 02:04:24 +01:00 - A(z) 20 Id-jű nyereményhez a 8 Id-jú ticket hozzáadva.
+2021.11.23 02:04:24 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=27
+2021.11.23 02:04:24 +01:00 - A(z) 27 Id-jű tickethez a 21 Id-jú nyeremény hozzáadva.
+2021.11.23 02:04:24 +01:00 - A(z) 21 Id-jű nyereményhez a 27 Id-jú ticket hozzáadva.
+2021.11.23 02:04:24 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=36
+2021.11.23 02:04:24 +01:00 - A(z) 36 Id-jű tickethez a 22 Id-jú nyeremény hozzáadva.
+2021.11.23 02:04:24 +01:00 - A(z) 22 Id-jű nyereményhez a 36 Id-jú ticket hozzáadva.
+2021.11.23 02:04:24 +01:00 - Exit AutoDraw
+
+2021.11.23 02:14:25 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:14:25 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 02:14:25 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=7
+2021.11.23 02:14:25 +01:00 - A(z) 7 Id-jű tickethez a 17 Id-jú nyeremény hozzáadva.
+2021.11.23 02:14:25 +01:00 - A(z) 17 Id-jű nyereményhez a 7 Id-jú ticket hozzáadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemény frissítésekor: UPDATE `prizes` SET `winner_ticket_id`='7' WHERE `id`='17'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=40
+2021.11.23 02:14:25 +01:00 - A(z) 40 Id-jű tickethez a 18 Id-jú nyeremény hozzáadva.
+2021.11.23 02:14:25 +01:00 - A(z) 18 Id-jű nyereményhez a 40 Id-jú ticket hozzáadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemény frissítésekor: UPDATE `prizes` SET `winner_ticket_id`='40' WHERE `id`='18'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=17
+2021.11.23 02:14:25 +01:00 - A(z) 17 Id-jű tickethez a 19 Id-jú nyeremény hozzáadva.
+2021.11.23 02:14:25 +01:00 - A(z) 19 Id-jű nyereményhez a 17 Id-jú ticket hozzáadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemény frissítésekor: UPDATE `prizes` SET `winner_ticket_id`='17' WHERE `id`='19'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=35
+2021.11.23 02:14:25 +01:00 - A(z) 35 Id-jű tickethez a 20 Id-jú nyeremény hozzáadva.
+2021.11.23 02:14:25 +01:00 - A(z) 20 Id-jű nyereményhez a 35 Id-jú ticket hozzáadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemény frissítésekor: UPDATE `prizes` SET `winner_ticket_id`='35' WHERE `id`='20'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=9
+2021.11.23 02:14:25 +01:00 - A(z) 9 Id-jű tickethez a 21 Id-jú nyeremény hozzáadva.
+2021.11.23 02:14:25 +01:00 - A(z) 21 Id-jű nyereményhez a 9 Id-jú ticket hozzáadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemény frissítésekor: UPDATE `prizes` SET `winner_ticket_id`='9' WHERE `id`='21'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=24
+2021.11.23 02:14:25 +01:00 - A(z) 24 Id-jű tickethez a 22 Id-jú nyeremény hozzáadva.
+2021.11.23 02:14:25 +01:00 - A(z) 22 Id-jű nyereményhez a 24 Id-jú ticket hozzáadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemény frissítésekor: UPDATE `prizes` SET `winner_ticket_id`='24' WHERE `id`='22'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Exit AutoDraw
+
+2021.11.23 02:16:12 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:16:12 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 02:16:12 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=17; Ticket ID=7
+2021.11.23 02:16:12 +01:00 - A(z) 7 Id-jű tickethez a 17 Id-jú nyeremény hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 17 Id-jű nyereményhez a 7 Id-jú ticket hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 29 Id-jú esemény átállítva SORSOLVA állapotra
+2021.11.23 02:16:12 +01:00 - Sorsolás eredménye: Esemény ID=29; Nyeremény ID=18; Ticket ID=10
+2021.11.23 02:16:12 +01:00 - A(z) 10 Id-jű tickethez a 18 Id-jú nyeremény hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 18 Id-jű nyereményhez a 10 Id-jú ticket hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 29 Id-jú esemény átállítva SORSOLVA állapotra
+2021.11.23 02:16:12 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=19; Ticket ID=2
+2021.11.23 02:16:12 +01:00 - A(z) 2 Id-jű tickethez a 19 Id-jú nyeremény hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 19 Id-jű nyereményhez a 2 Id-jú ticket hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 30 Id-jú esemény átállítva SORSOLVA állapotra
+2021.11.23 02:16:12 +01:00 - Sorsolás eredménye: Esemény ID=30; Nyeremény ID=20; Ticket ID=32
+2021.11.23 02:16:12 +01:00 - A(z) 32 Id-jű tickethez a 20 Id-jú nyeremény hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 20 Id-jű nyereményhez a 32 Id-jú ticket hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 30 Id-jú esemény átállítva SORSOLVA állapotra
+2021.11.23 02:16:12 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=21; Ticket ID=18
+2021.11.23 02:16:12 +01:00 - A(z) 18 Id-jű tickethez a 21 Id-jú nyeremény hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 21 Id-jű nyereményhez a 18 Id-jú ticket hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 31 Id-jú esemény átállítva SORSOLVA állapotra
+2021.11.23 02:16:12 +01:00 - Sorsolás eredménye: Esemény ID=31; Nyeremény ID=22; Ticket ID=9
+2021.11.23 02:16:12 +01:00 - A(z) 9 Id-jű tickethez a 22 Id-jú nyeremény hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 22 Id-jű nyereményhez a 9 Id-jú ticket hozzáadva.
+2021.11.23 02:16:12 +01:00 - A(z) 31 Id-jú esemény átállítva SORSOLVA állapotra
+2021.11.23 02:16:12 +01:00 - Exit AutoDraw
+
+2021.11.23 02:16:56 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:16:56 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 02:16:56 +01:00 - Exit AutoDraw
+
+2021.11.23 02:17:46 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:17:46 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 02:17:46 +01:00 - Exit AutoDraw
