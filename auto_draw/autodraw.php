@@ -53,24 +53,24 @@ function SendEmail($winner)
     $message = file_get_contents('tmsg.html');
     foreach ($emailData as $field=>$content) { $message = str_replace('{'.$field.'}', $content, $message); }
 
-    $mail=new PHPMailer(true);
+    $mail = new PHPMailer(true);
     $mail->setLanguage('hu','PHPMailer/language/');
-    //$mail->SMTPDebug='2';
-    $mail->CharSet = 'UTF-8';
     $mail->isSMTP();
-    $mail->SMTPAuth=true;
-    $mail->Host=HOST;
-    $mail->Username=USERNAME;
-    $mail->Password=PASSWORD;
-    $mail->SMTPSecure=PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port=465;
-    $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
-    $mail->addAddress($winnerEmail);
-    $mail->Subject='Ticketto - Értesítés a sorsolás eredményéről';
-    $mail->msgHTML($message);
-    $mail->AltBody='Ezt az üzenetet azért kaptad, mert nyert azegyik szelvényed a ticketto.hu-n.\n
+    $mail->CharSet    = 'UTF-8';
+    $mail->SMTPDebug  = '0';     // 0: off (set 2 to check process)
+    $mail->SMTPAuth   = true;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Host       = HOST;
+    $mail->Port       = PORT;
+    $mail->Username   = USERNAME;
+    $mail->Password   = PASSWORD;
+    $mail->Subject    = 'Ticketto - Értesítés a sorsolás eredményéről';
+    $mail->AltBody    = 'Ezt az üzenetet azért kaptad, mert nyert azegyik szelvényed a ticketto.hu-n.\n
         A részletekért kérjük, lépj be a fiókodba a ticketto.hu oldalon!\n
         Üdvözlettel, Ticketto.hu';
+    $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
+    $mail->addAddress($winnerEmail);
+    $mail->msgHTML($message);
     if (!$mail->send()) { addToLogger('Nyertes nincs értesítve. Hiba: '.$mail->ErrorInfo, ERROR); return false; }
     return true;
 }
@@ -123,31 +123,31 @@ function DrawPrize($eventId, $prize)
     global $database;
     global $drawableTickets;
     if (!SelectTickets($eventId)) { unset($GLOBALS['drawableTickets']); return 0; }
+    $toWin = rand(0, (count($drawableTickets) - 1));
     /* DEBUG:
     echo("<br>prize: "); var_dump($prize);
     echo("<br>drawableTickets: <pre>"); var_dump($drawableTickets); echo("</pre>");
+    echo("<br>ToWin=".$toWin);
      */
-    $toWin = rand(0, (count($drawableTickets) - 1));
-    echo("ToWin=".$toWin."<br>");
     $winner = new DrawResult();
     $winner->eventId = $eventId;
     $winner->prizeId = intval($prize["id"]);
     $winner->ticketId = intval($drawableTickets[$toWin]["id"]);
     $winner->userId = intval($drawableTickets[$toWin]["user"]);
-    unset($GLOBALS['drawableTickets']);
     $addPrizeToTicket = "UPDATE `tickets`
-        SET `won_prize_id`='$winner->prizeId'
-        WHERE `id`='$winner->ticketId';";
+        SET `won_prize_id` = '$winner->prizeId'
+        WHERE `id` = '$winner->ticketId';";
     $addTicketToPrize = "UPDATE `prizes`
-        SET `winner_ticket_id`='$winner->ticketId'
-        WHERE `id`='$winner->prizeId';";
-    if (!$database->query($addPrizeToTicket)) { return 0; }
-    if (!$database->query($addTicketToPrize)) { return 0; }
+        SET `winner_ticket_id` = '$winner->ticketId'
+        WHERE `id` = '$winner->prizeId';";
+    if (!$database->query($addPrizeToTicket)) { unset($GLOBALS['drawableTickets']); return 0; }
+    if (!$database->query($addTicketToPrize)) { unset($GLOBALS['drawableTickets']); return 0; }
     addToLogger("Sorsolas: EventID=".$winner->eventId.
         "; PrizeID=".$winner->prizeId.
         "; TicketID=".$winner->ticketId.
         "; UserID=".$winner->userId, INFO);
     if (SendEmail($winner)) { addToLogger('Nyertes értesítve.', INFO); }
+    unset($GLOBALS['drawableTickets']);
     return 1;
 }
 
@@ -163,12 +163,12 @@ function DrawEvent($event)
     echo("<br>drawablePrizes: <pre>"); var_dump($drawablePrizes); echo("</pre>");
      */
     foreach ($drawablePrizes as $prize) { $winCounter += DrawPrize($eventId, $prize); }
-    unset($GLOBALS['drawablePrizes']);
     if ($winCounter === 0) { return 0; }
     $setEventDrawed = "UPDATE `events`
         SET `flag` = '3'
-        WHERE `id`='$eventId';";
-    if (!$database->query($setEventDrawed)) { return 0; }
+        WHERE `id` = '$eventId';";
+    if (!$database->query($setEventDrawed)) { unset($GLOBALS['drawablePrizes']); return 0; }
+    unset($GLOBALS['drawablePrizes']);
     return 1;
 }
 
@@ -187,16 +187,16 @@ function Draw()
 }
 
 
-addToLogger("START Ticketto AutoDraw", INFO);
+addToLogger("START AutoDraw", INFO);
 $database = new mysqli($tserver, $tdbuser, $tdbpassword, $tdbname);
 if (!$database->connect_error)
 {
-    addToLogger("Adatbazis: sikeres csatlakozás.", INFO);
+    addToLogger("Adatbázis: sikeres csatlakozás.", INFO);
     srand();
     if (!Draw()) { addToLogger("Nem történt sorsolás.", INFO); }
     $database->close();
 }
-else { addToLogger("Nem sikerült csatlakozni az adatbázishoz. Hiba:".$database->connect_error, ERROR); }
+else { addToLogger("Adatbázis: sikertelen csatlakozás. Hiba:".$database->connect_error, ERROR); }
 addToLogger("EXIT AutoDraw", INFO);
 writeLog();
 ?>

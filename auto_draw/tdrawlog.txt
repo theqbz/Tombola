@@ -2577,3 +2577,5 @@ Table 'ticketto.event' doesn't exist
 2021.11.24 02:10:21 +01:00 - Exit AutoDraw
 
 2021.11.24 09:48:19 +01:00 - Üzenet elküldve külön authdata.php-vel
+
+2021.11.24 12:00:32 +01:00 - Üzenet elküldve

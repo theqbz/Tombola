@@ -21,7 +21,7 @@ $mail->Username=USERNAME;
 $mail->Password=PASSWORD;
 $mail->SMTPAuth=true;
 $mail->SMTPSecure=PHPMailer::ENCRYPTION_SMTPS;
-$mail->Port=465;
+$mail->Port=PORT;
 
 $mail->setFrom('admin@ticketto.hu', 'Ticketto Admin');
 $mail->addAddress('borsodi.zoltan@gmail.com');
