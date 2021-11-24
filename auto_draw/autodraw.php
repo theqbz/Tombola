@@ -66,10 +66,12 @@ function SendEmail($winner)
     $mail->Port=465;
     $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
     $mail->addAddress($winnerEmail);
-    $mail->Subject='Ticketto - Értesítés a sorsolás eredményérõl';
+    $mail->Subject='Ticketto - Ã‰rtesÃ­tÃ©s a sorsolÃ¡s eredmÃ©nyÃ©rÅ‘l';
     $mail->msgHTML($message);
-    $mail->AltBody='Ezt az üzenetet azért kaptad, mert nyert azegyik szelvényed a ticketto.hu-n. A részletekért kérjük, lépj be a fiókodba a ticketto.hu oldalon! Üdvözlettel, Ticketto.hu';
-    if (!$mail->send()) { addToLogger('Nyertes nincs ertesitve. Hiba: '.$mail->ErrorInfo, ERROR); return false; }
+    $mail->AltBody='Ezt az Ã¼zenetet azÃ©rt kaptad, mert nyert azegyik szelvÃ©nyed a ticketto.hu-n.\n
+        A rÃ©szletekÃ©rt kÃ©rjÃ¼k, lÃ©pj be a fiÃ³kodba a ticketto.hu oldalon!\n
+        ÃœdvÃ¶zlettel, Ticketto.hu';
+    if (!$mail->send()) { addToLogger('Nyertes nincs Ã©rtesÃ­tve. Hiba: '.$mail->ErrorInfo, ERROR); return false; }
     return true;
 }
 
@@ -145,7 +147,7 @@ function DrawPrize($eventId, $prize)
         "; PrizeID=".$winner->prizeId.
         "; TicketID=".$winner->ticketId.
         "; UserID=".$winner->userId, INFO);
-    if (SendEmail($winner)) { addToLogger('Nyertes ertesitve', INFO); }
+    if (SendEmail($winner)) { addToLogger('Nyertes Ã©rtesÃ­tve.', INFO); }
     return 1;
 }
 
@@ -185,16 +187,16 @@ function Draw()
 }
 
 
-addToLogger("Start Ticketto AutoDraw", INFO);
+addToLogger("START Ticketto AutoDraw", INFO);
 $database = new mysqli($tserver, $tdbuser, $tdbpassword, $tdbname);
 if (!$database->connect_error)
 {
-    addToLogger("Adatbazis: sikeres csatlakozas.", INFO);
+    addToLogger("Adatbazis: sikeres csatlakozÃ¡s.", INFO);
     srand();
-    if (!Draw()) { addToLogger("Nem tortent sorsolas.", INFO); }
+    if (!Draw()) { addToLogger("Nem tÃ¶rtÃ©nt sorsolÃ¡s.", INFO); }
     $database->close();
 }
-else { addToLogger("Nem sikerult csatlakozni az adatbazishoz:".$database->connect_error, ERROR); }
-addToLogger("Exit AutoDraw", INFO);
+else { addToLogger("Nem sikerÃ¼lt csatlakozni az adatbÃ¡zishoz. Hiba:".$database->connect_error, ERROR); }
+addToLogger("EXIT AutoDraw", INFO);
 writeLog();
 ?>

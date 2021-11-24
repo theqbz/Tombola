@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="HU-hu">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>TICKETTO nyertes értesítő email</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        small {
+            font-style:italic;
+        }
+    </style>
 </head>
 <body>
     <h1>Kedves {NAME}!</h1>
-    <a>Ezúton gratulál neked a Ticketto, kisorsolták az egyik tombolaszelvényedet!<br>
-        A részletekért lépj be a Ticketto fiókodba a ticketto.hu oldalon!</a>
+    <p>Ezt az üzenetet azért kaptad, mert nyert az egyik tombolaszelvényed a Ticketto-n.<br>
+        A részletekért lépj be a Ticketto fiókodba a <a href="ticketto.hu" target="_blank">ticketto.hu</a> oldalon!</p>
     <ul>
         <li>Játék: <b>{EVENTTITLE}</b></li>
         <li>A nyertes szelvény: <b>{TICKET}</b></li>
     </ul>
+    <p>Üdvözlettel, Ticketto.hu</p>
+    <small>Ez egy automatikusan küldött levél, ne válaszolj rá!</small>
 </body>
 </html>
