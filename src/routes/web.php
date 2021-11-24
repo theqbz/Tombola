@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\auth\ResendEmailController;
@@ -32,7 +31,8 @@ Route::post('/resendemail/temp', [ResendEmailController::class, 'resendTempEmail
 Route::get('/verified', [PageController::class, 'getPage'])->name('verified');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
-    Route::get('/event/mytickets',[EventController::class,'myTickets'])->name('event.mytickets');
+    Route::get('/mytickets',[UserController::class,'myTickets'])->name('mytickets');
+    Route::get('/myprizes',[UserController::class,'myPrizes'])->name('myprizes');
 
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::get('/profile',[UserController::class,'index'])->name('profile.index');
@@ -51,7 +51,13 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
 
     Route::get('/event/ticket/{id}',[EventController::class,'showTicketForm'])->name('event.ticket');
+
     Route::post('/event/addticket',[EventController::class,'addTicket'])->name('event.addticket');
+
+    Route::post('/event/color',[EventController::class,'showTicketColorForm'])->name('event.color');
+    Route::post('/event/addcolor',[EventController::class,'addTicketColor'])->name('event.addcolor');
+
+    Route::post('/event/number',[EventController::class,'showTicketNumberForm'])->name('event.number');
 
     Route::get('/event/{id}',[EventController::class,'show'])->name('event.show')->where('id', '[0-9]+');
 });
@@ -66,5 +72,13 @@ Route::post('/qrcoderegister', [RegisterController::class, 'registerTemp'])->nam
 
 
 Route::get('/terms-and-conditions', [PageController::class, 'getPage'])->name('terms-and-conditions');
+
+Route::get('initmigration', function () {
+
+    \Artisan::call('migrate:fresh');
+
+    dd("Migration succeded!");
+
+});
 
 

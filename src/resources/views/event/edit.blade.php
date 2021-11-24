@@ -83,7 +83,7 @@
                                     <p>{{$image->prize_description}}</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <img style="max-width: 100px;" id="prize" src="{{asset('uploads/events/'.$image->prize_img_url)}}" alt="{{$image->prize_img_url}}" title="{{$image->prize_img_url}}" width="250">
+                                    <img style="max-width: 100px;" id="prize" src="{{asset('uploads/events/'.$image->prize_img_url)}}" alt="{{$image->prize_title}}" title="{{$image->prize_title}}" width="250">
                                 </div>
                             </div>
                         @endforeach

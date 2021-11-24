@@ -32,7 +32,7 @@ class ResendEmailController extends Controller
             $user = User::findOrFail($request->input('id'));
         }
 
-        $details = ['title' => __('Login credentials')."-".config('app.name'), 'url' => URL::to('/') . '/dashboard/' . $user->hash];
+        $details = ['title' => __('Login credentials')."-".config('app.name'), 'url' => URL::to('/') . '/dashboard/' . $user->dashboard_url];
         Mail::to($user->email)->send(new \App\Mail\TempMail($details));
         return view('auth.verifyTemp')->with('resent', true);
     }

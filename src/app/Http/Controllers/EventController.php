@@ -41,7 +41,7 @@ class EventController extends Controller
     {
         $user = Auth::user();
         if ($user->canCreateEvent()) {
-            return view('event.create');
+            return view('event.create')->with(['colors' => EventTicketGroup::getColors()]);
         } else {
             return view('user.index', $user)->with(['error' => __('You need to fill all data to create Event!'),
                 'user' => $user]);
@@ -72,6 +72,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+
         $upladedFiles = array();
         $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
             'dt_end_full' => $request->input('dt_end') . ' ' . $request->input('dt_end_time')]);
@@ -134,24 +135,31 @@ class EventController extends Controller
             $request->flash();
             return back()->withErrors($this->validator($request->all()))->with(['images' => $upladedFiles]);
         }
-
         //Create Event
         $event = Event::create(['title' => $request->input('title'),
             'description' => $request->input('description'),
             'location' => $request->input('location'),
             'dt_start' => $request->input('dt_start_full'),
             'dt_end' => $request->input('dt_end_full'),
-            'is_public' => $request->input('is_public'),
-            'auto_ticket' => $request->input('auto_ticket')]);
+            'is_public' => $request->input('is_public')]);
 
         $this->generateAccesses($event);
 
-        if ($request->input('auto_ticket')) {
-            //@TODO limit
-            $eventTicketGroup = EventTicketGroup::create(['event_id' => $event->id, 'ticket_color' => 'default',]);
+        if ($event->is_public && $request->input('auto_ticket')) {
+            $eventTicketGroup = EventTicketGroup::create(['event_id' => $event->id, 'limit' => $request->input('limit'), 'ticket_color' => 'default']);
             $eventTicketGroup->setRandomColor();
         } else {
-            //@TODO color,number chose
+
+            $event->auto_ticket = $request->input('auto_ticket');
+            $event->save();
+            if ($request->input('chosable_color')) {
+                foreach ($request->input('colors') as $color) {
+                    EventTicketGroup::create(['event_id' => $event->id, 'limit' => $request->input('limit'), 'ticket_color' => $color]);
+                }
+            } else {
+                $eventTicketGroup = EventTicketGroup::create(['event_id' => $event->id, 'limit' => $request->input('limit'), 'ticket_color' => 'default',]);
+                $eventTicketGroup->setRandomColor();
+            }
         }
         if (!File::exists(public_path('uploads/events'))) {
             File::makeDirectory(public_path('uploads/events'), 0755, true, true);
@@ -257,13 +265,6 @@ class EventController extends Controller
 
         return view('event.myevents', ['events' => $events]);
     }
-    public function myTickets(Request $request)
-    {
-        $status = (!is_null($request->input('status')))?$request->input('status'):'active';
-        $eventTickets = Auth::user()->listTickets($status);
-
-        return view('user.tickets', ['eventTickets' => $eventTickets]);
-    }
 
     public function showTicketForm($id)
     {
@@ -278,55 +279,151 @@ class EventController extends Controller
 
     }
 
-    public function checkEventTicket($event)
+    public function getEventAutoTicket($event)
     {
         $args = array();
-
-        if ($event->auto_ticket) {
-            $eventTicketGroup = $event->eventTicketGroups->first();
-            $limit = $eventTicketGroup->limit;
-            $color = $eventTicketGroup->ticket_color;
-            $args['color'] = $color;
-            $args['value'] = $this->nextTicket($event, $color, $limit);
-            if (is_null($args['value'])) {
-                return null;
-            }
-            return $args;
+        $eventTicketGroup = $event->eventTicketGroups->first();
+        $limit = $eventTicketGroup->limit;
+        $color = $eventTicketGroup->ticket_color;
+        $args['color'] = $color;
+        $args['value'] = $this->nextAutoTicket($event, $color, $limit);
+        if (is_null($args['value'])) {
+            return null;
         }
+        return $args;
     }
 
-    public function nextTicket($event, $color, $limit)
+    public function checkUnlimitedTicket($event, $number, $color = null)
+    {
+        $eventTicketGroup = $event->eventTicketGroups->first();
+        $limit = $eventTicketGroup->limit;
+        if ($limit === 0) {
+            $tickets = array();
+            $userEvents = $event->userEvents->all();
+            foreach ($userEvents as $userEvent) {
+                if (!is_null($color)) {
+                    $tickets = array_merge($tickets, $userEvent->tickets->where('color', $color)->pluck('value')->all());
+                } else {
+                    $tickets = array_merge($tickets, $userEvent->tickets->pluck('value')->all());
+                }
+            }
+            return !array_search($number, $tickets);
+        }
+
+        return true;
+    }
+
+    public function nextAutoTicket($event, $color, $limit)
     {
         $tickets = array();
         $userEvents = $event->userEvents->all();
         foreach ($userEvents as $userEvent) {
             $tickets = array_merge($tickets, $userEvent->tickets->where('color', $color)->all());
         }
-        if ($limit != 0 && end($tickets)->value + 1 > $limit) {
+        $lastValue = end($tickets) ? end($tickets)->value + 1 : 0;
+        if ($limit != 0 && $lastValue > $limit) {
             return null;
         } else {
             return end($tickets)['value'] + 1;
         }
 
-
     }
 
-    public function availableTickets($color)
+    public function showTicketColorForm(Request $request)
     {
+        $event = Event::find($request->input('id'));
+
+        $user = User::where('hash', $request->input('hash'))->first();
+
+        if (!$user || !$event) {
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
+        }
+        if ($user->isEditor($event->id)) {
+            return redirect()->route('event.show', ['id' => $event->id])->with(['event' => $event]);
+        } else {
+            $colors = $event->getAvailableColors();
+            return view('event.ticketColor')->with(['event' => $event, 'uid' => $user->id, 'colors' => $colors]);
+        }
+    }
+
+    public function addTicketColor(Request $request)
+    {
+        $event = Event::find($request->input('id'));
+
+        $user = User::find($request->input('uid'));
+        if (!$user || !$event) {
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
+        }
+
+        if ($user->isEditor($event->id)) {
+            return redirect()->route('event.show', ['id' => $event->id])->with(['event' => $event]);
+        } else {
+
+            if ($color = $request->input('color')) {
+                $tickets = $event->getAvailableTickets($color);
+                return view('event.ticketNumber')->with(['event' => $event, 'color' => $color, 'tickets' => $tickets, 'uid' => $user->id]);
+            } else {
+                $tickets = $event->getAvailableTickets();
+                return view('event.ticketNumber')->with(['event' => $event, 'tickets' => $tickets, 'uid' => $user->id]);
+            }
+        }
+    }
+
+    public function showTicketNumberForm(Request $request)
+    {
+
+        $event = Event::find($request->input('id'));
+
+        $user = User::where('hash', $request->input('hash'))->first();
+
+        if (!$user || !$event) {
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
+        }
+
+        $tickets = $event->getAvailableTickets();
+
+        return view('event.ticketNumber')->with(['event' => $event, 'tickets' => $tickets, 'uid' => $user->id]);
+
 
     }
 
     public function addTicket(Request $request)
     {
-        $event = Event::find($request->input('id'))->first();
-        $user = User::where('hash', $request->input('hash'))->first();
-        if(!$user) {
-            return back()->withErrors(['error' => __('User not found!')]);
+
+        $event = Event::find($request->input('id'));
+        if ($request->input('uid')) {
+            $user = User::find($request->input('uid'));
+        } else {
+            $user = User::where('hash', $request->input('hash'))->first();
+        }
+        if (!$user) {
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
         }
         if (!$user->isEditor($event->id)) {
-            $args = $this->checkEventTicket($event);
+
+            if ($event->auto_ticket) {
+                $args = $this->getEventAutoTicket($event);
+            } else {
+                $number = $request->input('number');
+                $color = null;
+                if ($request->input('color')) {
+                    $color = $request->input('color');
+                    $args['color'] = $color;
+                }else {
+                    $eventGroup = $event->eventTicketGroups->first();
+                    $args['color']= $eventGroup->ticket_color;
+                }
+                if ($this->checkUnlimitedTicket($event, $number, $color)) {
+                    $args['value'] = $number;
+                } else {
+                    $args = null;
+                }
+
+
+            }
+
             if (is_null($args)) {
-                return back()->withErrors(['error' => __('You reached the limit of tickets')]);
+                return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
             }
 
             $userEvent = UserEvent::where(['user_id' => $user->id, 'event_id' => $event->id])->first();
@@ -335,22 +432,19 @@ class EventController extends Controller
             }
             $args['user_event_id'] = $userEvent->id;
             Ticket::create($args);
-        }else {
+
+            if (Auth::user()->isEditor($event->id)) {
+                return redirect()->route('event.ticket', ['id' => $event->id])->with('success', __('Ticket successfully added!'));
+            } else {
+                return redirect()->route('mytickets');
+            }
+
+        } else {
             return back()->withErrors(['error' => __('Editors can\'t get tickets')]);
         }
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
     private function sanitize_file_name($filename)
     {

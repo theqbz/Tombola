@@ -17,19 +17,24 @@ class EventTicketGroup extends Model
         'sold'
     ];
 
-    private $colors = array('Piros','Fehér','Zöld','Sárga');
+    const COLORS = array('red'=>'Piros','white'=>'Fehér','green'=>'Zöld','yellow'=>'Sárga');
 
     public function event() {
         return $this->belongsTo(Event::class);
     }
 
     public function getColors() {
-        return $this->colors;
+        return self::COLORS;
     }
 
     public function setRandomColor() {
-        $idx = rand(0,(count($this->colors)-1));
-        $this->ticket_color = $this->colors[$idx];
+        $colorKeys = array();
+        foreach (self::COLORS as $colorKey => $colorFull) {
+            $colorKeys[] = $colorKey;
+        }
+        $idx = rand(0,(count($colorKeys)-1));
+        $this->ticket_color = $colorKeys[$idx];
         $this->save();
     }
+
 }

@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-md-6 text-right">
                             <a class="btn btn-link" href="{{route('qrcodereg')}}">
-                                {{ __('Login with QR code') }}
+                                {{ __('Register as temporary user') }}
                             </a>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>

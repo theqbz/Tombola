@@ -95,14 +95,17 @@ class UserController extends Controller {
         return back()->with(['success' => __('Saved')]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id) {
-        //
+    public function myTickets(Request $request)
+    {
+        $status = (!is_null($request->input('status')))?$request->input('status'):'active';
+        $eventTickets = Auth::user()->listTickets($status);
+
+        return view('user.tickets', ['eventTickets' => $eventTickets,'status'=>$status]);
     }
+
+    public function myPrizes() {
+        $eventPrizes = Auth::user()->listPrizes();
+        return view('user.prizes', ['eventPrizes' => $eventPrizes]);
+    }
+
 }

@@ -87,14 +87,14 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function listTickets($ticketStatus = 'active')
     {
+
         $tickets = array();
-        $userEvents = UserEvent::where('user_id', $this->id)->get()->all();
-        foreach ($userEvents as $userEvent) {
+        foreach ($this->userEvents()->get()->all() as $userEvent) {
             switch ($ticketStatus) {
                 case 'active':
                     $event = Event::find($userEvent->event_id)->whereDate('dt_end', '>', date('Y-m-d H:i'))->first();
                     break;
-                case 'inactive':
+                case 'passive':
                     $event = Event::find($userEvent->event_id)->whereDate('dt_end', '<', date('Y-m-d H:i'))->first();
                     break;
             }
@@ -106,6 +106,26 @@ class User extends Authenticatable implements MustVerifyEmail
             }
         }
         return $tickets;
+    }
+
+    public function listPrizes()
+    {
+        $eventPrizes = array();
+        foreach ($this->userEvents()->get()->all() as $userEvent) {
+            $tickets = Ticket::where('user_event_id', $userEvent->id)->get()->all();
+            foreach ($tickets as $ticket) {
+                if (isset($ticket->won_prize_id)) {
+                    $event = Event::find($userEvent->event_id);
+                    $prizes = Prize::find($ticket->won_prize_id)->get()->all();
+                    $eventPrizes[] = array(
+                        'event' => $event,
+                        'prizes' => $prizes
+                    );
+                }
+            }
+        }
+
+        return $eventPrizes;
     }
 
     /**

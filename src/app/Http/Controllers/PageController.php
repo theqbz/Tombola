@@ -38,7 +38,7 @@ class PageController extends Controller
     public function dashboardTemp(Request $request)
     {
         $hash = $request->route('hash');
-        $user = User::where('hash', $hash)->first();
+        $user = User::where('dashboard_url', $hash)->first();
         if ($user) {
             return view('pages.dashboardTemp')->with('user', $user);
         } else {

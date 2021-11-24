@@ -56,14 +56,24 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2">
-                            {{Form::radioList(['id'=>'is_public','name'=>'is_public','label'=>__('Event Type'),'radios'=>array(__('Public')=>1,__('Private')=>0),'checked'=>1])}}
+                        <div class="col-md-3 form-group">
+                            {{Form::label('limit',__('Limit of tickets'))}}<span style="font-size:12px">(0 ha nincs limit)</span>
+                            {{Form::number('limit',old('limit',0),array('class'=>'form-control','min'=>0))}}
                         </div>
                         <div class="col-md-2">
-                            {{Form::radioList(['id'=>'auto_ticket','name'=>'auto_ticket','label'=>__('Draw type'),'radios'=>array(__('Auto')=>1,__('Manual')=>0),'checked'=>1])}}
+                            {{Form::radioList(['id'=>'is_public','name'=>'is_public','label'=>__('Event Type'),'radios'=>array(__('Public')=>1,__('Private')=>0),'checked'=>old('is_public',1)])}}
                         </div>
-                        <div class="col-md-2 d-none">
-                            {{Form::radioList(['id'=>'chosable_color','name'=>'chosable_color','label'=>__('Multiple colors'),'radios'=>array(__('Yes')=>1,__('No')=>0),'checked'=>0])}}
+                        <div id="ticket_chose_box_draw" class="col-md-2 {{(old('is_public'))?'':'d-none'}}">
+                            {{Form::radioList(['id'=>'auto_ticket','name'=>'auto_ticket','label'=>__('Draw type'),'radios'=>array(__('Auto')=>1,__('Manual')=>0),'checked'=>old('auto_ticket',1)])}}
+                        </div>
+                        <div id="ticket_chose_box_color-check" class="col-md-2 {{(old('auto_ticket'))?'':'d-none'}}">
+                            {{Form::radioList(['id'=>'chosable_color','name'=>'chosable_color','label'=>__('Multiple colors'),'radios'=>array(__('Yes')=>1,__('No')=>0),'checked'=>old('chosable_color',0)])}}
+                        </div>
+                        <div id="ticket_chose_box_color-select" class="col-md-2 d-none">
+                            <div class="form-group">
+                            {{Form::label('colors',__('Colors'))}}
+                            {{Form::select('colors[]', $colors,old('colors'),array('class' => 'form-control','multiple'=>true))}}
+                            </div>
                         </div>
                     </div>
                     <p class="mt-5">{{__('Prizes')}}</p>
@@ -130,6 +140,7 @@
     </div>
 @endsection
 @push('scripts')
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
     <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
@@ -206,8 +217,6 @@
                     };
                 }
 
-
-
                 {{--let formData = new FormData();--}}
                 {{--formData.append('title',$('#prize_title_add').val())--}}
                 {{--formData.append('image',$('#prize_image_add')[0].files[0],'prize')--}}
@@ -223,8 +232,41 @@
                 {{--    }--}}
                 {{--})--}}
 
-            })
+            });
 
+
+            //init
+            if($('input[name=is_public]:checked').val() === '0') {
+                $('#ticket_chose_box_draw').removeClass('d-none');
+            }
+            if($('input[name=auto_ticket]:checked').val() === '0') {
+                $('#ticket_chose_box_color-check').removeClass('d-none');
+            }
+            if($('input[name=chosable_color]:checked').val() === '1') {
+                $('#ticket_chose_box_color-select').removeClass('d-none');
+            }
+
+            $('input[name=is_public]').on('change',function() {
+                if(this.value === '1') {
+                    $('#ticket_chose_box_draw').addClass('d-none');
+                }else {
+                    $('#ticket_chose_box_draw').removeClass('d-none');
+                }
+            });
+             $('input[name=auto_ticket]').on('change',function() {
+                 if(this.value === '1') {
+                     $('#ticket_chose_box_color-check').addClass('d-none');
+                 }else {
+                     $('#ticket_chose_box_color-check').removeClass('d-none');
+                 }
+             });
+             $('input[name=chosable_color]').on('change',function() {
+                 if(this.value === '1') {
+                     $('#ticket_chose_box_color-select').removeClass('d-none');
+                 }else {
+                     $('#ticket_chose_box_color-select').addClass('d-none');
+                 }
+             });
         })
     </script>
 @endpush

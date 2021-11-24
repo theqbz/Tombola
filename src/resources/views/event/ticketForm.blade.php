@@ -13,6 +13,11 @@
                         </div>
                     </div>
                     <div class="card-body">
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
                         @error('error')
                         <div class="alert alert-danger">
                             <strong>{{ $message }}</strong>
@@ -20,16 +25,23 @@
                         @enderror
                         @if(empty($errors->any()))
                             <p>Olvassa be a játékos qr kódját, vagy írja be az azonosítóját!</p>
-                            <div class="box-access m-auto col-md-6 offset-md-3">
-                                {{Form::model($event, array('route' => array('event.addticket', ['id'=>$event->id]),'enctype'=>"multipart/form-data"))}}
-                                {{Form::QrCodeReader(['name'=>'userhash','id'=>'userhash','label'=>__('Access code')])}}
-                                <div class="form-group text-md-right mt-2">
-                                    @php
-                                        $text = "Add Ticket";
-                                            if($event->auto_ticket) {
-                                                $text = "Next";
+                                @php
+                                    $text = 'Add Ticket';
+                                    $route = 'event.addticket';
+                                        if(!$event->auto_ticket) {
+                                            $text = 'Next';
+                                            if($event->hasMultipleColors()) {
+                                                $route = 'event.color';
+                                            }else {
+                                                $route = 'event.number';
                                             }
-                                    @endphp
+                                        }
+                                @endphp
+                            <div class="box-access m-auto col-md-6 offset-md-3">
+                                {{Form::model($event, array('route' => array($route),'enctype'=>"multipart/form-data"))}}
+                                {{Form::QrCodeReader(['name'=>'hash','id'=>'hash','label'=>__('Access code')])}}
+                                <div class="form-group text-md-right mt-2">
+                                    {{Form::hidden('id',$event->id)}}
                                     {{Form::submit(__($text),array('class'=>'btn btn-primary'))}}
                                 </div>
                                 {{ Form::close() }}

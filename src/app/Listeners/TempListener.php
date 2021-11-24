@@ -19,7 +19,7 @@ class TempListener
      */
     public function handle(TemporaryRegistered $event)
     {
-            $details = ['title' => __('Login credentials')."-".config('app.name'), 'url' => URL::to('/') . '/dashboard/' . $event->user->hash];
+            $details = ['title' => __('Login credentials')."-".config('app.name'), 'url' => URL::to('/') . '/dashboard/' . $event->user->dashboard_url];
             Mail::to($event->user->email)->send(new \App\Mail\TempMail($details));
     }
 }

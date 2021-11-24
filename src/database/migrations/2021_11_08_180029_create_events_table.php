@@ -19,10 +19,11 @@ class CreateEventsTable extends Migration
             $table->string('description');
             $table->string('location');
             $table->string('hash')->nullable();
+            $table->integer('status')->default(0);
             $table->string('dt_start')->useCurrent();
             $table->string('dt_end')->useCurrent();
-            $table->boolean('is_public');
-            $table->boolean('auto_ticket');
+            $table->boolean('is_public')->default(1);
+            $table->boolean('auto_ticket')->default(1);
 
 
         });

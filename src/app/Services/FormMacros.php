@@ -90,6 +90,7 @@ class FormMacros extends FormBuilder
     {
         $this->setData($attributes);
 
+
         $html = '<div class="input-group">';
         if (isset($this->attr['label'])) {
             $html .= '<label style="display:block;width:100%" for="' . $this->attr["name"] . '">' . $this->attr["label"] . '</label>';
@@ -103,7 +104,7 @@ class FormMacros extends FormBuilder
             if (!is_null($checkedValue) && $checkedValue == $value) {
                 $checked = ' checked ';
             }
-            $html .= '<div class="form-control mb-1"><span>' . $label . '</span>&nbsp;<input ' . $checked . ' id="' . ($this->attr["name"] . "_" . $idx) . '" class="radio-list-item" type="radio" name="' . $this->attr["name"] . '" value="' . $value . '"></div>';
+            $html .= '<div class="form-control mb-1 '.(isset($this->attr['inline'])?"d-inline-block w-auto mr-2 mb-5":"").'"><span>' . $label . '</span>&nbsp;<input ' . $checked . ' id="' . ($this->attr["name"] . "_" . $idx) . '" class="radio-list-item" type="radio" name="' . $this->attr["name"] . '" value="' . $value . '"></div>';
             $idx++;
         }
         $html .= '</div>';

@@ -18,7 +18,6 @@ class CreateEventTicketGroupsTable extends Migration
             $table->unsignedBigInteger('event_id');
             $table->string('ticket_color')->nullable();
             $table->integer('limit')->default(0);
-            $table->integer('sold')->default(0);
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
         });
     }

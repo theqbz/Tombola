@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-warning border-5">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('event.mytickets')}}">Szelvényeim</a>
+                    <a class="nav-link" href="{{route('mytickets')}}">Szelvényeim</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#prizes">Nyereményeim</a>
+                    <a class="nav-link" href="{{route('myprizes')}}">Nyereményeim</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#joinevent">Csatlakozás</a>

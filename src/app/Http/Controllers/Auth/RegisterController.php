@@ -85,16 +85,23 @@ class RegisterController extends Controller
         $user = User::where('email', $request->input('email'))->where('status', 0)->first();
 
         if (!$user) {
+            $this->validator($request->all(), 'new')->validate();
             $user = User::create([
                 'email' => $request->input('email')
             ]);
         }
 
         try {
+
+
             if (!$user->hash) {
-                $this->generateAccesses($user);
+                $this->generateAccesses($user, true);
             }
 
+            if (!$user->dashboard_url) {
+                $user->dashboard_url = Hash::make($user->hash);
+                $user->save();
+            }
             event(new TemporaryRegistered($user));
             //return redirect('/dashboard/' . $user->hash);
             return view('auth.verifyTemp')->with('id', $user->id);
@@ -157,7 +164,7 @@ class RegisterController extends Controller
         $user->last_name = $request->input('last_name');
         $user->password = Hash::make($request->input('password'));
         $user->status = 1;
-        $user->hash = null;
+        $user->dashboard_url = null;
         $user->exp_date = null;
         $user->email_verified_at = null;
 
@@ -192,9 +199,7 @@ class RegisterController extends Controller
             'status' => 1,
         ]);
 
-        if (!$user->hash) {
-            $this->generateAccesses($user);
-        }
+        $this->generateAccesses($user);
 
 
         event(new Registered($user));
@@ -207,9 +212,13 @@ class RegisterController extends Controller
         return User::where([$params])->first();
     }
 
-    private function generateAccesses(User &$user)
+    private function generateAccesses(User &$user, $isTemp = false)
     {
-        $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), 0, 3));
+        if ($isTemp) {
+            $accessCode = "U-" . strtolower(substr($user->email, 0, 3) . substr(time(), 0, 3));
+        } else {
+            $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), 0, 3));
+        }
         $user->hash = $accessCode;
         $user->save();
         $path = public_path('/qrcodes/users');
