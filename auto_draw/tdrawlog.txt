@@ -2640,3 +2640,17 @@ Table 'ticketto.event' doesn't exist
 2021.11.24 12:31:54 +01:00 - Adatbázis: sikeres csatlakozás.
 2021.11.24 12:31:54 +01:00 - Nem történt sorsolás.
 2021.11.24 12:31:54 +01:00 - EXIT AutoDraw
+
+
+2021.11.24 13:57:27 +01:00 -! Adatbázis: sikertelen csatlakozás. Hiba:Nem hozható létre kapcsolat, mert a célszámítógép már visszautasította a kapcsolatot
+
+
+2021.11.24 13:58:09 +01:00 - START AutoDraw
+2021.11.24 13:58:13 +01:00 -! Adatbázis: sikertelen csatlakozás. Hiba:Nem hozható létre kapcsolat, mert a célszámítógép már visszautasította a kapcsolatot
+2021.11.24 13:58:13 +01:00 - EXIT AutoDraw
+
+2021.11.24 13:58:28 +01:00 - START AutoDraw
+2021.11.24 13:58:28 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 13:58:28 +01:00 - Nem történt sorsolás.
+2021.11.24 13:58:28 +01:00 - EXIT AutoDraw
+

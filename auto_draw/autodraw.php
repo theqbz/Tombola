@@ -6,6 +6,8 @@
 require_once 'errorlogger.php';
 require_once 'db_auth_data.php';
 
+setLoggerMode(_ERROR);  //_OFF: off; _ERROR: just errors; _INFO: all messages
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -67,7 +69,7 @@ function SendEmail($winner)
     $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
     $mail->addAddress($winnerEmail);
     $mail->msgHTML($message);
-    if (!$mail->send()) { addToLogger('Nyertes nincs értesítve. Hiba: '.$mail->ErrorInfo, ERROR); return false; }
+    if (!$mail->send()) { addToLogger('Nyertes nincs értesítve. Hiba: '.$mail->ErrorInfo, _ERROR); return false; }
     return true;
 }
 
@@ -141,8 +143,8 @@ function DrawPrize($eventId, $prize)
     addToLogger("Sorsolas: EventID=".$winner->eventId.
         "; PrizeID=".$winner->prizeId.
         "; TicketID=".$winner->ticketId.
-        "; UserID=".$winner->userId, INFO);
-    if (SendEmail($winner)) { addToLogger('Nyertes értesítve.', INFO); }
+        "; UserID=".$winner->userId, _INFO);
+    if (SendEmail($winner)) { addToLogger('Nyertes értesítve.', _INFO); }
     unset($GLOBALS['drawableTickets']);
     return 1;
 }
@@ -183,16 +185,16 @@ function Draw()
 }
 
 
-addToLogger("START AutoDraw", INFO);
+addToLogger("START AutoDraw", _INFO);
 $database = new mysqli($tserver, $tdbuser, $tdbpassword, $tdbname);
 if (!$database->connect_error)
 {
-    addToLogger("Adatbázis: sikeres csatlakozás.", INFO);
+    addToLogger("Adatbázis: sikeres csatlakozás.", _INFO);
     srand();
-    if (!Draw()) { addToLogger("Nem történt sorsolás.", INFO); }
+    if (!Draw()) { addToLogger("Nem történt sorsolás.", _INFO); }
     $database->close();
 }
-else { addToLogger("Adatbázis: sikertelen csatlakozás. Hiba:".$database->connect_error, ERROR); }
-addToLogger("EXIT AutoDraw", INFO);
+else { addToLogger("Adatbázis: sikertelen csatlakozás. Hiba:".$database->connect_error, _ERROR); }
+addToLogger("EXIT AutoDraw", _INFO);
 writeLog();
 ?>
