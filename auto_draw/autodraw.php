@@ -29,27 +29,23 @@ function SendEmail($winner)
     require_once 'PHPMailer/SMTP.php';
     require_once 'PHPMailer/Exception.php';
     global $database;
-    $sqlUsers = "SELECT `first_name`, `last_name`, `email`
-        FROM `users`
-        WHERE `id` = '$winner->userId';";
-    $sqlEvents = "SELECT `title`
+    $sqlEvents  = "SELECT `title`
         FROM `events`
         WHERE `id` = '$winner->eventId';";
     $sqlTickets = "SELECT `color`, `value`
         FROM `tickets`
         WHERE `id` = '$winner->ticketId';";
-    $winnerUserData = $database->query($sqlUsers);
-    $winnerUser = $winnerUserData->fetch_assoc();
-    $winnerEventData = $database->query($sqlEvents);
-    $winnerEvent = $winnerEventData->fetch_assoc();
-    $winnerTicketData = $database->query($sqlTickets);
-    $winnerTicket = $winnerTicketData->fetch_assoc();
-
-    $winnerEmail = $winnerUser['email'];
+    $sqlUsers   = "SELECT `first_name`, `last_name`, `email`
+        FROM `users`
+        WHERE `id` = '$winner->userId';";
+    $winnerEvent  = $database->query($sqlEvents)->fetch_assoc();
+    $winnerTicket = $database->query($sqlTickets)->fetch_assoc();
+    $winnerUser   = $database->query($sqlUsers)->fetch_assoc();
+    $winnerEmail  = $winnerUser['email'];
     $emailData = array(
-        'NAME' => $winnerUser['last_name']." ".$winnerUser['first_name'],
+        'NAME'       => $winnerUser['last_name']." ".$winnerUser['first_name'],
         'EVENTTITLE' => $winnerEvent['title'],
-        'TICKET' => $winnerTicket['color']." ".$winnerTicket['value'],);
+        'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],);
     $message = file_get_contents('tmsg.html');
     foreach ($emailData as $field=>$content) { $message = str_replace('{'.$field.'}', $content, $message); }
 
@@ -57,7 +53,7 @@ function SendEmail($winner)
     $mail->setLanguage('hu','PHPMailer/language/');
     $mail->isSMTP();
     $mail->CharSet    = 'UTF-8';
-    $mail->SMTPDebug  = '0';     // 0: off (set 2 to check process)
+    $mail->SMTPDebug  = '0';     // 0: off (set 2 to debug)
     $mail->SMTPAuth   = true;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Host       = HOST;
@@ -130,18 +126,18 @@ function DrawPrize($eventId, $prize)
     echo("<br>ToWin=".$toWin);
      */
     $winner = new DrawResult();
-    $winner->eventId = $eventId;
-    $winner->prizeId = intval($prize["id"]);
+    $winner->eventId  = $eventId;
+    $winner->prizeId  = intval($prize["id"]);
     $winner->ticketId = intval($drawableTickets[$toWin]["id"]);
-    $winner->userId = intval($drawableTickets[$toWin]["user"]);
-    $addPrizeToTicket = "UPDATE `tickets`
+    $winner->userId   = intval($drawableTickets[$toWin]["user"]);
+    $prizeToTicket = "UPDATE `tickets`
         SET `won_prize_id` = '$winner->prizeId'
         WHERE `id` = '$winner->ticketId';";
-    $addTicketToPrize = "UPDATE `prizes`
+    $ticketToPrize = "UPDATE `prizes`
         SET `winner_ticket_id` = '$winner->ticketId'
         WHERE `id` = '$winner->prizeId';";
-    if (!$database->query($addPrizeToTicket)) { unset($GLOBALS['drawableTickets']); return 0; }
-    if (!$database->query($addTicketToPrize)) { unset($GLOBALS['drawableTickets']); return 0; }
+    if (!$database->query($prizeToTicket)) { unset($GLOBALS['drawableTickets']); return 0; }
+    if (!$database->query($ticketToPrize)) { unset($GLOBALS['drawableTickets']); return 0; }
     addToLogger("Sorsolas: EventID=".$winner->eventId.
         "; PrizeID=".$winner->prizeId.
         "; TicketID=".$winner->ticketId.
@@ -156,14 +152,14 @@ function DrawEvent($event)
     global $database;
     global $drawablePrizes;
     $winCounter = 0;
-    $eventId = intval($event["id"]);
+    $eventId    = intval($event["id"]);
     if (!SelectPrizes($eventId)) { unset($GLOBALS['drawablePrizes']); return 0; }
     /* DEBUG:
     echo("<br>event: "); var_dump($event);
     echo("<br>drawablePrizes: <pre>"); var_dump($drawablePrizes); echo("</pre>");
      */
     foreach ($drawablePrizes as $prize) { $winCounter += DrawPrize($eventId, $prize); }
-    if ($winCounter === 0) { return 0; }
+    if ($winCounter === 0) { unset($GLOBALS['drawablePrizes']); return 0; }
     $setEventDrawed = "UPDATE `events`
         SET `flag` = '3'
         WHERE `id` = '$eventId';";

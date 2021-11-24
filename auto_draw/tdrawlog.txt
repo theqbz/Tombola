@@ -2579,3 +2579,64 @@ Table 'ticketto.event' doesn't exist
 2021.11.24 09:48:19 +01:00 - Üzenet elküldve külön authdata.php-vel
 
 2021.11.24 12:00:32 +01:00 - Üzenet elküldve
+
+2021.11.24 12:20:17 +01:00 - START AutoDraw
+2021.11.24 12:20:17 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 12:20:17 +01:00 - Sorsolas: EventID=29; PrizeID=1; TicketID=1; UserID=1
+2021.11.24 12:20:17 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:17 +01:00 - Sorsolas: EventID=29; PrizeID=2; TicketID=25; UserID=9
+2021.11.24 12:20:18 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:18 +01:00 - Sorsolas: EventID=29; PrizeID=3; TicketID=22; UserID=8
+2021.11.24 12:20:18 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:18 +01:00 - Sorsolas: EventID=29; PrizeID=4; TicketID=40; UserID=14
+2021.11.24 12:20:18 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:18 +01:00 - Sorsolas: EventID=29; PrizeID=5; TicketID=4; UserID=2
+2021.11.24 12:20:19 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:19 +01:00 - Sorsolas: EventID=29; PrizeID=6; TicketID=16; UserID=6
+2021.11.24 12:20:19 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:19 +01:00 - Sorsolas: EventID=29; PrizeID=7; TicketID=28; UserID=10
+2021.11.24 12:20:19 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:19 +01:00 - Sorsolas: EventID=29; PrizeID=8; TicketID=7; UserID=3
+2021.11.24 12:20:20 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:20 +01:00 - Sorsolas: EventID=29; PrizeID=9; TicketID=19; UserID=7
+2021.11.24 12:20:20 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:20 +01:00 - Sorsolas: EventID=29; PrizeID=10; TicketID=37; UserID=13
+2021.11.24 12:20:20 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:20 +01:00 - Sorsolas: EventID=29; PrizeID=11; TicketID=31; UserID=11
+2021.11.24 12:20:21 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:21 +01:00 - Sorsolas: EventID=29; PrizeID=12; TicketID=13; UserID=5
+2021.11.24 12:20:21 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:21 +01:00 - Sorsolas: EventID=29; PrizeID=13; TicketID=34; UserID=12
+2021.11.24 12:20:21 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:21 +01:00 - Sorsolas: EventID=29; PrizeID=14; TicketID=10; UserID=4
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=30; PrizeID=19; TicketID=38; UserID=13
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=30; PrizeID=20; TicketID=11; UserID=4
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=31; PrizeID=21; TicketID=6; UserID=2
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=31; PrizeID=22; TicketID=21; UserID=7
+2021.11.24 12:20:23 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:23 +01:00 - EXIT AutoDraw
+
+2021.11.24 12:31:03 +01:00 - START AutoDraw
+2021.11.24 12:31:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 12:31:03 +01:00 - Sorsolas: EventID=29; PrizeID=17; TicketID=28; UserID=10
+2021.11.24 12:31:04 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:04 +01:00 - Sorsolas: EventID=29; PrizeID=18; TicketID=10; UserID=4
+2021.11.24 12:31:04 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:04 +01:00 - Sorsolas: EventID=30; PrizeID=19; TicketID=38; UserID=13
+2021.11.24 12:31:04 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:04 +01:00 - Sorsolas: EventID=30; PrizeID=20; TicketID=11; UserID=4
+2021.11.24 12:31:05 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:05 +01:00 - Sorsolas: EventID=31; PrizeID=21; TicketID=33; UserID=11
+2021.11.24 12:31:05 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:05 +01:00 - Sorsolas: EventID=31; PrizeID=22; TicketID=36; UserID=12
+2021.11.24 12:31:05 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:05 +01:00 - EXIT AutoDraw
+
+2021.11.24 12:31:54 +01:00 - START AutoDraw
+2021.11.24 12:31:54 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 12:31:54 +01:00 - Nem történt sorsolás.
+2021.11.24 12:31:54 +01:00 - EXIT AutoDraw

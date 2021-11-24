@@ -1,11 +1,11 @@
 <?php
 //Tesztadatok resetelése
-require_once 'errorlogger.php';
-require_once 'db_auth_data.php';
+require_once '../errorlogger.php';
+require_once '../db_auth_data.php';
 
 $dbconnect=new mysqli($tserver,$tdbuser,$tdbpassword,$tdbname);
 if ($dbconnect->connect_error) {
-    addToLogger("Nem sikerült csatlakozni az adatbázishoz:".$dbconnect->connect_error, ERROR);
+    addToLogger("Adatbázis: sikertelen csatlakozás. Hiba:".$dbconnect->connect_error, ERROR);
     writeLog();
     exit();
 }
