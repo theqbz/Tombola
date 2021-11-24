@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\auto_draw"
+    "\\auto_draw",
+    "\\auto_draw\\old_files"
   ],
-  "SelectedNode": "\\auto_draw\\testdata_eventsandprizes.php",
+  "SelectedNode": "\\auto_draw\\autodraw.php",
   "PreviewInSolutionExplorer": true
 }

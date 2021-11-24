@@ -25,9 +25,9 @@ class DrawResult {
 function SendEmail($winner)
 {
     require_once 'email_auth_data.php';
-    require_once 'PHPMailer.php';
-    require_once 'SMTP.php';
-    require_once 'Exception.php';
+    require_once 'PHPMailer/PHPMailer.php';
+    require_once 'PHPMailer/SMTP.php';
+    require_once 'PHPMailer/Exception.php';
     global $database;
     $sqlUsers = "SELECT `first_name`, `last_name`, `email`
         FROM `users`
@@ -66,9 +66,9 @@ function SendEmail($winner)
     $mail->Port=465;
     $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
     $mail->addAddress($winnerEmail);
-    $mail->Subject='Ticketto - Ertesites a sorsolas eredmenyerol';
+    $mail->Subject='Ticketto - Értesítés a sorsolás eredményérõl';
     $mail->msgHTML($message);
-    $mail->AltBody='Ez a sima szoveges verzioja az uzenetnek';
+    $mail->AltBody='Ezt az üzenetet azért kaptad, mert nyert azegyik szelvényed a ticketto.hu-n. A részletekért kérjük, lépj be a fiókodba a ticketto.hu oldalon! Üdvözlettel, Ticketto.hu';
     if (!$mail->send()) { addToLogger('Nyertes nincs ertesitve. Hiba: '.$mail->ErrorInfo, ERROR); return false; }
     return true;
 }
@@ -121,9 +121,10 @@ function DrawPrize($eventId, $prize)
     global $database;
     global $drawableTickets;
     if (!SelectTickets($eventId)) { unset($GLOBALS['drawableTickets']); return 0; }
-    echo("<br>drawableTickets: <pre>");
-    var_dump($drawableTickets);
-    echo("</pre><br>");
+    /* DEBUG:
+    echo("<br>prize: "); var_dump($prize);
+    echo("<br>drawableTickets: <pre>"); var_dump($drawableTickets); echo("</pre>");
+     */
     $toWin = rand(0, (count($drawableTickets) - 1));
     echo("ToWin=".$toWin."<br>");
     $winner = new DrawResult();
@@ -140,7 +141,10 @@ function DrawPrize($eventId, $prize)
         WHERE `id`='$winner->prizeId';";
     if (!$database->query($addPrizeToTicket)) { return 0; }
     if (!$database->query($addTicketToPrize)) { return 0; }
-    addToLogger("Sorsolas: EventID=".$winner->eventId."; PrizeID=".$winner->prizeId."; TicketID=".$winner->ticketId."; UserID=".$winner->userId, INFO);
+    addToLogger("Sorsolas: EventID=".$winner->eventId.
+        "; PrizeID=".$winner->prizeId.
+        "; TicketID=".$winner->ticketId.
+        "; UserID=".$winner->userId, INFO);
     if (SendEmail($winner)) { addToLogger('Nyertes ertesitve', INFO); }
     return 1;
 }
@@ -149,14 +153,13 @@ function DrawEvent($event)
 {
     global $database;
     global $drawablePrizes;
-    echo("<br>event: ");
-    var_dump($event);
     $winCounter = 0;
     $eventId = intval($event["id"]);
     if (!SelectPrizes($eventId)) { unset($GLOBALS['drawablePrizes']); return 0; }
-    echo("<br>drawablePrizes: <pre>");
-    var_dump($drawablePrizes);
-    echo("</pre><br>");
+    /* DEBUG:
+    echo("<br>event: "); var_dump($event);
+    echo("<br>drawablePrizes: <pre>"); var_dump($drawablePrizes); echo("</pre>");
+     */
     foreach ($drawablePrizes as $prize) { $winCounter += DrawPrize($eventId, $prize); }
     unset($GLOBALS['drawablePrizes']);
     if ($winCounter === 0) { return 0; }
@@ -173,9 +176,9 @@ function Draw()
     global $drawableEvents;
     $drawCounter = 0;
     if (!SelectEvents()) { return false; }
-    echo("<br>drawableEvents: <pre>");
-    var_dump($drawableEvents);
-    echo("</pre><br>");
+    /* DEBUG:
+    echo("<br>drawableEvents: <pre>"); var_dump($drawableEvents); echo("</pre>");
+     */
     foreach ($drawableEvents as $event) { $drawCounter += DrawEvent($event); }
     if ($drawCounter === 0) { return false; }
     return true;
