@@ -2,10 +2,15 @@
 <html lang="hu">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Cron teszt uzenet</title>
+    <title>TICKETTO nyertes értesítő email</title>
 </head>
 <body>
-    <h1>Ez egy teszt üzenet</h1>
-    <a>Vajon küldi-e a levelet szorgalmasan a gép magától.</a>
+    <h1>Kedves {NAME}!</h1>
+    <a>Ezúton gratulál neked a Ticketto, kisorsolták az egyik tombolaszelvényedet!<br>
+        A részletekért lépj be a Ticketto fiókodba a ticketto.hu oldalon!</a>
+    <ul>
+        <li>Játék: <b>{EVENTTITLE}</b></li>
+        <li>A nyertes szelvény: <b>{TICKET}</b></li>
+    </ul>
 </body>
 </html>

@@ -1876,3 +1876,702 @@ Table 'ticketto.event' doesn't exist
 2021.11.23 02:17:46 +01:00 - Start Ticketto AutoDraw
 2021.11.23 02:17:46 +01:00 - Adatbázis: sikeres csatlakozás.
 2021.11.23 02:17:46 +01:00 - Exit AutoDraw
+
+2021.11.23 20:32:04 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:32:04 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 20:32:30 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:32:30 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:32:30 +01:00 - Nem történt sorsolás.
+2021.11.23 20:32:30 +01:00 - Exit AutoDraw
+
+2021.11.23 20:35:41 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:35:41 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:35:41 +01:00 - Nem történt sorsolás.
+2021.11.23 20:35:41 +01:00 - Exit AutoDraw
+
+2021.11.23 20:52:10 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:52:10 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 20:52:13 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:52:13 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:52:13 +01:00 - Nem történt sorsolás.
+2021.11.23 20:52:13 +01:00 - Exit AutoDraw
+
+2021.11.23 20:54:18 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:54:18 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:54:18 +01:00 - Nem történt sorsolás.
+2021.11.23 20:54:18 +01:00 - Exit AutoDraw
+
+2021.11.23 20:55:11 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:55:11 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:55:11 +01:00 - Nem történt sorsolás.
+2021.11.23 20:55:11 +01:00 - Exit AutoDraw
+
+2021.11.23 20:57:04 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:57:04 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:57:04 +01:00 - Nem történt sorsolás.
+2021.11.23 20:57:04 +01:00 - Exit AutoDraw
+
+2021.11.23 20:57:37 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:57:37 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:57:37 +01:00 - Nem történt sorsolás.
+2021.11.23 20:57:37 +01:00 - Exit AutoDraw
+
+2021.11.23 20:58:55 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:58:55 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:58:55 +01:00 - Nem történt sorsolás.
+2021.11.23 20:58:55 +01:00 - Exit AutoDraw
+
+2021.11.23 20:59:29 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:59:29 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 20:59:29 +01:00 - Nem történt sorsolás.
+2021.11.23 20:59:29 +01:00 - Exit AutoDraw
+
+2021.11.23 21:10:09 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:10:09 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:10:09 +01:00 - Nem történt sorsolás.
+2021.11.23 21:10:09 +01:00 - Exit AutoDraw
+
+2021.11.23 21:10:42 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:10:42 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:10:42 +01:00 - Nem történt sorsolás.
+2021.11.23 21:10:42 +01:00 - Exit AutoDraw
+
+2021.11.23 21:21:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:21:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=4; TicketID=0; UserID=0
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=5; TicketID=40; UserID=14
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=6; TicketID=1; UserID=1
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=7; TicketID=1; UserID=1
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=8; TicketID=16; UserID=6
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=9; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=10; TicketID=34; UserID=12
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=11; TicketID=37; UserID=13
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=12; TicketID=37; UserID=13
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=13; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=14; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=15; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=16; TicketID=7; UserID=3
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=31; UserID=11
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=4; TicketID=10; UserID=4
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=5; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=6; TicketID=10; UserID=4
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=7; TicketID=35; UserID=12
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=8; TicketID=7; UserID=3
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=9; TicketID=2; UserID=1
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=10; TicketID=11; UserID=4
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=11; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=12; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=13; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=14; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=15; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=16; TicketID=11; UserID=4
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=17; TicketID=32; UserID=11
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=18; TicketID=17; UserID=6
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=32; UserID=11
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=26; UserID=9
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=4; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=5; TicketID=3; UserID=1
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=6; TicketID=20; UserID=7
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=7; TicketID=34; UserID=12
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=8; TicketID=14; UserID=5
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=9; TicketID=5; UserID=2
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=10; TicketID=15; UserID=5
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=11; TicketID=16; UserID=6
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=12; TicketID=34; UserID=12
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=13; TicketID=24; UserID=8
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=14; TicketID=10; UserID=4
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=15; TicketID=31; UserID=11
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=16; TicketID=20; UserID=7
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=17; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=18; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=19; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=20; TicketID=20; UserID=7
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=9; UserID=3
+2021.11.23 21:21:03 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - Exit AutoDraw
+
+2021.11.23 21:24:53 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:24:53 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:24:53 +01:00 - Nem történt sorsolás.
+2021.11.23 21:24:53 +01:00 - Exit AutoDraw
+
+2021.11.23 21:25:44 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:25:44 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:25:44 +01:00 - Nem történt sorsolás.
+2021.11.23 21:25:44 +01:00 - Exit AutoDraw
+
+2021.11.23 21:26:56 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:26:56 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:26:56 +01:00 - Nem történt sorsolás.
+2021.11.23 21:26:56 +01:00 - Exit AutoDraw
+
+2021.11.23 21:33:50 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:33:50 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:33:51 +01:00 - Nem történt sorsolás.
+2021.11.23 21:33:51 +01:00 - Exit AutoDraw
+
+2021.11.23 21:35:54 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:35:54 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:35:54 +01:00 - Nem történt sorsolás.
+2021.11.23 21:35:54 +01:00 - Exit AutoDraw
+
+2021.11.23 21:37:18 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:37:18 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:37:18 +01:00 - Nem történt sorsolás.
+2021.11.23 21:37:18 +01:00 - Exit AutoDraw
+
+2021.11.23 21:37:35 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:37:35 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:37:35 +01:00 - Nem történt sorsolás.
+2021.11.23 21:37:35 +01:00 - Exit AutoDraw
+
+2021.11.23 21:47:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:47:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:47:03 +01:00 - Nem történt sorsolás.
+2021.11.23 21:47:03 +01:00 - Exit AutoDraw
+
+2021.11.23 21:48:25 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:48:25 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:48:25 +01:00 - Nem történt sorsolás.
+2021.11.23 21:48:25 +01:00 - Exit AutoDraw
+
+2021.11.23 21:48:59 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:48:59 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:48:59 +01:00 - Nem történt sorsolás.
+2021.11.23 21:48:59 +01:00 - Exit AutoDraw
+
+2021.11.23 21:51:23 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:51:23 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:51:23 +01:00 - Nem történt sorsolás.
+2021.11.23 21:51:23 +01:00 - Exit AutoDraw
+
+2021.11.23 21:51:49 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:51:49 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:51:49 +01:00 - Nem történt sorsolás.
+2021.11.23 21:51:49 +01:00 - Exit AutoDraw
+
+2021.11.23 21:59:50 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:59:50 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 21:59:50 +01:00 - Nem történt sorsolás.
+2021.11.23 21:59:50 +01:00 - Exit AutoDraw
+
+2021.11.23 22:00:48 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:00:48 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 22:00:56 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:00:56 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=1;
+        TicketID=7;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=2;
+        TicketID=34;
+        UserID=12
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=3;
+        TicketID=10;
+        UserID=4
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=4;
+        TicketID=28;
+        UserID=10
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=5;
+        TicketID=37;
+        UserID=13
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=6;
+        TicketID=19;
+        UserID=7
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=7;
+        TicketID=22;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=8;
+        TicketID=40;
+        UserID=14
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=9;
+        TicketID=25;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=10;
+        TicketID=25;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=11;
+        TicketID=13;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=12;
+        TicketID=22;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=13;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=14;
+        TicketID=40;
+        UserID=14
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=15;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=16;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=17;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=29;
+        PrizeID=18;
+        TicketID=25;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=1;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=2;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=3;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=4;
+        TicketID=28;
+        UserID=10
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=5;
+        TicketID=17;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=6;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=7;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=8;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=9;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=10;
+        TicketID=10;
+        UserID=4
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=11;
+        TicketID=37;
+        UserID=13
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=12;
+        TicketID=35;
+        UserID=12
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=13;
+        TicketID=5;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=14;
+        TicketID=14;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=15;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=16;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=17;
+        TicketID=8;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=18;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=19;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=30;
+        PrizeID=20;
+        TicketID=23;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=1;
+        TicketID=6;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=2;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=3;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=4;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=5;
+        TicketID=29;
+        UserID=10
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=6;
+        TicketID=8;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=7;
+        TicketID=14;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=8;
+        TicketID=27;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=9;
+        TicketID=11;
+        UserID=4
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=10;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=11;
+        TicketID=5;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=12;
+        TicketID=14;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=13;
+        TicketID=32;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=14;
+        TicketID=23;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=15;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=16;
+        TicketID=18;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=17;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=18;
+        TicketID=35;
+        UserID=12
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=19;
+        TicketID=42;
+        UserID=14
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=20;
+        TicketID=9;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=21;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - Sorsolás:
+        EventID=31;
+        PrizeID=22;
+        TicketID=22;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - Exit AutoDraw
+
+2021.11.23 22:42:07 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:42:07 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:42:07 +01:00 - Nem történt sorsolás.
+2021.11.23 22:42:07 +01:00 - Exit AutoDraw
+
+2021.11.23 22:42:54 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:42:54 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:42:54 +01:00 - Nem történt sorsolás.
+2021.11.23 22:42:54 +01:00 - Exit AutoDraw
+
+2021.11.23 22:43:13 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:43:13 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 22:43:15 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:43:15 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:43:15 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=10; UserID=4
+2021.11.23 22:43:15 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=37; UserID=13
+2021.11.23 22:43:15 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=16; UserID=6
+2021.11.23 22:43:15 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=19; UserID=7
+2021.11.23 22:43:15 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=26; UserID=9
+2021.11.23 22:43:15 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=27; UserID=9
+2021.11.23 22:43:15 +01:00 - Exit AutoDraw
+
+2021.11.23 22:45:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:45:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:45:03 +01:00 - Nem történt sorsolás.
+2021.11.23 22:45:03 +01:00 - Exit AutoDraw
+
+2021.11.23 22:45:15 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:45:15 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 22:45:22 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:45:22 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:45:22 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=37; UserID=13
+2021.11.23 22:45:22 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=7; UserID=3
+2021.11.23 22:45:22 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=4; UserID=2
+2021.11.23 22:45:22 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=16; UserID=6
+2021.11.23 22:45:22 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=35; UserID=12
+2021.11.23 22:45:22 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=3; UserID=1
+2021.11.23 22:45:22 +01:00 - Exit AutoDraw
+
+2021.11.23 22:57:41 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:57:41 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:57:41 +01:00 - Nem történt sorsolás.
+2021.11.23 22:57:41 +01:00 - Exit AutoDraw
+
+2021.11.23 22:57:51 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:57:51 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 22:57:51 +01:00 - Nem történt sorsolás.
+2021.11.23 22:57:51 +01:00 - Exit AutoDraw
+
+2021.11.23 23:05:36 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:05:36 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 23:05:38 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:05:38 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:05:38 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=28; UserID=10
+2021.11.23 23:05:38 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=7; UserID=3
+2021.11.23 23:05:38 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=17; UserID=6
+2021.11.23 23:05:38 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=41; UserID=14
+2021.11.23 23:05:38 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=24; UserID=8
+2021.11.23 23:05:38 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=33; UserID=11
+2021.11.23 23:05:38 +01:00 - Exit AutoDraw
+
+2021.11.23 23:08:05 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:08:05 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:08:05 +01:00 - Nem történt sorsolás.
+2021.11.23 23:08:05 +01:00 - Exit AutoDraw
+
+2021.11.23 23:10:13 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:10:13 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:10:13 +01:00 - Nem történt sorsolás.
+2021.11.23 23:10:13 +01:00 - Exit AutoDraw
+
+2021.11.23 23:23:51 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:23:51 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 23:24:19 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:24:19 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:24:19 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=31; UserID=11
+2021.11.23 23:24:19 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=40; UserID=14
+2021.11.23 23:24:19 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=0; UserID=0
+2021.11.23 23:24:19 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=29; UserID=10
+2021.11.23 23:24:19 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=33; UserID=11
+2021.11.23 23:24:19 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=12; UserID=4
+2021.11.23 23:24:19 +01:00 - Exit AutoDraw
+
+2021.11.23 23:24:46 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:24:46 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 23:30:55 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:30:55 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 23:32:59 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:32:59 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 23:33:29 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:33:29 +01:00 - Adatok resetelése sikeres
+
+2021.11.23 23:33:31 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:33:31 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.23 23:33:32 +01:00 - Nyertes értesítve
+2021.11.23 23:33:32 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=19; UserID=7
+2021.11.23 23:33:32 +01:00 - Nyertes értesítve
+2021.11.23 23:33:32 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=37; UserID=13
+2021.11.23 23:33:33 +01:00 - Nyertes értesítve
+2021.11.23 23:33:33 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=41; UserID=14
+2021.11.23 23:33:33 +01:00 - Nyertes értesítve
+2021.11.23 23:33:33 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=32; UserID=11
+2021.11.23 23:33:33 +01:00 - Nyertes értesítve
+2021.11.23 23:33:33 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=18; UserID=6
+2021.11.23 23:33:34 +01:00 - Nyertes értesítve
+2021.11.23 23:33:34 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=33; UserID=11
+2021.11.23 23:33:34 +01:00 - Exit AutoDraw
+
+2021.11.24 00:08:47 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:08:47 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 00:10:06 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:10:06 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:10:06 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=13; UserID=5
+2021.11.24 00:10:07 +01:00 - Nyertes értesítve
+2021.11.24 00:10:07 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=2; UserID=1
+2021.11.24 00:10:07 +01:00 - Nyertes értesítve
+2021.11.24 00:10:07 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=26; UserID=9
+2021.11.24 00:10:07 +01:00 - Nyertes értesítve
+2021.11.24 00:10:08 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=27; UserID=9
+2021.11.24 00:10:08 +01:00 - Nyertes értesítve
+2021.11.24 00:10:08 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=39; UserID=13
+2021.11.24 00:10:08 +01:00 - Nyertes értesítve
+2021.11.24 00:10:08 +01:00 - Exit AutoDraw
+
+2021.11.24 00:24:05 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:24:05 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 00:24:41 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:24:41 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 00:30:28 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:30:28 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 00:32:14 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:32:14 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 00:32:17 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:32:17 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:32:17 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=40; UserID=14
+2021.11.24 00:32:17 +01:00 - Nyertes értesítve
+2021.11.24 00:32:17 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=28; UserID=10
+2021.11.24 00:32:17 +01:00 - Nyertes értesítve
+2021.11.24 00:32:17 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=23; UserID=8
+2021.11.24 00:32:17 +01:00 - Nyertes értesítve
+2021.11.24 00:32:17 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=32; UserID=11
+2021.11.24 00:32:18 +01:00 - Nyertes értesítve
+2021.11.24 00:32:18 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=15; UserID=5
+2021.11.24 00:32:18 +01:00 - Nyertes értesítve
+2021.11.24 00:32:18 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=21; UserID=7
+2021.11.24 00:32:18 +01:00 - Nyertes értesítve
+2021.11.24 00:32:18 +01:00 - Exit AutoDraw
+
+2021.11.24 00:33:39 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:33:39 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:33:39 +01:00 - Nem történt sorsolás.
+2021.11.24 00:33:39 +01:00 - Exit AutoDraw
+
+2021.11.24 00:33:58 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:33:58 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 00:34:00 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:34:00 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 00:34:00 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=19; UserID=7
+2021.11.24 00:34:01 +01:00 - Nyertes értesítve
+2021.11.24 00:34:01 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=25; UserID=9
+2021.11.24 00:34:01 +01:00 - Nyertes értesítve
+2021.11.24 00:34:01 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=11; UserID=4
+2021.11.24 00:34:01 +01:00 - Nyertes értesítve
+2021.11.24 00:34:01 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=41; UserID=14
+2021.11.24 00:34:02 +01:00 - Nyertes értesítve
+2021.11.24 00:34:02 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=33; UserID=11
+2021.11.24 00:34:02 +01:00 - Nyertes értesítve
+2021.11.24 00:34:02 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=30; UserID=10
+2021.11.24 00:34:02 +01:00 - Nyertes értesítve
+2021.11.24 00:34:02 +01:00 - Exit AutoDraw
+
+2021.11.24 01:55:31 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 01:55:31 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 01:56:01 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 01:56:01 +01:00 - Adatok resetelése sikeres
+
+2021.11.24 01:56:04 +01:00 - Start Ticketto AutoDraw
+2021.11.24 01:56:04 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 01:56:04 +01:00 - Sorsolás: EventID=29; PrizeID=17; TicketID=1; UserID=1
+2021.11.24 01:56:05 +01:00 - Nyertes értesítve
+2021.11.24 01:56:05 +01:00 - Sorsolás: EventID=29; PrizeID=18; TicketID=10; UserID=4
+2021.11.24 01:56:05 +01:00 - Nyertes értesítve
+2021.11.24 01:56:05 +01:00 - Sorsolás: EventID=30; PrizeID=19; TicketID=17; UserID=6
+2021.11.24 01:56:05 +01:00 - Nyertes értesítve
+2021.11.24 01:56:05 +01:00 - Sorsolás: EventID=30; PrizeID=20; TicketID=14; UserID=5
+2021.11.24 01:56:06 +01:00 - Nyertes értesítve
+2021.11.24 01:56:06 +01:00 - Sorsolás: EventID=31; PrizeID=21; TicketID=24; UserID=8
+2021.11.24 01:56:06 +01:00 - Nyertes értesítve
+2021.11.24 01:56:06 +01:00 - Sorsolás: EventID=31; PrizeID=22; TicketID=18; UserID=6
+2021.11.24 01:56:06 +01:00 - Nyertes értesítve
+2021.11.24 01:56:06 +01:00 - Exit AutoDraw
+
+2021.11.24 02:10:21 +01:00 - Start Ticketto AutoDraw
+2021.11.24 02:10:21 +01:00 - Adatbazis: sikeres csatlakozas.
+2021.11.24 02:10:21 +01:00 - Nem tortent sorsolas.
+2021.11.24 02:10:21 +01:00 - Exit AutoDraw
