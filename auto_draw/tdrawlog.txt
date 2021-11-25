@@ -1,0 +1,2664 @@
+
+
+2021.11.18 22:59:10 +01:00 - Start Ticketto AutoDraw
+2021.11.18 22:59:10 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.18 22:59:10 +01:00 - QBZ 2 Ăšj rekord felvĂ©tele sikeres.
+2021.11.18 22:59:10 +01:00 - Exit AutoDraw
+
+2021.11.18 23:58:52 +01:00 - Start Ticketto AutoDraw
+2021.11.18 23:58:52 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.18 23:58:52 +01:00 - Exit AutoDraw
+
+2021.11.20 20:54:28 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 20:54:28 +01:00 - A(z) 1. user felvétele sikeres. ID=1
+2021.11.20 20:54:28 +01:00 - A(z) 2. user felvétele sikeres. ID=2
+2021.11.20 20:54:28 +01:00 - A(z) 3. user felvétele sikeres. ID=3
+2021.11.20 20:54:28 +01:00 - A(z) 4. user felvétele sikeres. ID=4
+2021.11.20 20:54:28 +01:00 - A(z) 5. user felvétele sikeres. ID=5
+2021.11.20 20:54:28 +01:00 - A(z) 6. user felvétele sikeres. ID=6
+2021.11.20 20:54:28 +01:00 - A(z) 7. user felvétele sikeres. ID=7
+2021.11.20 20:54:28 +01:00 - A(z) 8. user felvétele sikeres. ID=8
+2021.11.20 20:54:28 +01:00 - A(z) 9. user felvétele sikeres. ID=9
+2021.11.20 20:54:28 +01:00 - A(z) 10. user felvétele sikeres. ID=10
+2021.11.20 20:54:28 +01:00 - A(z) 11. user felvétele sikeres. ID=11
+2021.11.20 20:54:28 +01:00 - A(z) 12. user felvétele sikeres. ID=12
+2021.11.20 20:54:28 +01:00 - A(z) 13. user felvétele sikeres. ID=13
+2021.11.20 20:54:28 +01:00 - A(z) 14. user felvétele sikeres. ID=14
+
+2021.11.20 21:27:22 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='1. tesztnyeremény',
+        prize_description='A(z) 1 nyeremény leírása'
+        WHERE id='1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''1' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='2. tesztnyeremény',
+        prize_description='A(z) 2 nyeremény leírása'
+        WHERE id='2
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='3. tesztnyeremény',
+        prize_description='A(z) 3 nyeremény leírása'
+        WHERE id='3
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='4. tesztnyeremény',
+        prize_description='A(z) 4 nyeremény leírása'
+        WHERE id='4
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''4' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='5. tesztnyeremény',
+        prize_description='A(z) 5 nyeremény leírása'
+        WHERE id='5
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''5' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='6. tesztnyeremény',
+        prize_description='A(z) 6 nyeremény leírása'
+        WHERE id='6
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''6' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='7. tesztnyeremény',
+        prize_description='A(z) 7 nyeremény leírása'
+        WHERE id='7
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''7' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='8. tesztnyeremény',
+        prize_description='A(z) 8 nyeremény leírása'
+        WHERE id='8
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''8' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='9. tesztnyeremény',
+        prize_description='A(z) 9 nyeremény leírása'
+        WHERE id='9
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''9' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='10. tesztnyeremény',
+        prize_description='A(z) 10 nyeremény leírása'
+        WHERE id='10
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''10' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='11. tesztnyeremény',
+        prize_description='A(z) 11 nyeremény leírása'
+        WHERE id='11
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''11' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='12. tesztnyeremény',
+        prize_description='A(z) 12 nyeremény leírása'
+        WHERE id='12
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''12' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='13. tesztnyeremény',
+        prize_description='A(z) 13 nyeremény leírása'
+        WHERE id='13
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''13' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='14. tesztnyeremény',
+        prize_description='A(z) 14 nyeremény leírása'
+        WHERE id='14
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''14' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='15. tesztnyeremény',
+        prize_description='A(z) 15 nyeremény leírása'
+        WHERE id='15
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''15' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='16. tesztnyeremény',
+        prize_description='A(z) 16 nyeremény leírása'
+        WHERE id='16
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''16' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='17. tesztnyeremény',
+        prize_description='A(z) 17 nyeremény leírása'
+        WHERE id='17
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''17' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='18. tesztnyeremény',
+        prize_description='A(z) 18 nyeremény leírása'
+        WHERE id='18
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''18' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='19. tesztnyeremény',
+        prize_description='A(z) 19 nyeremény leírása'
+        WHERE id='19
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''19' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='20. tesztnyeremény',
+        prize_description='A(z) 20 nyeremény leírása'
+        WHERE id='20
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''20' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='21. tesztnyeremény',
+        prize_description='A(z) 21 nyeremény leírása'
+        WHERE id='21
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''21' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='22. tesztnyeremény',
+        prize_description='A(z) 22 nyeremény leírása'
+        WHERE id='22
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''22' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='23. tesztnyeremény',
+        prize_description='A(z) 23 nyeremény leírása'
+        WHERE id='23
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''23' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='24. tesztnyeremény',
+        prize_description='A(z) 24 nyeremény leírása'
+        WHERE id='24
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''24' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='25. tesztnyeremény',
+        prize_description='A(z) 25 nyeremény leírása'
+        WHERE id='25
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''25' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='26. tesztnyeremény',
+        prize_description='A(z) 26 nyeremény leírása'
+        WHERE id='26
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''26' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='27. tesztnyeremény',
+        prize_description='A(z) 27 nyeremény leírása'
+        WHERE id='27
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''27' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='28. tesztnyeremény',
+        prize_description='A(z) 28 nyeremény leírása'
+        WHERE id='28
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''28' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='29. tesztnyeremény',
+        prize_description='A(z) 29 nyeremény leírása'
+        WHERE id='29
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''29' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='30. tesztnyeremény',
+        prize_description='A(z) 30 nyeremény leírása'
+        WHERE id='30
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''30' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='31. tesztnyeremény',
+        prize_description='A(z) 31 nyeremény leírása'
+        WHERE id='31
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''31' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='32. tesztnyeremény',
+        prize_description='A(z) 32 nyeremény leírása'
+        WHERE id='32
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''32' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='33. tesztnyeremény',
+        prize_description='A(z) 33 nyeremény leírása'
+        WHERE id='33
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''33' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='34. tesztnyeremény',
+        prize_description='A(z) 34 nyeremény leírása'
+        WHERE id='34
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''34' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='35. tesztnyeremény',
+        prize_description='A(z) 35 nyeremény leírása'
+        WHERE id='35
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''35' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='36. tesztnyeremény',
+        prize_description='A(z) 36 nyeremény leírása'
+        WHERE id='36
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''36' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='37. tesztnyeremény',
+        prize_description='A(z) 37 nyeremény leírása'
+        WHERE id='37
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''37' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='38. tesztnyeremény',
+        prize_description='A(z) 38 nyeremény leírása'
+        WHERE id='38
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''38' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='39. tesztnyeremény',
+        prize_description='A(z) 39 nyeremény leírása'
+        WHERE id='39
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''39' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='40. tesztnyeremény',
+        prize_description='A(z) 40 nyeremény leírása'
+        WHERE id='40
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''40' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='41. tesztnyeremény',
+        prize_description='A(z) 41 nyeremény leírása'
+        WHERE id='41
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''41' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='42. tesztnyeremény',
+        prize_description='A(z) 42 nyeremény leírása'
+        WHERE id='42
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''42' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='43. tesztnyeremény',
+        prize_description='A(z) 43 nyeremény leírása'
+        WHERE id='43
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''43' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='44. tesztnyeremény',
+        prize_description='A(z) 44 nyeremény leírása'
+        WHERE id='44
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''44' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='45. tesztnyeremény',
+        prize_description='A(z) 45 nyeremény leírása'
+        WHERE id='45
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''45' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='46. tesztnyeremény',
+        prize_description='A(z) 46 nyeremény leírása'
+        WHERE id='46
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''46' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='47. tesztnyeremény',
+        prize_description='A(z) 47 nyeremény leírása'
+        WHERE id='47
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''47' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='48. tesztnyeremény',
+        prize_description='A(z) 48 nyeremény leírása'
+        WHERE id='48
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''48' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='49. tesztnyeremény',
+        prize_description='A(z) 49 nyeremény leírása'
+        WHERE id='49
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''49' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='50. tesztnyeremény',
+        prize_description='A(z) 50 nyeremény leírása'
+        WHERE id='50
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''50' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='51. tesztnyeremény',
+        prize_description='A(z) 51 nyeremény leírása'
+        WHERE id='51
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''51' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='52. tesztnyeremény',
+        prize_description='A(z) 52 nyeremény leírása'
+        WHERE id='52
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''52' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='53. tesztnyeremény',
+        prize_description='A(z) 53 nyeremény leírása'
+        WHERE id='53
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''53' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='54. tesztnyeremény',
+        prize_description='A(z) 54 nyeremény leírása'
+        WHERE id='54
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''54' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='55. tesztnyeremény',
+        prize_description='A(z) 55 nyeremény leírása'
+        WHERE id='55
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''55' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='56. tesztnyeremény',
+        prize_description='A(z) 56 nyeremény leírása'
+        WHERE id='56
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''56' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='57. tesztnyeremény',
+        prize_description='A(z) 57 nyeremény leírása'
+        WHERE id='57
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''57' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='58. tesztnyeremény',
+        prize_description='A(z) 58 nyeremény leírása'
+        WHERE id='58
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''58' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='59. tesztnyeremény',
+        prize_description='A(z) 59 nyeremény leírása'
+        WHERE id='59
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''59' at line 3
+2021.11.20 21:27:22 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='60. tesztnyeremény',
+        prize_description='A(z) 60 nyeremény leírása'
+        WHERE id='60
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''60' at line 3
+
+2021.11.20 21:29:20 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='1. tesztnyeremény',
+        prize_description='A(z) 1 nyeremény leírása'
+        WHERE id='1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''1' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='2. tesztnyeremény',
+        prize_description='A(z) 2 nyeremény leírása'
+        WHERE id='2
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='3. tesztnyeremény',
+        prize_description='A(z) 3 nyeremény leírása'
+        WHERE id='3
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='4. tesztnyeremény',
+        prize_description='A(z) 4 nyeremény leírása'
+        WHERE id='4
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''4' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='5. tesztnyeremény',
+        prize_description='A(z) 5 nyeremény leírása'
+        WHERE id='5
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''5' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='6. tesztnyeremény',
+        prize_description='A(z) 6 nyeremény leírása'
+        WHERE id='6
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''6' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='7. tesztnyeremény',
+        prize_description='A(z) 7 nyeremény leírása'
+        WHERE id='7
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''7' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='8. tesztnyeremény',
+        prize_description='A(z) 8 nyeremény leírása'
+        WHERE id='8
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''8' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='9. tesztnyeremény',
+        prize_description='A(z) 9 nyeremény leírása'
+        WHERE id='9
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''9' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='10. tesztnyeremény',
+        prize_description='A(z) 10 nyeremény leírása'
+        WHERE id='10
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''10' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='11. tesztnyeremény',
+        prize_description='A(z) 11 nyeremény leírása'
+        WHERE id='11
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''11' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='12. tesztnyeremény',
+        prize_description='A(z) 12 nyeremény leírása'
+        WHERE id='12
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''12' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='13. tesztnyeremény',
+        prize_description='A(z) 13 nyeremény leírása'
+        WHERE id='13
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''13' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='14. tesztnyeremény',
+        prize_description='A(z) 14 nyeremény leírása'
+        WHERE id='14
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''14' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='15. tesztnyeremény',
+        prize_description='A(z) 15 nyeremény leírása'
+        WHERE id='15
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''15' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='16. tesztnyeremény',
+        prize_description='A(z) 16 nyeremény leírása'
+        WHERE id='16
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''16' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='17. tesztnyeremény',
+        prize_description='A(z) 17 nyeremény leírása'
+        WHERE id='17
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''17' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='18. tesztnyeremény',
+        prize_description='A(z) 18 nyeremény leírása'
+        WHERE id='18
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''18' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='19. tesztnyeremény',
+        prize_description='A(z) 19 nyeremény leírása'
+        WHERE id='19
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''19' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='20. tesztnyeremény',
+        prize_description='A(z) 20 nyeremény leírása'
+        WHERE id='20
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''20' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='21. tesztnyeremény',
+        prize_description='A(z) 21 nyeremény leírása'
+        WHERE id='21
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''21' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='22. tesztnyeremény',
+        prize_description='A(z) 22 nyeremény leírása'
+        WHERE id='22
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''22' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='23. tesztnyeremény',
+        prize_description='A(z) 23 nyeremény leírása'
+        WHERE id='23
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''23' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='24. tesztnyeremény',
+        prize_description='A(z) 24 nyeremény leírása'
+        WHERE id='24
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''24' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='25. tesztnyeremény',
+        prize_description='A(z) 25 nyeremény leírása'
+        WHERE id='25
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''25' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='26. tesztnyeremény',
+        prize_description='A(z) 26 nyeremény leírása'
+        WHERE id='26
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''26' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='27. tesztnyeremény',
+        prize_description='A(z) 27 nyeremény leírása'
+        WHERE id='27
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''27' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='28. tesztnyeremény',
+        prize_description='A(z) 28 nyeremény leírása'
+        WHERE id='28
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''28' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='29. tesztnyeremény',
+        prize_description='A(z) 29 nyeremény leírása'
+        WHERE id='29
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''29' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='30. tesztnyeremény',
+        prize_description='A(z) 30 nyeremény leírása'
+        WHERE id='30
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''30' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='31. tesztnyeremény',
+        prize_description='A(z) 31 nyeremény leírása'
+        WHERE id='31
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''31' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='32. tesztnyeremény',
+        prize_description='A(z) 32 nyeremény leírása'
+        WHERE id='32
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''32' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='33. tesztnyeremény',
+        prize_description='A(z) 33 nyeremény leírása'
+        WHERE id='33
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''33' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='34. tesztnyeremény',
+        prize_description='A(z) 34 nyeremény leírása'
+        WHERE id='34
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''34' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='35. tesztnyeremény',
+        prize_description='A(z) 35 nyeremény leírása'
+        WHERE id='35
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''35' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='36. tesztnyeremény',
+        prize_description='A(z) 36 nyeremény leírása'
+        WHERE id='36
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''36' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='37. tesztnyeremény',
+        prize_description='A(z) 37 nyeremény leírása'
+        WHERE id='37
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''37' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='38. tesztnyeremény',
+        prize_description='A(z) 38 nyeremény leírása'
+        WHERE id='38
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''38' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='39. tesztnyeremény',
+        prize_description='A(z) 39 nyeremény leírása'
+        WHERE id='39
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''39' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='40. tesztnyeremény',
+        prize_description='A(z) 40 nyeremény leírása'
+        WHERE id='40
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''40' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='41. tesztnyeremény',
+        prize_description='A(z) 41 nyeremény leírása'
+        WHERE id='41
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''41' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='42. tesztnyeremény',
+        prize_description='A(z) 42 nyeremény leírása'
+        WHERE id='42
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''42' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='43. tesztnyeremény',
+        prize_description='A(z) 43 nyeremény leírása'
+        WHERE id='43
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''43' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='44. tesztnyeremény',
+        prize_description='A(z) 44 nyeremény leírása'
+        WHERE id='44
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''44' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='45. tesztnyeremény',
+        prize_description='A(z) 45 nyeremény leírása'
+        WHERE id='45
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''45' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='46. tesztnyeremény',
+        prize_description='A(z) 46 nyeremény leírása'
+        WHERE id='46
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''46' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='47. tesztnyeremény',
+        prize_description='A(z) 47 nyeremény leírása'
+        WHERE id='47
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''47' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='48. tesztnyeremény',
+        prize_description='A(z) 48 nyeremény leírása'
+        WHERE id='48
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''48' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='49. tesztnyeremény',
+        prize_description='A(z) 49 nyeremény leírása'
+        WHERE id='49
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''49' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='50. tesztnyeremény',
+        prize_description='A(z) 50 nyeremény leírása'
+        WHERE id='50
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''50' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='51. tesztnyeremény',
+        prize_description='A(z) 51 nyeremény leírása'
+        WHERE id='51
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''51' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='52. tesztnyeremény',
+        prize_description='A(z) 52 nyeremény leírása'
+        WHERE id='52
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''52' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='53. tesztnyeremény',
+        prize_description='A(z) 53 nyeremény leírása'
+        WHERE id='53
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''53' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='54. tesztnyeremény',
+        prize_description='A(z) 54 nyeremény leírása'
+        WHERE id='54
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''54' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='55. tesztnyeremény',
+        prize_description='A(z) 55 nyeremény leírása'
+        WHERE id='55
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''55' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='56. tesztnyeremény',
+        prize_description='A(z) 56 nyeremény leírása'
+        WHERE id='56
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''56' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='57. tesztnyeremény',
+        prize_description='A(z) 57 nyeremény leírása'
+        WHERE id='57
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''57' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='58. tesztnyeremény',
+        prize_description='A(z) 58 nyeremény leírása'
+        WHERE id='58
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''58' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='59. tesztnyeremény',
+        prize_description='A(z) 59 nyeremény leírása'
+        WHERE id='59
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''59' at line 3
+2021.11.20 21:29:20 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='60. tesztnyeremény',
+        prize_description='A(z) 60 nyeremény leírása'
+        WHERE id='60
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''60' at line 3
+
+2021.11.20 21:30:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='1. tesztnyeremény',
+        prize_description='A(z) 1 nyeremény leírása'
+        WHERE id='1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''1' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='2. tesztnyeremény',
+        prize_description='A(z) 2 nyeremény leírása'
+        WHERE id='2
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='3. tesztnyeremény',
+        prize_description='A(z) 3 nyeremény leírása'
+        WHERE id='3
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''3' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='4. tesztnyeremény',
+        prize_description='A(z) 4 nyeremény leírása'
+        WHERE id='4
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''4' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='5. tesztnyeremény',
+        prize_description='A(z) 5 nyeremény leírása'
+        WHERE id='5
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''5' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='6. tesztnyeremény',
+        prize_description='A(z) 6 nyeremény leírása'
+        WHERE id='6
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''6' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='7. tesztnyeremény',
+        prize_description='A(z) 7 nyeremény leírása'
+        WHERE id='7
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''7' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='8. tesztnyeremény',
+        prize_description='A(z) 8 nyeremény leírása'
+        WHERE id='8
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''8' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='9. tesztnyeremény',
+        prize_description='A(z) 9 nyeremény leírása'
+        WHERE id='9
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''9' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='10. tesztnyeremény',
+        prize_description='A(z) 10 nyeremény leírása'
+        WHERE id='10
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''10' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='11. tesztnyeremény',
+        prize_description='A(z) 11 nyeremény leírása'
+        WHERE id='11
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''11' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='12. tesztnyeremény',
+        prize_description='A(z) 12 nyeremény leírása'
+        WHERE id='12
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''12' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='13. tesztnyeremény',
+        prize_description='A(z) 13 nyeremény leírása'
+        WHERE id='13
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''13' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='14. tesztnyeremény',
+        prize_description='A(z) 14 nyeremény leírása'
+        WHERE id='14
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''14' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='15. tesztnyeremény',
+        prize_description='A(z) 15 nyeremény leírása'
+        WHERE id='15
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''15' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='16. tesztnyeremény',
+        prize_description='A(z) 16 nyeremény leírása'
+        WHERE id='16
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''16' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='17. tesztnyeremény',
+        prize_description='A(z) 17 nyeremény leírása'
+        WHERE id='17
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''17' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='18. tesztnyeremény',
+        prize_description='A(z) 18 nyeremény leírása'
+        WHERE id='18
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''18' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='19. tesztnyeremény',
+        prize_description='A(z) 19 nyeremény leírása'
+        WHERE id='19
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''19' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='20. tesztnyeremény',
+        prize_description='A(z) 20 nyeremény leírása'
+        WHERE id='20
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''20' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='21. tesztnyeremény',
+        prize_description='A(z) 21 nyeremény leírása'
+        WHERE id='21
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''21' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='22. tesztnyeremény',
+        prize_description='A(z) 22 nyeremény leírása'
+        WHERE id='22
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''22' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='23. tesztnyeremény',
+        prize_description='A(z) 23 nyeremény leírása'
+        WHERE id='23
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''23' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='24. tesztnyeremény',
+        prize_description='A(z) 24 nyeremény leírása'
+        WHERE id='24
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''24' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='25. tesztnyeremény',
+        prize_description='A(z) 25 nyeremény leírása'
+        WHERE id='25
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''25' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='26. tesztnyeremény',
+        prize_description='A(z) 26 nyeremény leírása'
+        WHERE id='26
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''26' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='27. tesztnyeremény',
+        prize_description='A(z) 27 nyeremény leírása'
+        WHERE id='27
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''27' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='28. tesztnyeremény',
+        prize_description='A(z) 28 nyeremény leírása'
+        WHERE id='28
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''28' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='29. tesztnyeremény',
+        prize_description='A(z) 29 nyeremény leírása'
+        WHERE id='29
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''29' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='30. tesztnyeremény',
+        prize_description='A(z) 30 nyeremény leírása'
+        WHERE id='30
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''30' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='31. tesztnyeremény',
+        prize_description='A(z) 31 nyeremény leírása'
+        WHERE id='31
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''31' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='32. tesztnyeremény',
+        prize_description='A(z) 32 nyeremény leírása'
+        WHERE id='32
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''32' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='33. tesztnyeremény',
+        prize_description='A(z) 33 nyeremény leírása'
+        WHERE id='33
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''33' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='34. tesztnyeremény',
+        prize_description='A(z) 34 nyeremény leírása'
+        WHERE id='34
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''34' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='35. tesztnyeremény',
+        prize_description='A(z) 35 nyeremény leírása'
+        WHERE id='35
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''35' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='36. tesztnyeremény',
+        prize_description='A(z) 36 nyeremény leírása'
+        WHERE id='36
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''36' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='37. tesztnyeremény',
+        prize_description='A(z) 37 nyeremény leírása'
+        WHERE id='37
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''37' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='38. tesztnyeremény',
+        prize_description='A(z) 38 nyeremény leírása'
+        WHERE id='38
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''38' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='39. tesztnyeremény',
+        prize_description='A(z) 39 nyeremény leírása'
+        WHERE id='39
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''39' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='40. tesztnyeremény',
+        prize_description='A(z) 40 nyeremény leírása'
+        WHERE id='40
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''40' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='41. tesztnyeremény',
+        prize_description='A(z) 41 nyeremény leírása'
+        WHERE id='41
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''41' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='42. tesztnyeremény',
+        prize_description='A(z) 42 nyeremény leírása'
+        WHERE id='42
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''42' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='43. tesztnyeremény',
+        prize_description='A(z) 43 nyeremény leírása'
+        WHERE id='43
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''43' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='44. tesztnyeremény',
+        prize_description='A(z) 44 nyeremény leírása'
+        WHERE id='44
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''44' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='45. tesztnyeremény',
+        prize_description='A(z) 45 nyeremény leírása'
+        WHERE id='45
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''45' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='46. tesztnyeremény',
+        prize_description='A(z) 46 nyeremény leírása'
+        WHERE id='46
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''46' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='47. tesztnyeremény',
+        prize_description='A(z) 47 nyeremény leírása'
+        WHERE id='47
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''47' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='48. tesztnyeremény',
+        prize_description='A(z) 48 nyeremény leírása'
+        WHERE id='48
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''48' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='49. tesztnyeremény',
+        prize_description='A(z) 49 nyeremény leírása'
+        WHERE id='49
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''49' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='50. tesztnyeremény',
+        prize_description='A(z) 50 nyeremény leírása'
+        WHERE id='50
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''50' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='51. tesztnyeremény',
+        prize_description='A(z) 51 nyeremény leírása'
+        WHERE id='51
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''51' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='52. tesztnyeremény',
+        prize_description='A(z) 52 nyeremény leírása'
+        WHERE id='52
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''52' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='53. tesztnyeremény',
+        prize_description='A(z) 53 nyeremény leírása'
+        WHERE id='53
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''53' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='54. tesztnyeremény',
+        prize_description='A(z) 54 nyeremény leírása'
+        WHERE id='54
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''54' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='55. tesztnyeremény',
+        prize_description='A(z) 55 nyeremény leírása'
+        WHERE id='55
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''55' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='56. tesztnyeremény',
+        prize_description='A(z) 56 nyeremény leírása'
+        WHERE id='56
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''56' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='57. tesztnyeremény',
+        prize_description='A(z) 57 nyeremény leírása'
+        WHERE id='57
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''57' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='58. tesztnyeremény',
+        prize_description='A(z) 58 nyeremény leírása'
+        WHERE id='58
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''58' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='59. tesztnyeremény',
+        prize_description='A(z) 59 nyeremény leírása'
+        WHERE id='59
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''59' at line 3
+2021.11.20 21:30:03 +01:00 -! Hiba az adatok hozzáadásában: UPDATE prizes SET prize_name='60. tesztnyeremény',
+        prize_description='A(z) 60 nyeremény leírása'
+        WHERE id='60
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''60' at line 3
+
+2021.11.20 21:32:01 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='1. tesztnyeremény',
+        'prize_description'='A(z) 1. nyeremény leírása'
+        WHERE 'id'='1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='1. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='2. tesztnyeremény',
+        'prize_description'='A(z) 2. nyeremény leírása'
+        WHERE 'id'='2
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='2. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='3. tesztnyeremény',
+        'prize_description'='A(z) 3. nyeremény leírása'
+        WHERE 'id'='3
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='3. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='4. tesztnyeremény',
+        'prize_description'='A(z) 4. nyeremény leírása'
+        WHERE 'id'='4
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='4. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='5. tesztnyeremény',
+        'prize_description'='A(z) 5. nyeremény leírása'
+        WHERE 'id'='5
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='5. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='6. tesztnyeremény',
+        'prize_description'='A(z) 6. nyeremény leírása'
+        WHERE 'id'='6
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='6. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='7. tesztnyeremény',
+        'prize_description'='A(z) 7. nyeremény leírása'
+        WHERE 'id'='7
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='7. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='8. tesztnyeremény',
+        'prize_description'='A(z) 8. nyeremény leírása'
+        WHERE 'id'='8
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='8. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='9. tesztnyeremény',
+        'prize_description'='A(z) 9. nyeremény leírása'
+        WHERE 'id'='9
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='9. tesztnyerem?ny',
+        'prize_descr...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='10. tesztnyeremény',
+        'prize_description'='A(z) 10. nyeremény leírása'
+        WHERE 'id'='10
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='10. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='11. tesztnyeremény',
+        'prize_description'='A(z) 11. nyeremény leírása'
+        WHERE 'id'='11
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='11. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='12. tesztnyeremény',
+        'prize_description'='A(z) 12. nyeremény leírása'
+        WHERE 'id'='12
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='12. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='13. tesztnyeremény',
+        'prize_description'='A(z) 13. nyeremény leírása'
+        WHERE 'id'='13
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='13. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='14. tesztnyeremény',
+        'prize_description'='A(z) 14. nyeremény leírása'
+        WHERE 'id'='14
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='14. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='15. tesztnyeremény',
+        'prize_description'='A(z) 15. nyeremény leírása'
+        WHERE 'id'='15
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='15. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='16. tesztnyeremény',
+        'prize_description'='A(z) 16. nyeremény leírása'
+        WHERE 'id'='16
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='16. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='17. tesztnyeremény',
+        'prize_description'='A(z) 17. nyeremény leírása'
+        WHERE 'id'='17
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='17. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='18. tesztnyeremény',
+        'prize_description'='A(z) 18. nyeremény leírása'
+        WHERE 'id'='18
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='18. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='19. tesztnyeremény',
+        'prize_description'='A(z) 19. nyeremény leírása'
+        WHERE 'id'='19
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='19. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='20. tesztnyeremény',
+        'prize_description'='A(z) 20. nyeremény leírása'
+        WHERE 'id'='20
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='20. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='21. tesztnyeremény',
+        'prize_description'='A(z) 21. nyeremény leírása'
+        WHERE 'id'='21
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='21. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='22. tesztnyeremény',
+        'prize_description'='A(z) 22. nyeremény leírása'
+        WHERE 'id'='22
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='22. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='23. tesztnyeremény',
+        'prize_description'='A(z) 23. nyeremény leírása'
+        WHERE 'id'='23
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='23. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='24. tesztnyeremény',
+        'prize_description'='A(z) 24. nyeremény leírása'
+        WHERE 'id'='24
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='24. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='25. tesztnyeremény',
+        'prize_description'='A(z) 25. nyeremény leírása'
+        WHERE 'id'='25
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='25. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='26. tesztnyeremény',
+        'prize_description'='A(z) 26. nyeremény leírása'
+        WHERE 'id'='26
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='26. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='27. tesztnyeremény',
+        'prize_description'='A(z) 27. nyeremény leírása'
+        WHERE 'id'='27
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='27. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='28. tesztnyeremény',
+        'prize_description'='A(z) 28. nyeremény leírása'
+        WHERE 'id'='28
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='28. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='29. tesztnyeremény',
+        'prize_description'='A(z) 29. nyeremény leírása'
+        WHERE 'id'='29
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='29. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='30. tesztnyeremény',
+        'prize_description'='A(z) 30. nyeremény leírása'
+        WHERE 'id'='30
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='30. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='31. tesztnyeremény',
+        'prize_description'='A(z) 31. nyeremény leírása'
+        WHERE 'id'='31
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='31. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='32. tesztnyeremény',
+        'prize_description'='A(z) 32. nyeremény leírása'
+        WHERE 'id'='32
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='32. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='33. tesztnyeremény',
+        'prize_description'='A(z) 33. nyeremény leírása'
+        WHERE 'id'='33
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='33. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='34. tesztnyeremény',
+        'prize_description'='A(z) 34. nyeremény leírása'
+        WHERE 'id'='34
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='34. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='35. tesztnyeremény',
+        'prize_description'='A(z) 35. nyeremény leírása'
+        WHERE 'id'='35
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='35. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='36. tesztnyeremény',
+        'prize_description'='A(z) 36. nyeremény leírása'
+        WHERE 'id'='36
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='36. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='37. tesztnyeremény',
+        'prize_description'='A(z) 37. nyeremény leírása'
+        WHERE 'id'='37
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='37. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='38. tesztnyeremény',
+        'prize_description'='A(z) 38. nyeremény leírása'
+        WHERE 'id'='38
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='38. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='39. tesztnyeremény',
+        'prize_description'='A(z) 39. nyeremény leírása'
+        WHERE 'id'='39
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='39. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='40. tesztnyeremény',
+        'prize_description'='A(z) 40. nyeremény leírása'
+        WHERE 'id'='40
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='40. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='41. tesztnyeremény',
+        'prize_description'='A(z) 41. nyeremény leírása'
+        WHERE 'id'='41
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='41. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='42. tesztnyeremény',
+        'prize_description'='A(z) 42. nyeremény leírása'
+        WHERE 'id'='42
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='42. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='43. tesztnyeremény',
+        'prize_description'='A(z) 43. nyeremény leírása'
+        WHERE 'id'='43
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='43. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='44. tesztnyeremény',
+        'prize_description'='A(z) 44. nyeremény leírása'
+        WHERE 'id'='44
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='44. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='45. tesztnyeremény',
+        'prize_description'='A(z) 45. nyeremény leírása'
+        WHERE 'id'='45
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='45. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='46. tesztnyeremény',
+        'prize_description'='A(z) 46. nyeremény leírása'
+        WHERE 'id'='46
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='46. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='47. tesztnyeremény',
+        'prize_description'='A(z) 47. nyeremény leírása'
+        WHERE 'id'='47
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='47. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='48. tesztnyeremény',
+        'prize_description'='A(z) 48. nyeremény leírása'
+        WHERE 'id'='48
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='48. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='49. tesztnyeremény',
+        'prize_description'='A(z) 49. nyeremény leírása'
+        WHERE 'id'='49
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='49. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='50. tesztnyeremény',
+        'prize_description'='A(z) 50. nyeremény leírása'
+        WHERE 'id'='50
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='50. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='51. tesztnyeremény',
+        'prize_description'='A(z) 51. nyeremény leírása'
+        WHERE 'id'='51
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='51. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='52. tesztnyeremény',
+        'prize_description'='A(z) 52. nyeremény leírása'
+        WHERE 'id'='52
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='52. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='53. tesztnyeremény',
+        'prize_description'='A(z) 53. nyeremény leírása'
+        WHERE 'id'='53
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='53. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='54. tesztnyeremény',
+        'prize_description'='A(z) 54. nyeremény leírása'
+        WHERE 'id'='54
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='54. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='55. tesztnyeremény',
+        'prize_description'='A(z) 55. nyeremény leírása'
+        WHERE 'id'='55
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='55. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='56. tesztnyeremény',
+        'prize_description'='A(z) 56. nyeremény leírása'
+        WHERE 'id'='56
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='56. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='57. tesztnyeremény',
+        'prize_description'='A(z) 57. nyeremény leírása'
+        WHERE 'id'='57
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='57. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='58. tesztnyeremény',
+        'prize_description'='A(z) 58. nyeremény leírása'
+        WHERE 'id'='58
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='58. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='59. tesztnyeremény',
+        'prize_description'='A(z) 59. nyeremény leírása'
+        WHERE 'id'='59
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='59. tesztnyerem?ny',
+        'prize_desc...' at line 1
+2021.11.20 21:32:01 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET
+        'prize_name'='60. tesztnyeremény',
+        'prize_description'='A(z) 60. nyeremény leírása'
+        WHERE 'id'='60
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET
+        'prize_name'='60. tesztnyerem?ny',
+        'prize_desc...' at line 1
+
+2021.11.20 21:32:38 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='1. tesztnyeremény', 'prize_description'='A(z) 1. nyeremény leírása' WHERE 'id'='1
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='1. tesztnyerem?ny', 'prize_description'='A(z) 1. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='2. tesztnyeremény', 'prize_description'='A(z) 2. nyeremény leírása' WHERE 'id'='2
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='2. tesztnyerem?ny', 'prize_description'='A(z) 2. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='3. tesztnyeremény', 'prize_description'='A(z) 3. nyeremény leírása' WHERE 'id'='3
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='3. tesztnyerem?ny', 'prize_description'='A(z) 3. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='4. tesztnyeremény', 'prize_description'='A(z) 4. nyeremény leírása' WHERE 'id'='4
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='4. tesztnyerem?ny', 'prize_description'='A(z) 4. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='5. tesztnyeremény', 'prize_description'='A(z) 5. nyeremény leírása' WHERE 'id'='5
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='5. tesztnyerem?ny', 'prize_description'='A(z) 5. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='6. tesztnyeremény', 'prize_description'='A(z) 6. nyeremény leírása' WHERE 'id'='6
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='6. tesztnyerem?ny', 'prize_description'='A(z) 6. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='7. tesztnyeremény', 'prize_description'='A(z) 7. nyeremény leírása' WHERE 'id'='7
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='7. tesztnyerem?ny', 'prize_description'='A(z) 7. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='8. tesztnyeremény', 'prize_description'='A(z) 8. nyeremény leírása' WHERE 'id'='8
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='8. tesztnyerem?ny', 'prize_description'='A(z) 8. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='9. tesztnyeremény', 'prize_description'='A(z) 9. nyeremény leírása' WHERE 'id'='9
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='9. tesztnyerem?ny', 'prize_description'='A(z) 9. n...' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='10. tesztnyeremény', 'prize_description'='A(z) 10. nyeremény leírása' WHERE 'id'='10
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='10. tesztnyerem?ny', 'prize_description'='A(z) 10....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='11. tesztnyeremény', 'prize_description'='A(z) 11. nyeremény leírása' WHERE 'id'='11
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='11. tesztnyerem?ny', 'prize_description'='A(z) 11....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='12. tesztnyeremény', 'prize_description'='A(z) 12. nyeremény leírása' WHERE 'id'='12
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='12. tesztnyerem?ny', 'prize_description'='A(z) 12....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='13. tesztnyeremény', 'prize_description'='A(z) 13. nyeremény leírása' WHERE 'id'='13
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='13. tesztnyerem?ny', 'prize_description'='A(z) 13....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='14. tesztnyeremény', 'prize_description'='A(z) 14. nyeremény leírása' WHERE 'id'='14
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='14. tesztnyerem?ny', 'prize_description'='A(z) 14....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='15. tesztnyeremény', 'prize_description'='A(z) 15. nyeremény leírása' WHERE 'id'='15
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='15. tesztnyerem?ny', 'prize_description'='A(z) 15....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='16. tesztnyeremény', 'prize_description'='A(z) 16. nyeremény leírása' WHERE 'id'='16
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='16. tesztnyerem?ny', 'prize_description'='A(z) 16....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='17. tesztnyeremény', 'prize_description'='A(z) 17. nyeremény leírása' WHERE 'id'='17
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='17. tesztnyerem?ny', 'prize_description'='A(z) 17....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='18. tesztnyeremény', 'prize_description'='A(z) 18. nyeremény leírása' WHERE 'id'='18
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='18. tesztnyerem?ny', 'prize_description'='A(z) 18....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='19. tesztnyeremény', 'prize_description'='A(z) 19. nyeremény leírása' WHERE 'id'='19
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='19. tesztnyerem?ny', 'prize_description'='A(z) 19....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='20. tesztnyeremény', 'prize_description'='A(z) 20. nyeremény leírása' WHERE 'id'='20
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='20. tesztnyerem?ny', 'prize_description'='A(z) 20....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='21. tesztnyeremény', 'prize_description'='A(z) 21. nyeremény leírása' WHERE 'id'='21
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='21. tesztnyerem?ny', 'prize_description'='A(z) 21....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='22. tesztnyeremény', 'prize_description'='A(z) 22. nyeremény leírása' WHERE 'id'='22
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='22. tesztnyerem?ny', 'prize_description'='A(z) 22....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='23. tesztnyeremény', 'prize_description'='A(z) 23. nyeremény leírása' WHERE 'id'='23
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='23. tesztnyerem?ny', 'prize_description'='A(z) 23....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='24. tesztnyeremény', 'prize_description'='A(z) 24. nyeremény leírása' WHERE 'id'='24
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='24. tesztnyerem?ny', 'prize_description'='A(z) 24....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='25. tesztnyeremény', 'prize_description'='A(z) 25. nyeremény leírása' WHERE 'id'='25
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='25. tesztnyerem?ny', 'prize_description'='A(z) 25....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='26. tesztnyeremény', 'prize_description'='A(z) 26. nyeremény leírása' WHERE 'id'='26
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='26. tesztnyerem?ny', 'prize_description'='A(z) 26....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='27. tesztnyeremény', 'prize_description'='A(z) 27. nyeremény leírása' WHERE 'id'='27
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='27. tesztnyerem?ny', 'prize_description'='A(z) 27....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='28. tesztnyeremény', 'prize_description'='A(z) 28. nyeremény leírása' WHERE 'id'='28
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='28. tesztnyerem?ny', 'prize_description'='A(z) 28....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='29. tesztnyeremény', 'prize_description'='A(z) 29. nyeremény leírása' WHERE 'id'='29
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='29. tesztnyerem?ny', 'prize_description'='A(z) 29....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='30. tesztnyeremény', 'prize_description'='A(z) 30. nyeremény leírása' WHERE 'id'='30
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='30. tesztnyerem?ny', 'prize_description'='A(z) 30....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='31. tesztnyeremény', 'prize_description'='A(z) 31. nyeremény leírása' WHERE 'id'='31
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='31. tesztnyerem?ny', 'prize_description'='A(z) 31....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='32. tesztnyeremény', 'prize_description'='A(z) 32. nyeremény leírása' WHERE 'id'='32
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='32. tesztnyerem?ny', 'prize_description'='A(z) 32....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='33. tesztnyeremény', 'prize_description'='A(z) 33. nyeremény leírása' WHERE 'id'='33
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='33. tesztnyerem?ny', 'prize_description'='A(z) 33....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='34. tesztnyeremény', 'prize_description'='A(z) 34. nyeremény leírása' WHERE 'id'='34
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='34. tesztnyerem?ny', 'prize_description'='A(z) 34....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='35. tesztnyeremény', 'prize_description'='A(z) 35. nyeremény leírása' WHERE 'id'='35
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='35. tesztnyerem?ny', 'prize_description'='A(z) 35....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='36. tesztnyeremény', 'prize_description'='A(z) 36. nyeremény leírása' WHERE 'id'='36
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='36. tesztnyerem?ny', 'prize_description'='A(z) 36....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='37. tesztnyeremény', 'prize_description'='A(z) 37. nyeremény leírása' WHERE 'id'='37
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='37. tesztnyerem?ny', 'prize_description'='A(z) 37....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='38. tesztnyeremény', 'prize_description'='A(z) 38. nyeremény leírása' WHERE 'id'='38
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='38. tesztnyerem?ny', 'prize_description'='A(z) 38....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='39. tesztnyeremény', 'prize_description'='A(z) 39. nyeremény leírása' WHERE 'id'='39
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='39. tesztnyerem?ny', 'prize_description'='A(z) 39....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='40. tesztnyeremény', 'prize_description'='A(z) 40. nyeremény leírása' WHERE 'id'='40
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='40. tesztnyerem?ny', 'prize_description'='A(z) 40....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='41. tesztnyeremény', 'prize_description'='A(z) 41. nyeremény leírása' WHERE 'id'='41
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='41. tesztnyerem?ny', 'prize_description'='A(z) 41....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='42. tesztnyeremény', 'prize_description'='A(z) 42. nyeremény leírása' WHERE 'id'='42
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='42. tesztnyerem?ny', 'prize_description'='A(z) 42....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='43. tesztnyeremény', 'prize_description'='A(z) 43. nyeremény leírása' WHERE 'id'='43
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='43. tesztnyerem?ny', 'prize_description'='A(z) 43....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='44. tesztnyeremény', 'prize_description'='A(z) 44. nyeremény leírása' WHERE 'id'='44
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='44. tesztnyerem?ny', 'prize_description'='A(z) 44....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='45. tesztnyeremény', 'prize_description'='A(z) 45. nyeremény leírása' WHERE 'id'='45
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='45. tesztnyerem?ny', 'prize_description'='A(z) 45....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='46. tesztnyeremény', 'prize_description'='A(z) 46. nyeremény leírása' WHERE 'id'='46
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='46. tesztnyerem?ny', 'prize_description'='A(z) 46....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='47. tesztnyeremény', 'prize_description'='A(z) 47. nyeremény leírása' WHERE 'id'='47
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='47. tesztnyerem?ny', 'prize_description'='A(z) 47....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='48. tesztnyeremény', 'prize_description'='A(z) 48. nyeremény leírása' WHERE 'id'='48
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='48. tesztnyerem?ny', 'prize_description'='A(z) 48....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='49. tesztnyeremény', 'prize_description'='A(z) 49. nyeremény leírása' WHERE 'id'='49
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='49. tesztnyerem?ny', 'prize_description'='A(z) 49....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='50. tesztnyeremény', 'prize_description'='A(z) 50. nyeremény leírása' WHERE 'id'='50
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='50. tesztnyerem?ny', 'prize_description'='A(z) 50....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='51. tesztnyeremény', 'prize_description'='A(z) 51. nyeremény leírása' WHERE 'id'='51
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='51. tesztnyerem?ny', 'prize_description'='A(z) 51....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='52. tesztnyeremény', 'prize_description'='A(z) 52. nyeremény leírása' WHERE 'id'='52
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='52. tesztnyerem?ny', 'prize_description'='A(z) 52....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='53. tesztnyeremény', 'prize_description'='A(z) 53. nyeremény leírása' WHERE 'id'='53
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='53. tesztnyerem?ny', 'prize_description'='A(z) 53....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='54. tesztnyeremény', 'prize_description'='A(z) 54. nyeremény leírása' WHERE 'id'='54
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='54. tesztnyerem?ny', 'prize_description'='A(z) 54....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='55. tesztnyeremény', 'prize_description'='A(z) 55. nyeremény leírása' WHERE 'id'='55
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='55. tesztnyerem?ny', 'prize_description'='A(z) 55....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='56. tesztnyeremény', 'prize_description'='A(z) 56. nyeremény leírása' WHERE 'id'='56
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='56. tesztnyerem?ny', 'prize_description'='A(z) 56....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='57. tesztnyeremény', 'prize_description'='A(z) 57. nyeremény leírása' WHERE 'id'='57
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='57. tesztnyerem?ny', 'prize_description'='A(z) 57....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='58. tesztnyeremény', 'prize_description'='A(z) 58. nyeremény leírása' WHERE 'id'='58
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='58. tesztnyerem?ny', 'prize_description'='A(z) 58....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='59. tesztnyeremény', 'prize_description'='A(z) 59. nyeremény leírása' WHERE 'id'='59
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='59. tesztnyerem?ny', 'prize_description'='A(z) 59....' at line 1
+2021.11.20 21:32:38 +01:00 -! Hiba az adatok hozzáadásában: UPDATE 'prizes' SET 'prize_name'='60. tesztnyeremény', 'prize_description'='A(z) 60. nyeremény leírása' WHERE 'id'='60
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''prizes' SET 'prize_name'='60. tesztnyerem?ny', 'prize_description'='A(z) 60....' at line 1
+
+2021.11.20 21:37:19 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 21:37:19 +01:00 - A(z) 1. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 2. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 3. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 4. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 5. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 6. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 7. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 8. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 9. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 10. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 11. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 12. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 13. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 14. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 15. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 16. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 17. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 18. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 19. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 20. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 21. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 22. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 23. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 24. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 25. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 26. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 27. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 28. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 29. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 30. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 31. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 32. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 33. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 34. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 35. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 36. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 37. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 38. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 39. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 40. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 41. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 42. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 43. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 44. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 45. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 46. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 47. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 48. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 49. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 50. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 51. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 52. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 53. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 54. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 55. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 56. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 57. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 58. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 59. nyeremény frissítése sikeres.
+2021.11.20 21:37:19 +01:00 - A(z) 60. nyeremény frissítése sikeres.
+
+2021.11.20 22:20:10 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('1', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('1', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('1', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('1', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('1', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('1', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('2', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('2', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('2', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('2', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('2', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('2', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('3', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('3', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('3', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('3', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('3', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('3', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('4', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('4', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('4', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('4', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('4', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('4', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('5', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('5', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('5', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('5', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('5', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('5', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('6', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('6', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('6', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('6', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('6', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('6', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('7', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('7', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('7', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('7', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('7', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('7', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('8', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('8', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('8', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('8', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('8', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('8', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('9', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('9', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('9', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('9', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('9', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('9', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('10', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('10', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('10', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('10', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('10', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('10', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('11', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('11', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('11', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('11', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('11', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('11', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('12', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('12', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('12', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('12', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('12', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('12', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('13', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('13', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('13', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('13', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('13', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('13', '31')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('14', '29')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('14', '29')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('14', '30')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('14', '30')' at line 1
+2021.11.20 22:20:10 +01:00 -! Hiba az adatok hozzáadásában: INSER INTO userevents (user, event)
+            VALUES ('14', '31')
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO userevents (user, event)
+            VALUES ('14', '31')' at line 1
+
+2021.11.20 22:25:25 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=1
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=1
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=2
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=2
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=3
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=3
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=4
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=4
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=5
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=5
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=6
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=6
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=7
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=7
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=8
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=8
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=9
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=9
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=10
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=10
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=11
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=11
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=12
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=12
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=13
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=13
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=14
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=14
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=15
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=15
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=16
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=16
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=17
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=17
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=18
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=18
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=19
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=19
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=20
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=20
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=21
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=21
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=22
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=22
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=23
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=23
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=24
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=24
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=25
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=25
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=26
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=26
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=27
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=27
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=28
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=28
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=29
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=29
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=30
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=30
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=31
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=31
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=32
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=32
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=33
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=33
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=34
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=34
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=35
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=35
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=36
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=36
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=37
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=37
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=38
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=38
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=39
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=39
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=40
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=40
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=41
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=41
+2021.11.20 22:25:25 +01:00 - A UserEvent felvétele sikeres. ID=42
+2021.11.20 22:25:25 +01:00 - A ticket létrehozása sikeres. ID=42
+
+2021.11.22 23:25:28 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:25:29 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:25:29 +01:00 - Exit AutoDraw
+
+2021.11.22 23:29:13 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:29:13 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:29:13 +01:00 - Exit AutoDraw
+
+2021.11.22 23:29:33 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:29:33 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:29:34 +01:00 - Exit AutoDraw
+
+2021.11.22 23:32:35 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:32:35 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:32:36 +01:00 - Exit AutoDraw
+
+2021.11.22 23:32:51 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:32:51 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:32:51 +01:00 - Exit AutoDraw
+
+2021.11.22 23:34:55 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:34:55 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:34:55 +01:00 - Exit AutoDraw
+
+2021.11.22 23:41:33 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:41:33 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:41:34 +01:00 - Exit AutoDraw
+
+2021.11.22 23:46:34 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:46:34 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:46:35 +01:00 - Exit AutoDraw
+
+2021.11.22 23:47:04 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:47:04 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:47:05 +01:00 - Exit AutoDraw
+
+2021.11.22 23:48:36 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:48:36 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:48:36 +01:00 - Exit AutoDraw
+
+2021.11.22 23:50:59 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:50:59 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:50:59 +01:00 - Exit AutoDraw
+
+2021.11.22 23:51:24 +01:00 - Start Ticketto AutoDraw
+2021.11.22 23:51:24 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.22 23:51:24 +01:00 - Exit AutoDraw
+
+2021.11.23 00:44:57 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:44:57 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 00:44:57 +01:00 - Exit AutoDraw
+
+2021.11.23 00:46:31 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:46:31 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 00:46:31 +01:00 - Exit AutoDraw
+
+2021.11.23 00:52:24 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:52:24 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 00:52:24 +01:00 - Exit AutoDraw
+
+2021.11.23 00:57:07 +01:00 - Start Ticketto AutoDraw
+2021.11.23 00:57:07 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 00:57:07 +01:00 - Exit AutoDraw
+
+2021.11.23 01:18:58 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:18:58 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:18:58 +01:00 - Exit AutoDraw
+
+2021.11.23 01:20:28 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:20:28 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:20:28 +01:00 - Exit AutoDraw
+
+2021.11.23 01:22:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:22:03 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:22:03 +01:00 - Exit AutoDraw
+
+2021.11.23 01:33:17 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:33:17 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:33:17 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=16
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jĹ± tickethez a Array Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=22
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jĹ± tickethez a Array Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=20
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jĹ± tickethez a Array Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=2
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jĹ± tickethez a Array Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=12
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jĹ± tickethez a Array Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=33
+2021.11.23 01:33:17 +01:00 - A(z)  Id-jĹ± tickethez a Array Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - A(z) Array Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:33:17 +01:00 - Exit AutoDraw
+
+2021.11.23 01:42:19 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:42:19 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:42:19 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=31
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jĹ± tickethez a 17 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - A(z) 17 Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=4
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jĹ± tickethez a 18 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - A(z) 18 Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=26
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jĹ± tickethez a 19 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - A(z) 19 Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=29
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jĹ± tickethez a 20 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - A(z) 20 Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=30
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jĹ± tickethez a 21 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - A(z) 21 Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=3
+2021.11.23 01:42:19 +01:00 - A(z)  Id-jĹ± tickethez a 22 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - A(z) 22 Id-jĹ± nyeremĂ©nyhez a  Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:42:19 +01:00 - Exit AutoDraw
+
+2021.11.23 01:44:01 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:44:01 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:44:01 +01:00 - Exit AutoDraw
+
+2021.11.23 01:48:22 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:48:22 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:48:22 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=40
+2021.11.23 01:48:22 +01:00 - A(z) 40 Id-jĹ± tickethez a 17 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - A(z) 17 Id-jĹ± nyeremĂ©nyhez a 40 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=25
+2021.11.23 01:48:22 +01:00 - A(z) 25 Id-jĹ± tickethez a 18 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - A(z) 18 Id-jĹ± nyeremĂ©nyhez a 25 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=38
+2021.11.23 01:48:22 +01:00 - A(z) 38 Id-jĹ± tickethez a 19 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - A(z) 19 Id-jĹ± nyeremĂ©nyhez a 38 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=14
+2021.11.23 01:48:22 +01:00 - A(z) 14 Id-jĹ± tickethez a 20 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - A(z) 20 Id-jĹ± nyeremĂ©nyhez a 14 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=3
+2021.11.23 01:48:22 +01:00 - A(z) 3 Id-jĹ± tickethez a 21 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - A(z) 21 Id-jĹ± nyeremĂ©nyhez a 3 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=33
+2021.11.23 01:48:22 +01:00 - A(z) 33 Id-jĹ± tickethez a 22 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - A(z) 22 Id-jĹ± nyeremĂ©nyhez a 33 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:48:22 +01:00 - Exit AutoDraw
+
+2021.11.23 01:49:47 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:49:47 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:49:47 +01:00 - Exit AutoDraw
+
+2021.11.23 01:58:24 +01:00 - Start Ticketto AutoDraw
+2021.11.23 01:58:24 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 01:58:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=28
+2021.11.23 01:58:24 +01:00 - A(z) 28 Id-jĹ± tickethez a 17 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - A(z) 17 Id-jĹ± nyeremĂ©nyhez a 28 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=4
+2021.11.23 01:58:24 +01:00 - A(z) 4 Id-jĹ± tickethez a 18 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - A(z) 18 Id-jĹ± nyeremĂ©nyhez a 4 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=23
+2021.11.23 01:58:24 +01:00 - A(z) 23 Id-jĹ± tickethez a 19 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - A(z) 19 Id-jĹ± nyeremĂ©nyhez a 23 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=11
+2021.11.23 01:58:24 +01:00 - A(z) 11 Id-jĹ± tickethez a 20 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - A(z) 20 Id-jĹ± nyeremĂ©nyhez a 11 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=3
+2021.11.23 01:58:24 +01:00 - A(z) 3 Id-jĹ± tickethez a 21 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - A(z) 21 Id-jĹ± nyeremĂ©nyhez a 3 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=33
+2021.11.23 01:58:24 +01:00 - A(z) 33 Id-jĹ± tickethez a 22 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - A(z) 22 Id-jĹ± nyeremĂ©nyhez a 33 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 01:58:24 +01:00 - Exit AutoDraw
+
+2021.11.23 02:04:24 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:04:24 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 02:04:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=28
+2021.11.23 02:04:24 +01:00 - A(z) 28 Id-jĹ± tickethez a 17 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - A(z) 17 Id-jĹ± nyeremĂ©nyhez a 28 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=22
+2021.11.23 02:04:24 +01:00 - A(z) 22 Id-jĹ± tickethez a 18 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - A(z) 18 Id-jĹ± nyeremĂ©nyhez a 22 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=2
+2021.11.23 02:04:24 +01:00 - A(z) 2 Id-jĹ± tickethez a 19 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - A(z) 19 Id-jĹ± nyeremĂ©nyhez a 2 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=8
+2021.11.23 02:04:24 +01:00 - A(z) 8 Id-jĹ± tickethez a 20 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - A(z) 20 Id-jĹ± nyeremĂ©nyhez a 8 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=27
+2021.11.23 02:04:24 +01:00 - A(z) 27 Id-jĹ± tickethez a 21 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - A(z) 21 Id-jĹ± nyeremĂ©nyhez a 27 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=36
+2021.11.23 02:04:24 +01:00 - A(z) 36 Id-jĹ± tickethez a 22 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - A(z) 22 Id-jĹ± nyeremĂ©nyhez a 36 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:04:24 +01:00 - Exit AutoDraw
+
+2021.11.23 02:14:25 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:14:25 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 02:14:25 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=7
+2021.11.23 02:14:25 +01:00 - A(z) 7 Id-jĹ± tickethez a 17 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 - A(z) 17 Id-jĹ± nyeremĂ©nyhez a 7 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemĂ©ny frissĂ­tĂ©sekor: UPDATE `prizes` SET `winner_ticket_id`='7' WHERE `id`='17'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=40
+2021.11.23 02:14:25 +01:00 - A(z) 40 Id-jĹ± tickethez a 18 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 - A(z) 18 Id-jĹ± nyeremĂ©nyhez a 40 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemĂ©ny frissĂ­tĂ©sekor: UPDATE `prizes` SET `winner_ticket_id`='40' WHERE `id`='18'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=17
+2021.11.23 02:14:25 +01:00 - A(z) 17 Id-jĹ± tickethez a 19 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 - A(z) 19 Id-jĹ± nyeremĂ©nyhez a 17 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemĂ©ny frissĂ­tĂ©sekor: UPDATE `prizes` SET `winner_ticket_id`='17' WHERE `id`='19'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=35
+2021.11.23 02:14:25 +01:00 - A(z) 35 Id-jĹ± tickethez a 20 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 - A(z) 20 Id-jĹ± nyeremĂ©nyhez a 35 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemĂ©ny frissĂ­tĂ©sekor: UPDATE `prizes` SET `winner_ticket_id`='35' WHERE `id`='20'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=9
+2021.11.23 02:14:25 +01:00 - A(z) 9 Id-jĹ± tickethez a 21 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 - A(z) 21 Id-jĹ± nyeremĂ©nyhez a 9 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemĂ©ny frissĂ­tĂ©sekor: UPDATE `prizes` SET `winner_ticket_id`='9' WHERE `id`='21'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=24
+2021.11.23 02:14:25 +01:00 - A(z) 24 Id-jĹ± tickethez a 22 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 - A(z) 22 Id-jĹ± nyeremĂ©nyhez a 24 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:14:25 +01:00 -! Hiba az esemĂ©ny frissĂ­tĂ©sekor: UPDATE `prizes` SET `winner_ticket_id`='24' WHERE `id`='22'
+Table 'ticketto.event' doesn't exist
+2021.11.23 02:14:25 +01:00 - Exit AutoDraw
+
+2021.11.23 02:16:12 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:16:12 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 02:16:12 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=17; Ticket ID=7
+2021.11.23 02:16:12 +01:00 - A(z) 7 Id-jĹ± tickethez a 17 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 17 Id-jĹ± nyeremĂ©nyhez a 7 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 29 Id-jĂş esemĂ©ny ĂˇtĂˇllĂ­tva SORSOLVA Ăˇllapotra
+2021.11.23 02:16:12 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=29; NyeremĂ©ny ID=18; Ticket ID=10
+2021.11.23 02:16:12 +01:00 - A(z) 10 Id-jĹ± tickethez a 18 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 18 Id-jĹ± nyeremĂ©nyhez a 10 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 29 Id-jĂş esemĂ©ny ĂˇtĂˇllĂ­tva SORSOLVA Ăˇllapotra
+2021.11.23 02:16:12 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=19; Ticket ID=2
+2021.11.23 02:16:12 +01:00 - A(z) 2 Id-jĹ± tickethez a 19 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 19 Id-jĹ± nyeremĂ©nyhez a 2 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 30 Id-jĂş esemĂ©ny ĂˇtĂˇllĂ­tva SORSOLVA Ăˇllapotra
+2021.11.23 02:16:12 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=30; NyeremĂ©ny ID=20; Ticket ID=32
+2021.11.23 02:16:12 +01:00 - A(z) 32 Id-jĹ± tickethez a 20 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 20 Id-jĹ± nyeremĂ©nyhez a 32 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 30 Id-jĂş esemĂ©ny ĂˇtĂˇllĂ­tva SORSOLVA Ăˇllapotra
+2021.11.23 02:16:12 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=21; Ticket ID=18
+2021.11.23 02:16:12 +01:00 - A(z) 18 Id-jĹ± tickethez a 21 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 21 Id-jĹ± nyeremĂ©nyhez a 18 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 31 Id-jĂş esemĂ©ny ĂˇtĂˇllĂ­tva SORSOLVA Ăˇllapotra
+2021.11.23 02:16:12 +01:00 - SorsolĂˇs eredmĂ©nye: EsemĂ©ny ID=31; NyeremĂ©ny ID=22; Ticket ID=9
+2021.11.23 02:16:12 +01:00 - A(z) 9 Id-jĹ± tickethez a 22 Id-jĂş nyeremĂ©ny hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 22 Id-jĹ± nyeremĂ©nyhez a 9 Id-jĂş ticket hozzĂˇadva.
+2021.11.23 02:16:12 +01:00 - A(z) 31 Id-jĂş esemĂ©ny ĂˇtĂˇllĂ­tva SORSOLVA Ăˇllapotra
+2021.11.23 02:16:12 +01:00 - Exit AutoDraw
+
+2021.11.23 02:16:56 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:16:56 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 02:16:56 +01:00 - Exit AutoDraw
+
+2021.11.23 02:17:46 +01:00 - Start Ticketto AutoDraw
+2021.11.23 02:17:46 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 02:17:46 +01:00 - Exit AutoDraw
+
+2021.11.23 20:32:04 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:32:04 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 20:32:30 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:32:30 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:32:30 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:32:30 +01:00 - Exit AutoDraw
+
+2021.11.23 20:35:41 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:35:41 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:35:41 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:35:41 +01:00 - Exit AutoDraw
+
+2021.11.23 20:52:10 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:52:10 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 20:52:13 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:52:13 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:52:13 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:52:13 +01:00 - Exit AutoDraw
+
+2021.11.23 20:54:18 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:54:18 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:54:18 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:54:18 +01:00 - Exit AutoDraw
+
+2021.11.23 20:55:11 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:55:11 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:55:11 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:55:11 +01:00 - Exit AutoDraw
+
+2021.11.23 20:57:04 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:57:04 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:57:04 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:57:04 +01:00 - Exit AutoDraw
+
+2021.11.23 20:57:37 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:57:37 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:57:37 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:57:37 +01:00 - Exit AutoDraw
+
+2021.11.23 20:58:55 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:58:55 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:58:55 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:58:55 +01:00 - Exit AutoDraw
+
+2021.11.23 20:59:29 +01:00 - Start Ticketto AutoDraw
+2021.11.23 20:59:29 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 20:59:29 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 20:59:29 +01:00 - Exit AutoDraw
+
+2021.11.23 21:10:09 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:10:09 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:10:09 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:10:09 +01:00 - Exit AutoDraw
+
+2021.11.23 21:10:42 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:10:42 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:10:42 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:10:42 +01:00 - Exit AutoDraw
+
+2021.11.23 21:21:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:21:03 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=4; TicketID=0; UserID=0
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=5; TicketID=40; UserID=14
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=6; TicketID=1; UserID=1
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=7; TicketID=1; UserID=1
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=8; TicketID=16; UserID=6
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=9; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=10; TicketID=34; UserID=12
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=11; TicketID=37; UserID=13
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=12; TicketID=37; UserID=13
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=13; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=14; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=15; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=16; TicketID=7; UserID=3
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=31; UserID=11
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=4; TicketID=10; UserID=4
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=5; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=6; TicketID=10; UserID=4
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=7; TicketID=35; UserID=12
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=8; TicketID=7; UserID=3
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=9; TicketID=2; UserID=1
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=10; TicketID=11; UserID=4
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=11; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=12; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=13; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=14; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=15; TicketID=28; UserID=10
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=16; TicketID=11; UserID=4
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=17; TicketID=32; UserID=11
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=18; TicketID=17; UserID=6
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=32; UserID=11
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=26; UserID=9
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=4; TicketID=22; UserID=8
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=5; TicketID=3; UserID=1
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=6; TicketID=20; UserID=7
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=7; TicketID=34; UserID=12
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=8; TicketID=14; UserID=5
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=9; TicketID=5; UserID=2
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=10; TicketID=15; UserID=5
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=11; TicketID=16; UserID=6
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=12; TicketID=34; UserID=12
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=13; TicketID=24; UserID=8
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=14; TicketID=10; UserID=4
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=15; TicketID=31; UserID=11
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=16; TicketID=20; UserID=7
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=17; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=18; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=19; TicketID=25; UserID=9
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=20; TicketID=20; UserID=7
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=9; UserID=3
+2021.11.23 21:21:03 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=8; UserID=3
+2021.11.23 21:21:03 +01:00 - Exit AutoDraw
+
+2021.11.23 21:24:53 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:24:53 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:24:53 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:24:53 +01:00 - Exit AutoDraw
+
+2021.11.23 21:25:44 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:25:44 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:25:44 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:25:44 +01:00 - Exit AutoDraw
+
+2021.11.23 21:26:56 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:26:56 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:26:56 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:26:56 +01:00 - Exit AutoDraw
+
+2021.11.23 21:33:50 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:33:50 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:33:51 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:33:51 +01:00 - Exit AutoDraw
+
+2021.11.23 21:35:54 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:35:54 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:35:54 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:35:54 +01:00 - Exit AutoDraw
+
+2021.11.23 21:37:18 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:37:18 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:37:18 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:37:18 +01:00 - Exit AutoDraw
+
+2021.11.23 21:37:35 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:37:35 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:37:35 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:37:35 +01:00 - Exit AutoDraw
+
+2021.11.23 21:47:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:47:03 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:47:03 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:47:03 +01:00 - Exit AutoDraw
+
+2021.11.23 21:48:25 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:48:25 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:48:25 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:48:25 +01:00 - Exit AutoDraw
+
+2021.11.23 21:48:59 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:48:59 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:48:59 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:48:59 +01:00 - Exit AutoDraw
+
+2021.11.23 21:51:23 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:51:23 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:51:23 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:51:23 +01:00 - Exit AutoDraw
+
+2021.11.23 21:51:49 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:51:49 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:51:49 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:51:49 +01:00 - Exit AutoDraw
+
+2021.11.23 21:59:50 +01:00 - Start Ticketto AutoDraw
+2021.11.23 21:59:50 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 21:59:50 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 21:59:50 +01:00 - Exit AutoDraw
+
+2021.11.23 22:00:48 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:00:48 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 22:00:56 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:00:56 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=1;
+        TicketID=7;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=2;
+        TicketID=34;
+        UserID=12
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=3;
+        TicketID=10;
+        UserID=4
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=4;
+        TicketID=28;
+        UserID=10
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=5;
+        TicketID=37;
+        UserID=13
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=6;
+        TicketID=19;
+        UserID=7
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=7;
+        TicketID=22;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=8;
+        TicketID=40;
+        UserID=14
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=9;
+        TicketID=25;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=10;
+        TicketID=25;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=11;
+        TicketID=13;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=12;
+        TicketID=22;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=13;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=14;
+        TicketID=40;
+        UserID=14
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=15;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=16;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=17;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=29;
+        PrizeID=18;
+        TicketID=25;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=1;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=2;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=3;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=4;
+        TicketID=28;
+        UserID=10
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=5;
+        TicketID=17;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=6;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=7;
+        TicketID=4;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=8;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=9;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=10;
+        TicketID=10;
+        UserID=4
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=11;
+        TicketID=37;
+        UserID=13
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=12;
+        TicketID=35;
+        UserID=12
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=13;
+        TicketID=5;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=14;
+        TicketID=14;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=15;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=16;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=17;
+        TicketID=8;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=18;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=19;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=30;
+        PrizeID=20;
+        TicketID=23;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=1;
+        TicketID=6;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=2;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=3;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=4;
+        TicketID=31;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=5;
+        TicketID=29;
+        UserID=10
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=6;
+        TicketID=8;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=7;
+        TicketID=14;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=8;
+        TicketID=27;
+        UserID=9
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=9;
+        TicketID=11;
+        UserID=4
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=10;
+        TicketID=1;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=11;
+        TicketID=5;
+        UserID=2
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=12;
+        TicketID=14;
+        UserID=5
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=13;
+        TicketID=32;
+        UserID=11
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=14;
+        TicketID=23;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=15;
+        TicketID=16;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=16;
+        TicketID=18;
+        UserID=6
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=17;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=18;
+        TicketID=35;
+        UserID=12
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=19;
+        TicketID=42;
+        UserID=14
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=20;
+        TicketID=9;
+        UserID=3
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=21;
+        TicketID=2;
+        UserID=1
+2021.11.23 22:00:56 +01:00 - SorsolĂˇs:
+        EventID=31;
+        PrizeID=22;
+        TicketID=22;
+        UserID=8
+2021.11.23 22:00:56 +01:00 - Exit AutoDraw
+
+2021.11.23 22:42:07 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:42:07 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:42:07 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 22:42:07 +01:00 - Exit AutoDraw
+
+2021.11.23 22:42:54 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:42:54 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:42:54 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 22:42:54 +01:00 - Exit AutoDraw
+
+2021.11.23 22:43:13 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:43:13 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 22:43:15 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:43:15 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:43:15 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=10; UserID=4
+2021.11.23 22:43:15 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=37; UserID=13
+2021.11.23 22:43:15 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=16; UserID=6
+2021.11.23 22:43:15 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=19; UserID=7
+2021.11.23 22:43:15 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=26; UserID=9
+2021.11.23 22:43:15 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=27; UserID=9
+2021.11.23 22:43:15 +01:00 - Exit AutoDraw
+
+2021.11.23 22:45:03 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:45:03 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:45:03 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 22:45:03 +01:00 - Exit AutoDraw
+
+2021.11.23 22:45:15 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:45:15 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 22:45:22 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:45:22 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:45:22 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=37; UserID=13
+2021.11.23 22:45:22 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=7; UserID=3
+2021.11.23 22:45:22 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=4; UserID=2
+2021.11.23 22:45:22 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=16; UserID=6
+2021.11.23 22:45:22 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=35; UserID=12
+2021.11.23 22:45:22 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=3; UserID=1
+2021.11.23 22:45:22 +01:00 - Exit AutoDraw
+
+2021.11.23 22:57:41 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:57:41 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:57:41 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 22:57:41 +01:00 - Exit AutoDraw
+
+2021.11.23 22:57:51 +01:00 - Start Ticketto AutoDraw
+2021.11.23 22:57:51 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 22:57:51 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 22:57:51 +01:00 - Exit AutoDraw
+
+2021.11.23 23:05:36 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:05:36 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 23:05:38 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:05:38 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:05:38 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=28; UserID=10
+2021.11.23 23:05:38 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=7; UserID=3
+2021.11.23 23:05:38 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=17; UserID=6
+2021.11.23 23:05:38 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=41; UserID=14
+2021.11.23 23:05:38 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=24; UserID=8
+2021.11.23 23:05:38 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=33; UserID=11
+2021.11.23 23:05:38 +01:00 - Exit AutoDraw
+
+2021.11.23 23:08:05 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:08:05 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:08:05 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 23:08:05 +01:00 - Exit AutoDraw
+
+2021.11.23 23:10:13 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:10:13 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:10:13 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.23 23:10:13 +01:00 - Exit AutoDraw
+
+2021.11.23 23:23:51 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:23:51 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 23:24:19 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:24:19 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:24:19 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=31; UserID=11
+2021.11.23 23:24:19 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=40; UserID=14
+2021.11.23 23:24:19 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=0; UserID=0
+2021.11.23 23:24:19 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=29; UserID=10
+2021.11.23 23:24:19 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=33; UserID=11
+2021.11.23 23:24:19 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=12; UserID=4
+2021.11.23 23:24:19 +01:00 - Exit AutoDraw
+
+2021.11.23 23:24:46 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:24:46 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 23:30:55 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:30:55 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 23:32:59 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:32:59 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 23:33:29 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:33:29 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.23 23:33:31 +01:00 - Start Ticketto AutoDraw
+2021.11.23 23:33:31 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.23 23:33:32 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.23 23:33:32 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=19; UserID=7
+2021.11.23 23:33:32 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.23 23:33:32 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=37; UserID=13
+2021.11.23 23:33:33 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.23 23:33:33 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=41; UserID=14
+2021.11.23 23:33:33 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.23 23:33:33 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=32; UserID=11
+2021.11.23 23:33:33 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.23 23:33:33 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=18; UserID=6
+2021.11.23 23:33:34 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.23 23:33:34 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=33; UserID=11
+2021.11.23 23:33:34 +01:00 - Exit AutoDraw
+
+2021.11.24 00:08:47 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:08:47 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 00:10:06 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:10:06 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:10:06 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=13; UserID=5
+2021.11.24 00:10:07 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:10:07 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=2; UserID=1
+2021.11.24 00:10:07 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:10:07 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=26; UserID=9
+2021.11.24 00:10:07 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:10:08 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=27; UserID=9
+2021.11.24 00:10:08 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:10:08 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=39; UserID=13
+2021.11.24 00:10:08 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:10:08 +01:00 - Exit AutoDraw
+
+2021.11.24 00:24:05 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:24:05 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 00:24:41 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:24:41 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 00:30:28 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:30:28 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 00:32:14 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:32:14 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 00:32:17 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:32:17 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:32:17 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=40; UserID=14
+2021.11.24 00:32:17 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:32:17 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=28; UserID=10
+2021.11.24 00:32:17 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:32:17 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=23; UserID=8
+2021.11.24 00:32:17 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:32:17 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=32; UserID=11
+2021.11.24 00:32:18 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:32:18 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=15; UserID=5
+2021.11.24 00:32:18 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:32:18 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=21; UserID=7
+2021.11.24 00:32:18 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:32:18 +01:00 - Exit AutoDraw
+
+2021.11.24 00:33:39 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:33:39 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:33:39 +01:00 - Nem tĂ¶rtĂ©nt sorsolĂˇs.
+2021.11.24 00:33:39 +01:00 - Exit AutoDraw
+
+2021.11.24 00:33:58 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:33:58 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 00:34:00 +01:00 - Start Ticketto AutoDraw
+2021.11.24 00:34:00 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 00:34:00 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=19; UserID=7
+2021.11.24 00:34:01 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:34:01 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=25; UserID=9
+2021.11.24 00:34:01 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:34:01 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=11; UserID=4
+2021.11.24 00:34:01 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:34:01 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=41; UserID=14
+2021.11.24 00:34:02 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:34:02 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=33; UserID=11
+2021.11.24 00:34:02 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:34:02 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=30; UserID=10
+2021.11.24 00:34:02 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 00:34:02 +01:00 - Exit AutoDraw
+
+2021.11.24 01:55:31 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 01:55:31 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 01:56:01 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 01:56:01 +01:00 - Adatok resetelĂ©se sikeres
+
+2021.11.24 01:56:04 +01:00 - Start Ticketto AutoDraw
+2021.11.24 01:56:04 +01:00 - AdatbĂˇzis: sikeres csatlakozĂˇs.
+2021.11.24 01:56:04 +01:00 - SorsolĂˇs: EventID=29; PrizeID=17; TicketID=1; UserID=1
+2021.11.24 01:56:05 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 01:56:05 +01:00 - SorsolĂˇs: EventID=29; PrizeID=18; TicketID=10; UserID=4
+2021.11.24 01:56:05 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 01:56:05 +01:00 - SorsolĂˇs: EventID=30; PrizeID=19; TicketID=17; UserID=6
+2021.11.24 01:56:05 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 01:56:05 +01:00 - SorsolĂˇs: EventID=30; PrizeID=20; TicketID=14; UserID=5
+2021.11.24 01:56:06 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 01:56:06 +01:00 - SorsolĂˇs: EventID=31; PrizeID=21; TicketID=24; UserID=8
+2021.11.24 01:56:06 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 01:56:06 +01:00 - SorsolĂˇs: EventID=31; PrizeID=22; TicketID=18; UserID=6
+2021.11.24 01:56:06 +01:00 - Nyertes Ă©rtesĂ­tve
+2021.11.24 01:56:06 +01:00 - Exit AutoDraw
+
+2021.11.24 02:10:21 +01:00 - Start Ticketto AutoDraw
+2021.11.24 02:10:21 +01:00 - Adatbazis: sikeres csatlakozas.
+2021.11.24 02:10:21 +01:00 - Nem tortent sorsolas.
+2021.11.24 02:10:21 +01:00 - Exit AutoDraw
+
+2021.11.24 09:48:19 +01:00 - Üzenet elküldve külön authdata.php-vel
+
+2021.11.24 12:00:32 +01:00 - Üzenet elküldve
+
+2021.11.24 12:20:17 +01:00 - START AutoDraw
+2021.11.24 12:20:17 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 12:20:17 +01:00 - Sorsolas: EventID=29; PrizeID=1; TicketID=1; UserID=1
+2021.11.24 12:20:17 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:17 +01:00 - Sorsolas: EventID=29; PrizeID=2; TicketID=25; UserID=9
+2021.11.24 12:20:18 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:18 +01:00 - Sorsolas: EventID=29; PrizeID=3; TicketID=22; UserID=8
+2021.11.24 12:20:18 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:18 +01:00 - Sorsolas: EventID=29; PrizeID=4; TicketID=40; UserID=14
+2021.11.24 12:20:18 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:18 +01:00 - Sorsolas: EventID=29; PrizeID=5; TicketID=4; UserID=2
+2021.11.24 12:20:19 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:19 +01:00 - Sorsolas: EventID=29; PrizeID=6; TicketID=16; UserID=6
+2021.11.24 12:20:19 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:19 +01:00 - Sorsolas: EventID=29; PrizeID=7; TicketID=28; UserID=10
+2021.11.24 12:20:19 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:19 +01:00 - Sorsolas: EventID=29; PrizeID=8; TicketID=7; UserID=3
+2021.11.24 12:20:20 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:20 +01:00 - Sorsolas: EventID=29; PrizeID=9; TicketID=19; UserID=7
+2021.11.24 12:20:20 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:20 +01:00 - Sorsolas: EventID=29; PrizeID=10; TicketID=37; UserID=13
+2021.11.24 12:20:20 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:20 +01:00 - Sorsolas: EventID=29; PrizeID=11; TicketID=31; UserID=11
+2021.11.24 12:20:21 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:21 +01:00 - Sorsolas: EventID=29; PrizeID=12; TicketID=13; UserID=5
+2021.11.24 12:20:21 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:21 +01:00 - Sorsolas: EventID=29; PrizeID=13; TicketID=34; UserID=12
+2021.11.24 12:20:21 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:21 +01:00 - Sorsolas: EventID=29; PrizeID=14; TicketID=10; UserID=4
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=30; PrizeID=19; TicketID=38; UserID=13
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=30; PrizeID=20; TicketID=11; UserID=4
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=31; PrizeID=21; TicketID=6; UserID=2
+2021.11.24 12:20:22 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:22 +01:00 - Sorsolas: EventID=31; PrizeID=22; TicketID=21; UserID=7
+2021.11.24 12:20:23 +01:00 - Nyertes értesítve.
+2021.11.24 12:20:23 +01:00 - EXIT AutoDraw
+
+2021.11.24 12:31:03 +01:00 - START AutoDraw
+2021.11.24 12:31:03 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 12:31:03 +01:00 - Sorsolas: EventID=29; PrizeID=17; TicketID=28; UserID=10
+2021.11.24 12:31:04 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:04 +01:00 - Sorsolas: EventID=29; PrizeID=18; TicketID=10; UserID=4
+2021.11.24 12:31:04 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:04 +01:00 - Sorsolas: EventID=30; PrizeID=19; TicketID=38; UserID=13
+2021.11.24 12:31:04 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:04 +01:00 - Sorsolas: EventID=30; PrizeID=20; TicketID=11; UserID=4
+2021.11.24 12:31:05 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:05 +01:00 - Sorsolas: EventID=31; PrizeID=21; TicketID=33; UserID=11
+2021.11.24 12:31:05 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:05 +01:00 - Sorsolas: EventID=31; PrizeID=22; TicketID=36; UserID=12
+2021.11.24 12:31:05 +01:00 - Nyertes értesítve.
+2021.11.24 12:31:05 +01:00 - EXIT AutoDraw
+
+2021.11.24 12:31:54 +01:00 - START AutoDraw
+2021.11.24 12:31:54 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 12:31:54 +01:00 - Nem történt sorsolás.
+2021.11.24 12:31:54 +01:00 - EXIT AutoDraw
+
+
+2021.11.24 13:57:27 +01:00 -! Adatbázis: sikertelen csatlakozás. Hiba:Nem hozható létre kapcsolat, mert a célszámítógép már visszautasította a kapcsolatot
+
+
+2021.11.24 13:58:09 +01:00 - START AutoDraw
+2021.11.24 13:58:13 +01:00 -! Adatbázis: sikertelen csatlakozás. Hiba:Nem hozható létre kapcsolat, mert a célszámítógép már visszautasította a kapcsolatot
+2021.11.24 13:58:13 +01:00 - EXIT AutoDraw
+
+2021.11.24 13:58:28 +01:00 - START AutoDraw
+2021.11.24 13:58:28 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.24 13:58:28 +01:00 - Nem történt sorsolás.
+2021.11.24 13:58:28 +01:00 - EXIT AutoDraw
+
+
+2021.11.25 23:42:17 +01:00 -! Adatbázis: sikertelen csatlakozás. Hiba:Unknown database 'ticketto'
+
+
+2021.11.25 23:44:13 +01:00 - START AutoDraw
+2021.11.25 23:44:13 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.25 23:44:13 +01:00 - Nem történt sorsolás.
+2021.11.25 23:44:13 +01:00 - EXIT AutoDraw
