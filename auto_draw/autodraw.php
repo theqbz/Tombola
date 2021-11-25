@@ -6,7 +6,7 @@
 require_once 'errorlogger.php';
 require_once 'db_auth_data.php';
 
-setLoggerMode(_ERROR);  //_OFF: off; _ERROR: just errors; _INFO: all messages
+setLoggerMode(_INFO);  //_OFF: off; _ERROR: just errors; _INFO: all messages
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -65,7 +65,8 @@ function SendEmail($winner)
     $mail->Subject    = 'Ticketto - Értesítés a sorsolás eredményéről';
     $mail->AltBody    = 'Ezt az üzenetet azért kaptad, mert nyert azegyik szelvényed a ticketto.hu-n.\n
         A részletekért kérjük, lépj be a fiókodba a ticketto.hu oldalon!\n
-        Üdvözlettel, Ticketto.hu';
+        Üdvözlettel, Ticketto.hu\n\n
+        Ez egy automatikusan generált üzenet, ne álaszolj rá!';
     $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
     $mail->addAddress($winnerEmail);
     $mail->msgHTML($message);
@@ -77,10 +78,10 @@ function SelectEvents()
 {
     global $database;
     global $drawableEvents;
-    $sqlEvents = "SELECT `id`, `draw_time`
+    $sqlEvents = "SELECT `id`
         FROM `events`
-        WHERE `flag` <> 3
-        AND `draw_time` < NOW();";
+        WHERE `status` <> 3
+        AND `dt_end` < NOW();";
     $toDraw = $database->query($sqlEvents);
     if ($toDraw->num_rows == 0) { return false; }
     while ($row = $toDraw->fetch_assoc()) { $drawableEvents[]=$row; }
@@ -91,9 +92,9 @@ function SelectPrizes($eventId)
 {
     global $database;
     global $drawablePrizes;
-    $sqlPrizes = "SELECT `id`, `event`
+    $sqlPrizes = "SELECT `id`
         FROM `prizes`
-        WHERE `event` = '$eventId'
+        WHERE `event_id` = '$eventId'
         AND `winner_ticket_id` IS NULL;";
     $eventsPrizes = $database->query($sqlPrizes);
     if ($eventsPrizes->num_rows == 0) { return false; }
@@ -105,10 +106,10 @@ function SelectTickets($eventId)
 {
     global $database;
     global $drawableTickets;
-    $sqlTickets = "SELECT `tickets`.`id`, `userevents`.`user`
-        FROM `tickets`, `userevents`
-        WHERE `userevents`.`event` = '$eventId'
-        AND `tickets`.`userevents` = `userevents`.`id`
+    $sqlTickets = "SELECT `tickets`.`id`, `user_events`.`user_id`
+        FROM `tickets`, `user_events`
+        WHERE `user_events`.`event_id` = '$eventId'
+        AND `tickets`.`user_event_id` = `user_events`.`id`
         AND `tickets`.`won_prize_id` IS NULL;";
     $eventsTickets = $database->query($sqlTickets);
     if ($eventsTickets->num_rows == 0) { return false; }
@@ -163,7 +164,7 @@ function DrawEvent($event)
     foreach ($drawablePrizes as $prize) { $winCounter += DrawPrize($eventId, $prize); }
     if ($winCounter === 0) { unset($GLOBALS['drawablePrizes']); return 0; }
     $setEventDrawed = "UPDATE `events`
-        SET `flag` = '3'
+        SET `status` = '3'
         WHERE `id` = '$eventId';";
     if (!$database->query($setEventDrawed)) { unset($GLOBALS['drawablePrizes']); return 0; }
     unset($GLOBALS['drawablePrizes']);

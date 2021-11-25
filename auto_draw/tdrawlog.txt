@@ -2654,3 +2654,11 @@ Table 'ticketto.event' doesn't exist
 2021.11.24 13:58:28 +01:00 - Nem történt sorsolás.
 2021.11.24 13:58:28 +01:00 - EXIT AutoDraw
 
+
+2021.11.25 23:42:17 +01:00 -! Adatbázis: sikertelen csatlakozás. Hiba:Unknown database 'ticketto'
+
+
+2021.11.25 23:44:13 +01:00 - START AutoDraw
+2021.11.25 23:44:13 +01:00 - Adatbázis: sikeres csatlakozás.
+2021.11.25 23:44:13 +01:00 - Nem történt sorsolás.
+2021.11.25 23:44:13 +01:00 - EXIT AutoDraw
