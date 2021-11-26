@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Bootstrap",
+    "\\Bootstrap\\tsass"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\Bootstrap\\tsass\\ticketto.scss",
   "PreviewInSolutionExplorer": true
 }

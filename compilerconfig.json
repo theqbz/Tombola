@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFile": "css/ticketto.css",
-    "inputFile": "tsass/ticketto.scss"
+    "outputFile": "src/resources/css/app.css",
+    "inputFile": "Bootstrap/tsass/ticketto.scss"
   }
 ]

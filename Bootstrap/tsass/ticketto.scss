@@ -12,6 +12,7 @@ $ticketto-theme-colors: (
     "tgray": #fafafa,
 );
 
+
 $theme-colors: map-merge($ticketto-theme-colors, $theme-colors);
 
 @import '../scss/bootstrap.scss';
