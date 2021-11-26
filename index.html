@@ -1,0 +1,200 @@
+<html lang="HU-hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/ticketto.css" />
+    <title>Ticketto Test2</title>
+    <style>
+        section{
+            padding: 60px 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body class="d-flex flex-column h-100">
+
+<!--FEJLÉC-->
+	<header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-ticketto border-5">
+            <div class="container-lg">
+                <a href="#" class="navbar-brand">
+                    <span class="fw-bold text-ticketto">Ticketto</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menupontok" aria-controls="menupontok" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end algin-center" id="menupontok">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tickets">Szelvényeim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prizes">Nyereményeim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#joinevent">Csatlakozás eseményhez</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#newevent">Új játék létrehozása</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#editprofile">Profil/beállítások</a>
+                        </li>
+                        <li class="nav-item d-md-none">
+                            <a class="nav-link" href="#logout">Kijelentkezés</a>
+                        </li>
+                        <li class="nav-item ms-2 d-none d-md-inline">
+                            <a class="btn btn-secondary" href="#logout">Kijelentkezés</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	</header>
+
+<!--TARTALOM-->
+    <main class="flex-shrink-0">
+        <section id="tartalom" class="bg-tgray">
+
+        <!--ÜDVÖZLŐ ÜZENET-->
+            <div class="container">
+                <p class="display-3 text-dark">Teszt Játékos</p>
+                <p class="lead text-dark">A Ticketto rendszere üdvözöl!</p>
+            </div>
+
+        <!--dolgok gyors elérése-->
+            <div class="container bg-tgray">
+                <div class="row">
+
+                <!--SZELVÉNYEK-->
+                    <div id="tickets" class="col-sm-12 col-lg-4 p-3">
+                        <p class="h2 p-1 text-dark fw-bold">Szelvényeim</p>
+                        <!--szelvény: lejárt, nyert-->
+                        <div class="card m-1 bg-winner text-dark">
+                            <div class="card-body">
+                                <div class="row g-0 justify-content-center align-items-center">
+                                    <div class="col-sm-12 col-lg-8">
+                                        <p class="h5 card-title">Nyertes játék szelvénye</p>
+                                        <p class="card-text">2021. november 6. 18:00</p>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <p class="h1 card-title fw-bold text-lg-end">P12</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--szelvény: rövidesen-->
+                        <div class="card m-1 bg-activenow text-dark">
+                            <div class="card-body">
+                                <div class="row g-0 justify-content-center align-items-center">
+                                    <div class="col-sm-12 col-lg-8">
+                                        <p class="h5 card-title">Hamarosan esedékes játék szelvénye</p>
+                                        <p class="card-text">2021. november 15.</p>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4 align-items-center">
+                                        <p class="h1 card-title fw-bold text-lg-end">Z05</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--szelvény: később-->
+                        <div class="card m-1 bg-active text-dark">
+                            <div class="card-body">
+                                <div class="row g-0 justify-content-center align-items-center">
+                                    <div class="col-sm-12 col-lg-8">
+                                        <p class="h5 card-title">Későbbi játék szelvénye</p>
+                                        <p class="card-text">2022. január 16. 19:30</p>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <p class="h1 card-title fw-bold text-lg-end">05</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--szelvény: lejárt, nem nyert-->
+                        <div class="card m-1 bg-expired text-dark">
+                            <div class="card-body">
+                                <div class="row g-0 justify-content-center align-items-center">
+                                    <div class="col-sm-12 col-lg-8">
+                                        <p class="h5 card-title">Lejárt játék nyeretlen szelvénye</p>
+                                        <p class="card-text">2021. augusztus 20. 21:00</p>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <p class="h1 card-title fw-bold text-lg-end">S05</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--ESEMÉNYEK-->
+                    <div id="events" class="col-sm-12 col-lg-4 p-3">
+                        <p class="h2 p-1 text-dark fw-bold">Játékok</p>
+                    <!--játék: rövidesen-->
+                        <div class="card m-1 border border-5 border-activenow text-dark">
+                            <div class="card-body">
+                                <div class="row g-0 justify-content-center align-items-center">
+                                    <div class="col-sm-12 col-lg-8">
+                                        <p class="h5 card-title">Hamarosan esedékes játék</p>
+                                        <p class="card-text">2021. november 15.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--játék: később-->
+                        <div class="card m-1 border border-5 border-active text-dark">
+                            <div class="card-body">
+                                <div class="row g-0 justify-content-center align-items-center">
+                                    <div class="col-sm-12 col-lg-8">
+                                        <p class="h5 card-title">Későbbi játék</p>
+                                        <p class="card-text">2022. január 16. 19:30</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--NYEREMÉNYEK-->
+                    <div id="prizes" class="col-sm-12 col-lg-4 p-3">
+                        <p class="h2 p-1 text-dark fw-bold">Nyereményeim</p>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="/assets/prizepic.png" style="max-width: 150px; max-height: 150px;" class="rounded border border-dark rounded">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nyeremény neve</h5>
+                                        <p class="card-text" style="margin-bottom: 0;">Az esemény neve amin nyerte</p>
+                                        <p class="card-text">A nyerés ideje</p>
+                                        <p class="card-text"><small class="text-muted">Nyereményt: Átvette/Nem vette át</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!--LÁBLÉC-->
+    <footer class="footer mt-auto bg-dark border-top border-ticketto border-5">
+		<div class="container">
+            <span class="fw-bold text-ticketto">Ticketto</span>
+            <p class="p-1 text-light">
+                Online tombolajáték szervező és lebonyolító rendszer - csoportfeladat Projektmunka 1. (GKNB_INTM004) tárgyból.<br>
+                Készítik: Borsodi Zoltán, Eszenyi Ákos Zsolt, Tenk Norbert<br>
+                mérnökinformatika BSC, Széchenyi István Egyetem
+            </p>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
