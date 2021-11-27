@@ -21,16 +21,21 @@
     <link href="../css/ticketto.css"
 </head>
 <body class="d-flex flex-column h-100">
-@include('layouts.header')
 
-<!--<div id="app" class="pt-4 pb-4" style="min-height: 75vh">-->
+    <header>
+        @include('layouts.header')
+    </header>
+
     <main class="flex-shrink-0 pt-4 pb-4">
         @yield('content')
     </main>
-<!--</div>-->
-@include('layouts.footer')
-<!-- Scripts -->
-@stack('scripts')
+
+    <footer class="footer mt-auto bg-dark border-top border-ticketto border-5">
+        @include('layouts.footer')
+    </footer>
+
+    <!-- Scripts -->
+    @stack('scripts')
 
 </body>
 </html>
