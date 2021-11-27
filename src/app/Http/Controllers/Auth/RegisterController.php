@@ -215,9 +215,9 @@ class RegisterController extends Controller
     private function generateAccesses(User &$user, $isTemp = false)
     {
         if ($isTemp) {
-            $accessCode = "U-" . strtolower(substr($user->email, 0, 3) . substr(time(), 0, 3));
+            $accessCode = "U-" . strtolower(substr($user->email, 0, 3) . substr(time(), -3));
         } else {
-            $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), 0, 3));
+            $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), -3));
         }
         $user->hash = $accessCode;
         $user->save();

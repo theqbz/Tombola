@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row justify-content-center">
+    <div class="container-lg mt-4 justify-content-center">
         <div class="container">
             <div class="card">
                 {{Form::open(array('route' => 'event.store','enctype'=>"multipart/form-data"))}}

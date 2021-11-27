@@ -1,5 +1,3 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-warning border-5">
-    <ul class="navbar-nav">
 @if (Route::has('login'))
     <li class="nav-item">
         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -11,5 +9,3 @@
         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
     </li>
 @endif
-    </ul>
-</nav>

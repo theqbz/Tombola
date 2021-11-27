@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\auth\ResendEmailController;
+use App\Http\Controllers\Auth\ResendEmailController;
 use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PageController;

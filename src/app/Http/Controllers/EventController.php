@@ -324,7 +324,7 @@ class EventController extends Controller
         if ($limit != 0 && $lastValue > $limit) {
             return null;
         } else {
-            return end($tickets)['value'] + 1;
+            return $lastValue;
         }
 
     }
@@ -460,7 +460,7 @@ class EventController extends Controller
     private function generateAccesses(&$event)
     {
 
-        $accessCode = "U-" . strtolower(substr($event->title, 0, 3) . substr(time(), 0, 3));
+        $accessCode = "U-" . strtolower(substr($event->title, 0, 3) . substr(time(), -1, 3));
         $event->hash = $accessCode;
         $event->save();
         $path = public_path('/qrcodes/events');
