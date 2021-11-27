@@ -2,12 +2,7 @@
 
 @section('content')
     <div class="container-lg mt-4 justify-content-center">
-        <!--eterfgfd-->
-        <!--eterfgfd-->
-        <!--fsdfgsdálgknsadpkjfn-->
-                <!--fsdfgsdálgknsadpkjfn-->
-                <!--fsdfgsdálgknsadpkjfn-->
-                <!--fsdfgsdálgknsadpkjfn-->
+
         <div class="container">
             <div class="card">
                 {{Form::open(array('route' => 'event.store','enctype'=>"multipart/form-data"))}}

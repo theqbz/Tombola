@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" style="overflow-x:hidden">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" style="overflow-x:hidden height=100%" >
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
 @include('layouts.header')
 
 <!--<div id="app" class="pt-4 pb-4" style="min-height: 75vh">-->
-    <main class="flex-shrink-0 pt-4 pb-4" style="min-height: 75vh">
+    <main class="flex-shrink-0 pt-4 pb-4">
         @yield('content')
     </main>
 <!--</div>-->
