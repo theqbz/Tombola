@@ -763,5 +763,8 @@
     "Create event" : "Esemény létrehozása",
     "Edit event" : "Esemény szerkesztése",
     "More": "Részletek",
-    "You need to fill all data to create Event!":"Minden adatot ki kell tölteni az eseménykészítéshez!"
+    "You need to fill all data to create Event!":"Minden adatot ki kell tölteni az eseménykészítéshez!",
+    "Event": "Esemény",
+    "My Tickets": "Szelvényeim",
+    "Prize name": "Nyeremény neve"
 }

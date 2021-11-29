@@ -5,7 +5,7 @@
 <!--aloldal fejléc-->
     <div class="row align-middle mb-2">
         <div class="col text-md-start">
-            <h1><div class="display-4">Szelvényeim</div></h1>
+            <h1><div class="display-4">{{__('My Tickets')}}</div></h1>
         </div>
         <div class="col text-md-end">
             <div class="dropdown">
