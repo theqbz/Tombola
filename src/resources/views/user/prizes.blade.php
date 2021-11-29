@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-lg">
 <!--aloldal fejléc-->
     <div class="row align-items-center mb-2">
         <div class="col text-md-start mb-3">
