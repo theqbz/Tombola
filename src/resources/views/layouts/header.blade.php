@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-ticketto border-5 text-tlight">
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark border-bottom border-ticketto border-5 text-tlight">
     <div class="container-lg">
     <!--Ticketto branding-->
         <a class="navbar-brand" href="{{ url('/') }}">

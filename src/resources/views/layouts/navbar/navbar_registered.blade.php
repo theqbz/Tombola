@@ -8,13 +8,13 @@
 	<a class="nav-link" href="#joinevent">Csatlakozás</a>
 </li>
 <li class="nav-item">
-	<a class="nav-link" href="{{route('event.index')}}">Publikus játékok</a>
-</li>
-<li class="nav-item">
 	<a class="nav-link" href="{{route('event.myevents')}}">Játékaim</a>
 </li>
 <li class="nav-item">
-	<a class="nav-link" href="{{route('event.create')}}">Új játék</a>
+	<a class="nav-link" href="{{route('event.create')}}">Játék létrehozása</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" href="{{route('event.index')}}">Publikus játékok</a>
 </li>
 <li class="nav-item">
 	<a class="nav-link" href="{{route('profile.index')}}">Profil/beállítások</a>

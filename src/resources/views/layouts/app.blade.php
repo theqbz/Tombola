@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="../css/ticketto.css"
+    <link href="{{ asset('css/ticketto.css') }}" rel="stylesheet">
 </head>
 <body class="d-flex flex-column h-100">
 
