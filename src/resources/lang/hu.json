@@ -21,9 +21,9 @@
     "30 Days": "30 nap",
     "60 Days": "60 nap",
     "90 Days": "90 nap",
-    "Access data": "Azonosító adatok",
-    "Access code": "Azonosító kód",
-    "QR code": "Qr kód",
+    "Access data": "Azonosítók",
+    "Access code": "Azonosító",
+    "QR code": "QR kód",
     ":amount Total": ":amount összesen",
     ":days day trial": ":days day trial",
     ":resource Details": ":resource Részletek",
@@ -474,7 +474,7 @@
     "Previous": "Előző",
     "Privacy Policy": "Adatvédelmi Irányelvek",
     "Profile": "Profil",
-    "Profile Information": "Adatlap Információk",
+    "Profile Information": "Adatlap",
     "Puerto Rico": "Puerto Rico",
     "Qatar": "Qatar",
     "Quarter To Date": "Negyedév A Mai Napig",
@@ -769,5 +769,6 @@
     "Prize name": "Nyeremény neve",
     "Save event": "Esemény mentése",
     "Sale Ticket": "Tombola eladás",
-    "Draw Date": "Sorsolás dátuma"
+    "Draw Date": "Sorsolás dátuma",
+    "Profile ID": "Profil azonosító"
 }
