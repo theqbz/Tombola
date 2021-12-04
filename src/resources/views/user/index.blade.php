@@ -5,7 +5,7 @@
 <!--aloldal fejléc-->
     <div class="row align-items-top mb-2">
         <div class="col-sm-8 text-start mb-3">
-            <h1><div class="display-4">{{__("Profile Information")}}</div></h1>
+            <h1><div class="display-4">{{__('Profile Information')}}</div></h1>
         </div>
         <div class="col-sm-4 text-sm-end pt-3">
             <a class="btn btn-primary" href="{{route('profile.edit')}}">
