@@ -17,7 +17,7 @@
                         <a class="dropdown-item" href="{{route('mytickets',['status'=>'active'])}}">Érvényes szelvények</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{route('mytickets',['status'=>'passive'])}}">Futó játékok</a>
+                        <a class="dropdown-item" href="{{route('mytickets',['status'=>'passive'])}}">Lejárt szelvények</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Nyertes szelvények</a>
