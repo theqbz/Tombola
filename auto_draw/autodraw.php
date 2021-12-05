@@ -6,7 +6,14 @@
 require_once 'errorlogger.php';
 require_once 'db_auth_data.php';
 
-setLoggerMode(_INFO);  //_OFF: off; _ERROR: just errors; _INFO: all messages
+/* setLoggerMode() options:
+ * _OFF    off
+ * _ERROR  just errors
+ * _WIN    errors and winners
+ * _INFO   all messages
+ */
+
+setLoggerMode(_WIN);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -132,7 +139,7 @@ function DrawPrize($eventId, $prize)
     $winner->eventId  = $eventId;
     $winner->prizeId  = intval($prize["id"]);
     $winner->ticketId = intval($drawableTickets[$toWin]["id"]);
-    $winner->userId   = intval($drawableTickets[$toWin]["user"]);
+    $winner->userId   = intval($drawableTickets[$toWin]["user_id"]);
     $prizeToTicket = "UPDATE `tickets`
         SET `won_prize_id` = '$winner->prizeId'
         WHERE `id` = '$winner->ticketId';";
@@ -144,7 +151,7 @@ function DrawPrize($eventId, $prize)
     addToLogger("Sorsolas: EventID=".$winner->eventId.
         "; PrizeID=".$winner->prizeId.
         "; TicketID=".$winner->ticketId.
-        "; UserID=".$winner->userId, _INFO);
+        "; UserID=".$winner->userId, _WIN);
     if (SendEmail($winner)) { addToLogger('Nyertes értesítve.', _INFO); }
     unset($GLOBALS['drawableTickets']);
     return 1;
@@ -192,7 +199,7 @@ if (!$database->connect_error)
 {
     addToLogger("Adatbázis: sikeres csatlakozás.", _INFO);
     srand();
-    if (!Draw()) { addToLogger("Nem történt sorsolás.", _INFO); }
+    if (!Draw()) { addToLogger("Nem történt sorsolás.", _WIN); }
     $database->close();
 }
 else { addToLogger("Adatbázis: sikertelen csatlakozás. Hiba:".$database->connect_error, _ERROR); }

@@ -3,7 +3,8 @@
 
 define("_OFF", 0);
 define("_ERROR", 1);
-define("_INFO", 2);
+define("_WIN", 2);
+define("_INFO", 3);
 
 $logtext = "\n";
 $mode = 2;
@@ -17,10 +18,12 @@ function setLoggerMode($type)
 function addToLogger($msg, $type)
 {
     global $logtext, $mode;
-    $separator = " - ";
-    if ($type == 1) { $separator = " -! "; }
+    $separator = " -- ";
+    if ($type == 1) { $separator = " !- "; }
+    if ($type == 2) { $separator = " *- "; }
     if ($mode == 1) { if ($type == 1) { $logtext.=date('Y.m.d H:i:s P').$separator.$msg."\n"; } }
-    if ($mode == 2) { $logtext.=date('Y.m.d H:i:s P').$separator.$msg."\n"; }
+    if ($mode == 2) { if ($type != 3) { $logtext.=date('Y.m.d H:i:s P').$separator.$msg."\n"; } }
+    if ($mode == 3) { $logtext.=date('Y.m.d H:i:s P').$separator.$msg."\n"; }
 }
 
 function writeLog()
