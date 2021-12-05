@@ -7,3 +7,15 @@
 
 2021.11.24 12:28:17 +01:00 - Adatbázis: sikeres csatlakozás.
 2021.11.24 12:28:17 +01:00 - Adatok resetelése sikeres
+
+2021.12.05 18:02:49 +01:00 !- Események resetelése sikertelen
+
+2021.12.05 18:03:49 +01:00 -- Adatbázis: sikeres csatlakozás.
+2021.12.05 18:03:49 +01:00 !- Események resetelése sikertelen
+2021.12.05 18:03:49 +01:00 -- Adatok resetelése sikeres
+
+2021.12.05 18:04:44 +01:00 -- Adatbázis: sikeres csatlakozás.
+2021.12.05 18:04:44 +01:00 -- Adatok resetelése sikeres
+
+2021.12.05 18:07:00 +01:00 -- Adatbázis: sikeres csatlakozás.
+2021.12.05 18:07:00 +01:00 -- Resetelés vége

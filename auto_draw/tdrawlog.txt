@@ -2662,3 +2662,21 @@ Table 'ticketto.event' doesn't exist
 2021.11.25 23:44:13 +01:00 - Adatbázis: sikeres csatlakozás.
 2021.11.25 23:44:13 +01:00 - Nem történt sorsolás.
 2021.11.25 23:44:13 +01:00 - EXIT AutoDraw
+
+2021.12.05 17:37:39 +01:00 !- Adatbázis: sikertelen csatlakozás. Hiba:Access denied for user 'tdbtester'@'localhost' (using password: YES)
+
+2021.12.05 17:38:00 +01:00 !- Adatbázis: sikertelen csatlakozás. Hiba:Access denied for user 'tdbtester'@'localhost' (using password: YES)
+
+2021.12.05 17:38:12 +01:00 *- Nem történt sorsolás.
+
+2021.12.05 17:56:50 +01:00 -- START AutoDraw
+2021.12.05 17:56:50 +01:00 -- Adatbázis: sikeres csatlakozás.
+2021.12.05 17:56:50 +01:00 *- Sorsolas: EventID=1; PrizeID=1; TicketID=1; UserID=2
+2021.12.05 17:56:50 +01:00 -- Nyertes értesítve.
+2021.12.05 17:56:50 +01:00 -- EXIT AutoDraw
+
+2021.12.05 18:07:05 +01:00 -- START AutoDraw
+2021.12.05 18:07:05 +01:00 -- Adatbázis: sikeres csatlakozás.
+2021.12.05 18:07:05 +01:00 *- Sorsolas: EventID=1; PrizeID=1; TicketID=1; UserID=2
+2021.12.05 18:07:06 +01:00 -- Nyertes értesítve.
+2021.12.05 18:07:06 +01:00 -- EXIT AutoDraw

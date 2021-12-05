@@ -13,7 +13,7 @@ require_once 'db_auth_data.php';
  * _INFO   all messages
  */
 
-setLoggerMode(_WIN);
+setLoggerMode(_INFO);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -51,10 +51,18 @@ function SendEmail($winner)
     $winnerTicket = $database->query($sqlTickets)->fetch_assoc();
     $winnerUser   = $database->query($sqlUsers)->fetch_assoc();
     $winnerEmail  = $winnerUser['email'];
-    $emailData = array(
-        'NAME'       => $winnerUser['last_name']." ".$winnerUser['first_name'],
-        'EVENTTITLE' => $winnerEvent['title'],
-        'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],);
+    echo("<br>winnerUser: <pre>"); var_dump($winnerUser); echo("</pre>");
+    if (!is_null($winnerUser['last_name']) and !is_null($winnerUser['first_name'])) {
+        $emailData = array(
+            'NAME'       => $winnerUser['last_name']." ".$winnerUser['first_name'],
+            'EVENTTITLE' => $winnerEvent['title'],
+            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],);
+    } else {
+        $emailData = array(
+            'NAME'       => "Játékos",
+            'EVENTTITLE' => $winnerEvent['title'],
+            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],);
+    }
     $message = file_get_contents('tmsg.html');
     foreach ($emailData as $field=>$content) { $message = str_replace('{'.$field.'}', $content, $message); }
 
