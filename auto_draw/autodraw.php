@@ -51,17 +51,20 @@ function SendEmail($winner)
     $winnerTicket = $database->query($sqlTickets)->fetch_assoc();
     $winnerUser   = $database->query($sqlUsers)->fetch_assoc();
     $winnerEmail  = $winnerUser['email'];
-    echo("<br>winnerUser: <pre>"); var_dump($winnerUser); echo("</pre>");
-    if (!is_null($winnerUser['last_name']) and !is_null($winnerUser['first_name'])) {
-        $emailData = array(
-            'NAME'       => $winnerUser['last_name']." ".$winnerUser['first_name'],
-            'EVENTTITLE' => $winnerEvent['title'],
-            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],);
-    } else {
+    if (is_null($winnerUser['last_name']) and is_null($winnerUser['first_name'])) {
         $emailData = array(
             'NAME'       => "Játékos",
             'EVENTTITLE' => $winnerEvent['title'],
-            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],);
+            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],
+            'ADTEXT'     => "Jelenleg ideiglenes felhasználói státuszban vagy a ticketto.hu-n.
+                             Neved megadásával teljes jogú felhasználóvá válhatsz.
+                             A részletekért lépj be az oldalra!");
+    } else {
+        $emailData = array(
+            'NAME'       => $winnerUser['last_name']." ".$winnerUser['first_name'],
+            'EVENTTITLE' => $winnerEvent['title'],
+            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],
+            'ADTEXT'     => "Köszönjük, hogy játszottál a Ticketto-val!");
     }
     $message = file_get_contents('tmsg.html');
     foreach ($emailData as $field=>$content) { $message = str_replace('{'.$field.'}', $content, $message); }
