@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @stack('meta')
-    <title>{{ config('app.name', 'Ticketto') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <script src="{{ asset('js/app.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -25,7 +25,9 @@
 <body class="d-flex flex-column h-100">
 
 <header>
-    @include('layouts.header')
+    <a class="navbar-brand" href="{{ url('/') }}">
+        <span class="btn btn-primary">Vissza</span>
+    </a>
 </header>
 
 <main class="flex-shrink-0 pt-4 pb-4">
@@ -33,7 +35,6 @@
 </main>
 
 <footer class="footer mt-auto bg-dark border-top border-ticketto border-5">
-    @include('layouts.footer')
 </footer>
 
 <!-- Scripts -->
