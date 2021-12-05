@@ -1,1 +1,3 @@
 .vscode/pro-deployer.json
+auto_draw/db_auth_data.php
+auto_draw/email_auth_data.php
