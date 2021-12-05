@@ -96,10 +96,11 @@ function SelectEvents()
 {
     global $database;
     global $drawableEvents;
+    $timestamp = date("Y-m-d H:i:s", strtotime('+1 hour'));    // set time delay
     $sqlEvents = "SELECT `id`
         FROM `events`
         WHERE `status` <> 3
-        AND `dt_end` < NOW();";
+        AND `dt_end` < '$timestamp'";
     $toDraw = $database->query($sqlEvents);
     if ($toDraw->num_rows == 0) { return false; }
     while ($row = $toDraw->fetch_assoc()) { $drawableEvents[]=$row; }
