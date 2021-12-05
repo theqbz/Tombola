@@ -44,28 +44,24 @@ function SendEmail($winner)
     $sqlTickets = "SELECT `color`, `value`
         FROM `tickets`
         WHERE `id` = '$winner->ticketId';";
-    $sqlUsers   = "SELECT `first_name`, `last_name`, `email`
+    $sqlUsers   = "SELECT `first_name`, `last_name`, `email`, `status`
         FROM `users`
         WHERE `id` = '$winner->userId';";
     $winnerEvent  = $database->query($sqlEvents)->fetch_assoc();
     $winnerTicket = $database->query($sqlTickets)->fetch_assoc();
     $winnerUser   = $database->query($sqlUsers)->fetch_assoc();
     $winnerEmail  = $winnerUser['email'];
-    if (is_null($winnerUser['last_name']) and is_null($winnerUser['first_name'])) {
-        $emailData = array(
-            'NAME'       => "Játékos",
-            'EVENTTITLE' => $winnerEvent['title'],
-            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],
-            'ADTEXT'     => "Jelenleg ideiglenes felhasználói státuszban vagy a ticketto.hu-n.
-                             Neved megadásával teljes jogú felhasználóvá válhatsz.
-                             A részletekért lépj be az oldalra!");
-    } else {
-        $emailData = array(
-            'NAME'       => $winnerUser['last_name']." ".$winnerUser['first_name'],
-            'EVENTTITLE' => $winnerEvent['title'],
-            'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],
-            'ADTEXT'     => "Köszönjük, hogy játszottál a Ticketto-val!");
-    }
+    $winnerName   = $winnerUser['last_name']." ".$winnerUser['first_name'];
+    $adText       = "Köszönjük, hogy játszottál a Ticketto-val!";
+    $adTextTempU  = "Jelenleg ideiglenes felhasználói státuszban vagy a ticketto.hu-n.
+                     Neved megadásával teljes jogú felhasználóvá válhatsz.
+                     A részletekért lépj be az oldalra!";
+    if ($winnerUser['status'] === 0) { $winnerName = "Játékos"; $adText = $adTextTempU; }
+    $emailData = array(
+        'NAME'       => $winnerName,
+        'EVENTTITLE' => $winnerEvent['title'],
+        'TICKET'     => $winnerTicket['color']." ".$winnerTicket['value'],
+        'ADTEXT'     => $adText);
     $message = file_get_contents('tmsg.html');
     foreach ($emailData as $field=>$content) { $message = str_replace('{'.$field.'}', $content, $message); }
 
@@ -82,9 +78,9 @@ function SendEmail($winner)
     $mail->Password   = PASSWORD;
     $mail->Subject    = 'Ticketto - Értesítés a sorsolás eredményéről';
     $mail->AltBody    = 'Ezt az üzenetet azért kaptad, mert nyert azegyik szelvényed a ticketto.hu-n.\n
-        A részletekért kérjük, lépj be a fiókodba a ticketto.hu oldalon!\n
-        Üdvözlettel, Ticketto.hu\n\n
-        Ez egy automatikusan generált üzenet, ne álaszolj rá!';
+                         A részletekért kérjük, lépj be a fiókodba a ticketto.hu oldalon!\n
+                         Üdvözlettel, Ticketto.hu\n\n
+                         Ez egy automatikusan generált üzenet, ne álaszolj rá!';
     $mail->setFrom('admin@ticketto.hu', 'Ticketto.hu');
     $mail->addAddress($winnerEmail);
     $mail->msgHTML($message);
