@@ -23,20 +23,20 @@
                             <strong>{{ $message }}</strong>
                         </div>
                         @enderror
-                        @if(empty($errors->any()))
+                        @if(empty($errors->any() && $event->hasMoreTicket()))
                             <p>Olvassa be a játékos qr kódját, vagy írja be az azonosítóját!</p>
-                                @php
-                                    $text = 'Add Ticket';
-                                    $route = 'event.addticket';
-                                        if(!$event->auto_ticket) {
-                                            $text = 'Next';
-                                            if($event->hasMultipleColors()) {
-                                                $route = 'event.color';
-                                            }else {
-                                                $route = 'event.number';
-                                            }
+                            @php
+                                $text = 'Add Ticket';
+                                $route = 'event.addticket';
+                                    if(!$event->auto_ticket) {
+                                        $text = 'Next';
+                                        if($event->hasMultipleColors()) {
+                                            $route = 'event.color';
+                                        }else {
+                                            $route = 'event.number';
                                         }
-                                @endphp
+                                    }
+                            @endphp
                             <div class="box-access m-auto col-md-6 offset-md-3">
                                 {{Form::model($event, array('route' => array($route),'enctype'=>"multipart/form-data"))}}
                                 {{Form::QrCodeReader(['name'=>'hash','id'=>'hash','label'=>__('Access code')])}}
@@ -46,6 +46,9 @@
                                 </div>
                                 {{ Form::close() }}
                             </div>
+                        @endif
+                        @if(!$event->hasMoreTicket())
+                            <h2>A tombolák elfogytak</h2>
                         @endif
                     </div>
                 </div>
