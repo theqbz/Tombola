@@ -3,7 +3,11 @@
 
 
 @section('content')
-
+    <style>
+        .invalid-feedback {
+            display: block
+        }
+    </style>
     <div class="container-lg">
 
         <!--aloldal fejléc-->
@@ -73,9 +77,7 @@
                             <div class="col-md-6">
 
 
-
                                 {{Form::text('email', old('email'),array('class'=>"form-control"))}}
-
 
 
                             </div>
@@ -91,7 +93,6 @@
                             @enderror
 
                         </div>
-
 
 
                         <div class="form-group row">
@@ -117,7 +118,6 @@
                         </div>
 
 
-
                         <div class="form-group row">
 
                             {{Form::label('last_name', __('Last Name'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
@@ -139,7 +139,6 @@
                             @enderror
 
                         </div>
-
 
 
                         <div class="form-group row">
@@ -165,13 +164,11 @@
                         </div>
 
 
-
                         <div class="form-group row">
 
                             {{Form::label('date_of_birth', __('Date Of Birth'), array('class' => 'col-md-4 col-form-label text-md-right'))}}
 
                             <div class="col-md-6">
-
 
 
                                 @php
@@ -193,18 +190,11 @@
                                 @endphp
 
                                 {{Form::datePicker(['id'=>'date_of_birth','value'=>$date,'name'=>'date_of_birth','placeholder'=>true])}}
-
+                                @error('date_of_birth')
+                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
+                                @enderror
                             </div>
 
-                            @error('date_of_birth')
-
-                            <span class="invalid-feedback" role="alert">
-
-                            <strong>{{ $message }}</strong>
-
-                        </span>
-
-                            @enderror
 
                         </div>
 

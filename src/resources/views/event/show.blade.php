@@ -48,9 +48,9 @@
 
                     @if($event->isAvailable())
 
-                        @if($event->hasMoreTickets() && ($event->auto_ticket ) && !(Auth::user()->isEditor($event->id) && !Auth::user()->hasTicketForEvent($event)))
+                        @if($event->hasMoreTickets() && ($event->is_public) && !(Auth::user()->isEditor($event->id) && !Auth::user()->hasTicketForEvent($event)))
 
-                            {{Form::model($event, array('route' => array('event.addticket', ['id'=>$event->id]),'enctype'=>"multipart/form-data"))}}
+                            {{Form::model($event, array('route' => array('event.color', ['id'=>$event->id]),'enctype'=>"multipart/form-data"))}}
 
                             <input type="hidden" name="hash" id="hash" value="{{Auth::user()->hash}}">
 

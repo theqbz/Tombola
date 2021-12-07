@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Mockery\Exception;
@@ -34,10 +35,13 @@ class UserController extends Controller
 
     protected function validator(array $data)
     {
+        $dt = new Carbon();
+        $before = $dt->subYears(15)->format('Y-m-d');
         $validationRules = array("email" => ['required', 'string', 'email', 'max:255'],
             "first_name" => ['required', 'string', 'max:255'],
             "last_name" => ['required', 'string', 'max:255'],
-            'address' => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255']);
+            'address' => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255'],
+            'date_of_birth' => ['nullable', 'date', 'max:255', 'before:' . $before]);
 
         return Validator::make($data, $validationRules);
     }
@@ -70,7 +74,7 @@ class UserController extends Controller
             "first_name" => ['required', 'string', 'max:255'],
             "last_name" => ['required', 'string', 'max:255']);
         $validationPlus = array('address' => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255'],
-            'date_of_birth' => ['nullable', 'date', 'max:255']);
+            'date_of_birth' => ['nullable', 'date', 'max:255', 'before:2008']);
         if ($checkAuthor) {
             $validationPlus = array_map(function ($item) {
                 $item[0] = 'required';
