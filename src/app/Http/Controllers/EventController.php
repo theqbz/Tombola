@@ -52,7 +52,8 @@ class EventController extends Controller
     {
         $todayDate = date("Y-m-d H:i");
 
-        $validationRules = array('title' => ['required', 'string', 'max:255'],
+        $validationRules = array(
+            'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'location' => ['required', 'string', 'max:255'],
             'dt_start_full' => ['required', 'date', 'max:255', 'after:' . $todayDate],
@@ -61,9 +62,8 @@ class EventController extends Controller
 
         if (!$isUpdate) {
             $validationRules = array_merge($validationRules, array(
-                'limit' => ['required', 'numeric', 'max:100'],
+                'limit' => ['required', 'numeric', 'max:500'],
                 'is_public' => ['required', 'boolean', 'max:255'],
-                'auto_ticket' => ['required', 'boolean', 'max:255']
             ));
         }
 
@@ -79,8 +79,183 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public
-    function store(Request $request)
+    public function store(Request $request)
+    {
+
+        /*EVENT ARGUMENTS*/
+        $args = array(
+            'is_limitable' => 'false',
+            'limit' => 0,
+            'is_public' => true,
+            'is_multicolor' => false,
+            'colors' => array(),
+            'is_variable' => false,
+            'auto_ticket' => true
+        );
+
+        $errors = array();
+
+        /*LIMIT*/
+        if ($request->input('is_limitable')) {
+            $args['is_limitable'] = true;
+            $args['limit'] = $request->input('limit');
+            if ($args['limit'] > 100) {
+                $errors = array_merge($errors, ['limit' => 'A limitált tombolák száma max. 100 lehet!']);
+            }
+        } else {
+            $args['is_limitable'] = false;
+            $args['limit'] = 0;
+        }
+
+        /*IS_PUBLIC*/
+        $args['type'] = $request->input('is_public');
+
+        /*MULTICOLORS*/
+        if ($request->input('is_multicolor')) {
+            $colors = $request->input('colors');
+            if (count($colors) < 2) {
+                $errors = array_merge($errors, ['multi_colors' => 'Többszínű játékhoz legalább két szín szükséges']);
+            } else {
+                $args['colors'] = $colors;
+                $args['is_multicolor'] = true;
+                $args['auto_ticket'] = false;
+                /*VARIABLE NUMBERS*/
+            }
+            if (!$args['is_limitable']) {
+                $errors = array_merge($errors, ['multi_colors' => 'Választható tombolák csak limitált játék esetén!']);
+            }
+        }
+
+        $request->merge(['limit' => $args['limit'], 'is_public' => $args['is_public'], 'auto_ticket' => $args['auto_ticket']]);
+
+        /*IMAGE UPLOAD*/
+        $upladedFiles = array();
+        $matches = array();
+        $exceptNames = array();
+        foreach ($request->all() as $label => $item) {
+            if (preg_match('/prize_item_\w+/', $label)) {
+                $itemIdx = explode('_', $label);
+                $matches[end($itemIdx)][$itemIdx[count($itemIdx) - 2]] = $item;
+            }
+        }
+
+        if (count($request->files)) {
+            foreach ($request->files as $inputName => $file) {
+                //get file name with extenstion
+                $fileNameWithExt = $file->getClientOriginalName();
+
+                //get just filename
+                $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+                //get extension
+                $extension = $file->getClientOriginalExtension();
+
+                //file to store
+                $fileNameToStore = $this->sanitize_file_name($fileName) . '_' . time() . '.' . $extension;
+
+                //upload to store
+                $path = public_path('temp/events');
+                if (!File::exists($path)) {
+                    File::makeDirectory($path, 0755, true, true);
+                }
+                try {
+
+                    $file->move($path, $fileNameToStore);
+                } catch (IniSizeFileException $ex) {
+                    $errors = array_merge($errors, ['prize' => $ex->getMessage()]);
+                }
+                $itemIdx = explode('_', $inputName);
+                $itemIdx = end($itemIdx);
+                $upladedFiles[$itemIdx] = ['title' => $request->input('prize_first_title_' . $itemIdx),
+                    'description' => $request->input('prize_first_description_' . $itemIdx),
+                    'image' => $fileNameToStore
+                ];
+                $exceptNames[] = $inputName;
+            }
+        } else {
+            foreach ($request->all() as $label => $item) {
+                if (preg_match('/prize_first_\w+/', $label)) {
+                    $itemIdx = explode('_', $label);
+                    $matches[end($itemIdx)][$itemIdx[count($itemIdx) - 2]] = $item;
+                }
+            }
+        }
+
+        if (!empty($matches)) {
+            $upladedFiles = array_merge($upladedFiles, $matches);
+        }
+
+        if (empty($upladedFiles)) {
+            $errors = array_merge($errors, ['prize' => __('Legalább egy nyeremény kötelező')]);
+        }
+
+        /*PERSONAL DATA*/
+        $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
+            'dt_end_full' => $request->input('dt_end') . ' ' . $request->input('dt_end_time')]);
+
+
+        /*VALIDATION*/
+        if ($this->validator($request->all())->fails() || !empty($errors)) {
+
+            $errors = array_merge($this->validator($request->except($exceptNames))->errors()
+                ->messages(), $errors);
+            $request->flash();
+            return back()->with($request->except($exceptNames))->withErrors($errors)->with(['images' => $upladedFiles]);
+        }
+
+        /*CREATE EVENT*/
+        $event = Event::create(['title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'location' => $request->input('location'),
+            'dt_start' => $request->input('dt_start_full'),
+            'dt_end' => $request->input('dt_end_full'),
+            'is_public' => $args['is_public'],
+            'auto_ticket' => $args['auto_ticket']]);
+
+        $this->generateAccesses($event);
+
+
+        if ($args['is_multicolor']) {
+            foreach ($request->input('colors') as $color) {
+                EventTicketGroup::create(['event_id' => $event->id, 'limit' => $args['limit'], 'ticket_color' => $color]);
+            }
+        } else {
+            $eventTicketGroup = EventTicketGroup::create(['event_id' => $event->id, 'limit' => $args['limit'], 'ticket_color' => 'default']);
+            $eventTicketGroup->setRandomColor();
+        }
+
+
+        /*CHECK EVENT UPLOADS FOLDER*/
+        if (!File::exists(public_path('uploads/events'))) {
+            File::makeDirectory(public_path('uploads/events'), 0755, true, true);
+        }
+
+        /*CREATE PRIZES*/
+
+        foreach ($upladedFiles as $prize) {
+
+            if (isset($prize['image'])) {
+                File::move(public_path('temp/events') . "/" . $prize['image'], public_path('uploads/events') . "/" . $prize['image']);
+                $img_url = $prize['image'];
+            } else {
+                $img_url = 'mockimage.svg';
+            }
+
+            Prize::create(['event_id' => $event->id, 'prize_title' => $prize['title'],
+                'prize_description' => $prize['description'], 'prize_img_url' => $img_url]);
+        }
+
+
+        /*CREATE USEREVENT*/
+        UserEvent::create(['user_id' => Auth::user()->id, 'event_id' => $event->id, 'access_type' => 1]);
+
+
+        return redirect()->route('event.show', ['id' => $event->id])->with(['event' => $event]);
+
+
+    }
+
+    public function store2(Request $request)
     {
         $upladedFiles = array();
         $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
@@ -195,8 +370,7 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public
-    function show($id)
+    public function show($id)
     {
         $event = Event::find($id);
         return view('event.show', ['event' => $event]);
@@ -381,10 +555,11 @@ class EventController extends Controller
         if ($user->isEditor($event->id)) {
             return redirect()->route('event.show', ['id' => $event->id])->with(['event' => $event]);
         } else {
-            $colors = $event->getAvailableColors();
+            $colors = $event->getSelableTicketColors();
             return view('event.ticketColor')->with(['event' => $event, 'uid' => $user->id, 'colors' => $colors]);
         }
     }
+
 
     public
     function addTicketColor(Request $request)
@@ -440,7 +615,11 @@ class EventController extends Controller
             $user = User::where('hash', $request->input('hash'))->first();
         }
         if (!$user) {
-            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Felhasználó nem található')]);
+        }
+
+        if ($event->auto_ticket && $user->hasTicketForEvent($event)) {
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('A játékosnak már van egy tombolája!')]);
         }
         if (!$user->isEditor($event->id)) {
 
@@ -466,7 +645,7 @@ class EventController extends Controller
             }
 
             if (is_null($args)) {
-                return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
+                return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Hiba történt, kérjük próbálja újra!')]);
             }
 
             $userEvent = UserEvent::where(['user_id' => $user->id, 'event_id' => $event->id])->first();

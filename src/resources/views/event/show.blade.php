@@ -48,7 +48,7 @@
 
                     @if($event->isAvailable())
 
-                        @if($event->hasMoreTickets() && ($event->is_public || !$event->auto_ticket ) && !(Auth::user()->isEditor($event->id)))
+                        @if($event->hasMoreTickets() && ($event->auto_ticket ) && !(Auth::user()->isEditor($event->id) && !Auth::user()->hasTicketForEvent($event)))
 
                             {{Form::model($event, array('route' => array('event.addticket', ['id'=>$event->id]),'enctype'=>"multipart/form-data"))}}
 
@@ -63,7 +63,6 @@
                         @endif
 
                     @endif
-
 
 
                 </div>
@@ -131,9 +130,7 @@
                 </div>
 
 
-
             </div>
-
 
 
             <div class="col-md-8">

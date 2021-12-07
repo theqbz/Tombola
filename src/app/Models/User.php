@@ -169,6 +169,13 @@ class User extends Authenticatable implements MustVerifyEmail
         return $eventPrizes;
     }
 
+    public function hasTicketForEvent($event)
+    {
+        $userEvents = $this->userEvents()->where(['access_type' => 0, 'event_id' => $event->id])->get()->all();
+        return count($userEvents);
+
+    }
+
     /**
      * @return string $hash
      */

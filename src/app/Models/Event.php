@@ -70,15 +70,37 @@ class Event extends Model
 
     public function hasMoreTickets()
     {
-        $eventTicketGroup = $this->eventTicketGroups->first();
-        $limit = $eventTicketGroup->limit;
+
+        $limit = $this->getLimit();
         return ($limit === 0 || $this->countTickets() < $limit);
+    }
+
+    public function getLimit()
+    {
+        if ($this->auto_ticket) {
+            $eventTicketGroup = $this->eventTicketGroups->first();
+            $limit = $eventTicketGroup->limit;
+        } else {
+            $eventTicketGroups = $this->eventTicketGroups->all();
+            $limit = $eventTicketGroups[0]->limit * count($eventTicketGroups);
+        }
+        return $limit;
+    }
+
+    public function getSelableTicketColors()
+    {
+        $colors = array();
+        foreach ($this->eventTicketGroups->pluck('ticket_color')->all() as $color) {
+            if (count($this->getAvailableTickets($color)) > 0) {
+                $colors[__($color)] = $color;
+            }
+        }
+        return $colors;
     }
 
     public function ticketsLeft()
     {
-        $eventTicketGroup = $this->eventTicketGroups->first();
-        $limit = $eventTicketGroup->limit;
+        $limit = $this->getLimit();
         if ($this->countTickets() < $limit) {
             return $limit - $this->countTickets();
         }
@@ -147,6 +169,7 @@ class Event extends Model
         }
         return $colors;
     }
+
 
     public function getAuthor()
     {
