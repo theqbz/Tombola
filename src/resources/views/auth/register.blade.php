@@ -55,8 +55,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="password"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">
+                                    {{ __('Password') }}<br>
+                                    <small> (A jelszó legalább 8 karakterből álljon)</small>
+                                </label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
