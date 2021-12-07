@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row justify-content-center">
-        <div class="container">
+
+    <div class="container-lg">
+        <div class="row justify-content-center">
             <div class="card">
                 {{Form::model($event, array('route' => array('event.update', $event->id),'enctype'=>"multipart/form-data"))}}
                 <div class="card-header">
@@ -52,41 +53,48 @@
                         <div class="col-md-6">
                             {{Form::datePicker(['id'=>'dt_start','value'=>$event->dt_start->format('Y-m-d'),'name'=>'dt_start','label'=>__('Start Date'),'needTime'=>true,'valueTime'=>$event->dt_start->format('H:i')])}}
                             @error('dt_start_full')
-                            <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+                            <span class="alert alert-danger d-block"
+                                  role="alert"><strong>{{ $message }}</strong> </span>
                             @enderror
                         </div>
                         <div class="col-md-6">
                             {{Form::datePicker(['id'=>'dt_end','value'=>$event->dt_end->format('Y-m-d'),'name'=>'dt_end','label'=>__('End Date'),'needTime'=>true,'valueTime'=>$event->dt_end->format('H:i')])}}
                             @error('dt_end_full')
-                            <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+                            <span class="alert alert-danger d-block"
+                                  role="alert"><strong>{{ $message }}</strong> </span>
                             @enderror
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2">
-                            {{Form::radioList(['id'=>'is_public','name'=>'is_public','label'=>__('Event Type'),'radios'=>array(__('Public')=>1,__('Private')=>0),'checked'=>$event->is_public])}}
+                            <div class="rounded bg-expired p-2">
+                                <p>{{__('Event Type')}}</p>
+                                <strong>{{$event->is_public?__('Public'):__('Private')}}</strong>
+                            </div>
                         </div>
-                        <div class="col-md-2">
-                            {{Form::radioList(['id'=>'auto_ticket','name'=>'auto_ticket','label'=>__('Draw type'),'radios'=>array(__('Auto')=>1,__('Manual')=>0),'checked'=>$event->auto_ticket])}}
-                        </div>
-                        <div class="col-md-2 d-none">
-                            {{Form::radioList(['id'=>'chosable_color','name'=>'chosable_color','label'=>__('Multiple colors'),'radios'=>array(__('Yes')=>1,__('No')=>0),'checked'=>$event->chosable_color])}}
+                        <div class="col-md-3">
+                            <div class="rounded bg-expired p-2">
+                                <p>{{__('Draw type')}}</p>
+                                <strong>{{$event->auto_ticket?__('Auto'):__('Manual')}}</strong>
+                            </div>
                         </div>
                     </div>
                     <p class="mt-5">{{__('Prizes')}}</p>
                     @foreach ($event->prizes->all() as $image)
-                            <div class="prize_item card-body row col-md-12">
-                                <div class="col-md-3">
-                                    <p>{{$image->prize_title}}</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <p>{{$image->prize_description}}</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <img style="max-width: 100px;" id="prize" src="{{asset('uploads/events/'.$image->prize_img_url)}}" alt="{{$image->prize_title}}" title="{{$image->prize_title}}" width="250">
-                                </div>
+                        <div class="prize_item card-body row col-md-12">
+                            <div class="col-md-3">
+                                <p>{{$image->prize_title}}</p>
                             </div>
-                        @endforeach
+                            <div class="col-md-3">
+                                <p>{{$image->prize_description}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img style="max-width: 100px;" id="prize"
+                                     src="{{asset('uploads/events/'.$image->prize_img_url)}}"
+                                     alt="{{$image->prize_title}}" title="{{$image->prize_title}}" width="250">
+                            </div>
+                        </div>
+                    @endforeach
                     <div class="form-group text-md-right mt-2">
                         {{Form::submit(__('Save'),array('class'=>'btn btn-primary'))}}
                     </div>
@@ -94,11 +102,11 @@
                 </div>
             </div>
         </div>
-        </div>
-        @endsection
-        @push('scripts')
-            <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
-            <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
-            </script>
-    @endpush
+    </div>
+@endsection
+@push('scripts')
+    <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    </script>
+@endpush

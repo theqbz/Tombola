@@ -1,285 +1,869 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container-lg">
-<!--aloldal fejléc-->
-    <div class="row align-items-center mb-2">
-        <div class="col text-md-start mb-3">
-            <h1><div class="display-4">{{__("Create event")}}</div></h1>
-        </div>
-    </div>
-<!--esemény-létrehozó form-->
-    <div class="card bg-light text-dark">
-    <!--esemény hozzáadása-->
-        <div class="card-header">
-            <div class="lead">
-                {{__("Event")}}
-            </div>
-        </div>
-        <div class="card-body">
-            {{Form::open(array('route' => 'event.store','enctype'=>"multipart/form-data"))}}
-            @if(session()->has('error'))
-                <p class="alert d-block alert-danger">
-                    {{ session()->get('error') }}
-                </p>
-            @endif
-
-            <div class="form-group">
-                {{Form::label('title', __('Title'), array('class' => ' col-form-label text-md-right'))}}
-                {{Form::text('title', old('title'),array('class'=>"form-control"))}}
-                @error('title')
-                <span class="alert d-block alert-danger fw-bold" role="alert">
-                    {{ $message }}
-                </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                {{Form::label('location', __('Location'), array('class' => ' col-form-label text-md-right'))}}
-                {{Form::text('location', old('location'),array('class'=>"form-control"))}}
-                @error('location')
-                <span class="alert d-block alert-danger fw-bold" role="alert">
-                    {{ $message }}
-                </span>
-                @enderror
-            </div>
-            {{ Form::WyswygEditor(['id'=>'description','value'=>old('description'),'name'=>'description','label'=>__('Description')]) }}
-            @error('description')
-            <span class="alert d-block alert-danger" role="alert">
-                {{ $message }}
-            </span>
-            @enderror
-
-            <div class="row">
-                <div class="col-md-6">
-                    {{Form::datePicker(['id'=>'dt_start','value'=>old('dt_start'),'name'=>'dt_start','label'=>__('Start Date'),'needTime'=>true,'valueTime'=>old('dt_start_time')])}}
-                    @error('dt_start_full')
-                    <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
-                    @enderror
-                </div>
-                <div class="col-md-6">
-                    {{Form::datePicker(['id'=>'dt_end','value'=>old('dt_end'),'name'=>'dt_end','label'=>__('End Date'),'needTime'=>true,'valueTime'=>old('dt_end_time')])}}
-                    @error('dt_end_full')
-                    <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
-                    @enderror
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-3 form-group">
-                    {{Form::label('limit',__('Limit of tickets'))}}<span class="small"> (0 ha nincs limit)</span>
-                    {{Form::number('limit',old('limit',0),array('class'=>'form-control','min'=>0))}}
-                </div>
-                <div class="col-md-2">
-                    {{Form::radioList(['id'=>'is_public','name'=>'is_public','label'=>__('Event Type'),'radios'=>array(__('Public')=>1,__('Private')=>0),'checked'=>old('is_public',1)])}}
-                </div>
-                <div id="ticket_chose_box_draw" class="col-md-2 {{(old('is_public'))?'':'d-none'}}">
-                    {{Form::radioList(['id'=>'auto_ticket','name'=>'auto_ticket','label'=>__('Draw type'),'radios'=>array(__('Auto')=>1,__('Manual')=>0),'checked'=>old('auto_ticket',1)])}}
-                </div>
-                <div id="ticket_chose_box_color-check" class="col-md-2 {{(old('auto_ticket'))?'':'d-none'}}">
-                    {{Form::radioList(['id'=>'chosable_color','name'=>'chosable_color','label'=>__('Multiple colors'),'radios'=>array(__('Yes')=>1,__('No')=>0),'checked'=>old('chosable_color',0)])}}
-                </div>
-                <div id="ticket_chose_box_color-select" class="col-md-2 d-none">
-                    <div class="form-group">
-                    {{Form::label('colors',__('Colors'))}}
-                    {{Form::select('colors[]', $colors,old('colors'),array('class' => 'form-control','multiple'=>true))}}
-                    </div>
-                </div>
-            </div>
-        <!--nyeremények hozzáadása-->
-            <div class="card" id="prizes">
-                <div class="card-header">
-                    <div class="lead">
-                        {{__('Prizes')}}
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3">{{__('Prize name')}}</div>
-                        <div class="col-md-3">{{__('Description')}}</div>
-                        <div class="col-md-6">{{__('Image')}}</div>
-                        <div class="col-md-3 form-group">
-                            <input type="text" class="form-control" id="prize_title_add" name="prize_title_add">
-                        </div>
-                        <div class="col-md-3 form-group">
-                            <textarea id="prize_description_add" class="form-control" name="prize_description_add"></textarea>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="prize_image_add" id="prize_image_add" lang="hu_HU">
-                                    <label class="custom-file-label" for="prize_image_add" data-browse="asd" aria-describedby="inputGroupFileAddon02">{{__('Choose')}}</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group text-md-right col-md-2">
-                            <a href="#" id="add_prize" class="btn btn-secondary">{{__('Add')}}</a>
-                        </div>
-                        <span id="prize_error" class="invalid-feedback was-validated" role="alert"><strong></strong> </span>
-                    </div>
-                </div>
-                @if(session()->has('images'))
-                    @foreach (session()->get('images') as $image)
-                        <div class="prize_item card-body row col-md-12">
-                            <div class="col-md-3">
-                                <p>{{$image['title']}}</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>{{$image['description']}}</p>
-                            </div>
-                            <div class="col-md-6">
-                                <img style="max-width: 100px;" id="prize" src="{{asset('temp/events/'.$image['image'])}}" alt="{{$image['title']}}" title="{{$image['title']}}" width="250">
-                            </div>
-                            <div class="d-none">
-                                <input type="text" name="prize_item_title_{{ $loop->index }}" value="{{$image['title']}}">
-                                <input type="text" name="prize_item_description_{{ $loop->index }}" value="{{$image['description']}}">
-                                <input type="text" name="prize_item_image_{{ $loop->index }}" value="{{$image['image']}}">
-                            </div>
-                        </div>
-                    @endforeach
-                    <div class="d-none">
-                        <input name="update" value="1">
-                    </div>
-                @endif
-                @error('prize')
-                <span class="alert alert-danger" role="alert"><strong>{{ $message }}</strong> </span>
-                @enderror
-            </div>
-            <div class="form-group text-md-right mt-5">
-                {{Form::submit(__('Save event'),array('class'=>'btn btn-primary'))}}
-            </div>
-            {{ Form::close() }}
-        </div>
-    </div>
-</div>
-
-@endsection
-@push('scripts')
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            bsCustomFileInput.init();
-            $('#add_prize').on('click', function (e) {
-                const idx = $('.prize_item').length;
-                e.preventDefault();
-                let img = null;
-                let errorMsg = $("<ul></ul>");
-                let isError = false;
-                const file = $('#prize_image_add')[0].files[0];
-                const title = $('#prize_title_add').val();
-                const description = $('#prize_description_add').val();
-                if (!file) {
-                    $('<li>Kép feltöltése kötelező!</li>').appendTo(errorMsg);
-                    isError = true;
-                }
-                if (!title.length) {
-                    $('<li>Cím kitöltése kötelező!</li>').appendTo(errorMsg);
-                    isError = true;
-                }
-                if (!description.length) {
-                    $('<li>Leírás kitöltése kötelező!</li>').appendTo(errorMsg);
-                    isError = true;
-                }
-                if (isError) {
-                    $('#prize_error').html(errorMsg);
-                    $('#prize_error').show();
-                } else {
-                    const reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = function (e) {
-
-                        img = $('<img />').attr({
-                            'id': 'prize',
-                            'src': e.target.result,
-                            'alt': title,
-                            'title': title,
-                            'width': 100
-                        });
-
-                        $('#prize_error').hide();
-                        const container = $('<div class="prize_item card-body row col-md-12"></div>');
-                        const titleGrid = $('<div class="col-md-3"><p>' + title + '</p><div class="d-none"><input name="prize_title_' + idx + '" value="' + title + '"></div></div>');
-                        titleGrid.appendTo(container);
-
-                        const descGrid = $('<div class="col-md-3"><p>' + description + '</p><div class="d-none"><input name="prize_description_' + idx + '" value="' + description + '"></div></div>');
-                        descGrid.appendTo(container);
-
-
-                        const fileInputCopy = $('#prize_image_add').clone();
-                        fileInputCopy.attr('name', 'prize_image_' + $('.prize_item').length);
-                        fileInputCopy.removeAttr('id');
-
-                        const imageGrid = $('<div class="col-md-6"></div>');
-                        img.appendTo(imageGrid);
-
-                        const hideContainer = $('<div class="d-none"></div>');
-                        fileInputCopy.appendTo(hideContainer);
-                        hideContainer.appendTo(imageGrid);
-
-                        imageGrid.appendTo(container);
-
-                        $('#prizes').append(container)
-
-                        $('#prizes').append($('<hr>'));
-
-                        $('#prize_image_add').next('label').html('{{__('Choose')}}');
-                        ;
-                        $('#prize_title_add').val("");
-                        $('#prize_description_add').val("");
-                    };
-                }
-
-                {{--let formData = new FormData();--}}
-                {{--formData.append('title',$('#prize_title_add').val())--}}
-                {{--formData.append('image',$('#prize_image_add')[0].files[0],'prize')--}}
-                {{--$.ajax({--}}
-                {{--    method: "POST",--}}
-                {{--    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},--}}
-                {{--    url: "{{route('prize.add')}}",--}}
-                {{--    data: formData,--}}
-                {{--    processData: false,--}}
-                {{--    contentType: false,--}}
-                {{--    success:function(data){--}}
-                {{--        console.log(data);--}}
-                {{--    }--}}
-                {{--})--}}
-
-            });
-
-
-            //init
-            if($('input[name=is_public]:checked').val() === '0') {
-                $('#ticket_chose_box_draw').removeClass('d-none');
-            }
-            if($('input[name=auto_ticket]:checked').val() === '0') {
-                $('#ticket_chose_box_color-check').removeClass('d-none');
-            }
-            if($('input[name=chosable_color]:checked').val() === '1') {
-                $('#ticket_chose_box_color-select').removeClass('d-none');
-            }
-
-            $('input[name=is_public]').on('change',function() {
-                if(this.value === '1') {
-                    $('#ticket_chose_box_draw').addClass('d-none');
-                }else {
-                    $('#ticket_chose_box_draw').removeClass('d-none');
-                }
-            });
-             $('input[name=auto_ticket]').on('change',function() {
-                 if(this.value === '1') {
-                     $('#ticket_chose_box_color-check').addClass('d-none');
-                 }else {
-                     $('#ticket_chose_box_color-check').removeClass('d-none');
-                 }
-             });
-             $('input[name=chosable_color]').on('change',function() {
-                 if(this.value === '1') {
-                     $('#ticket_chose_box_color-select').removeClass('d-none');
-                 }else {
-                     $('#ticket_chose_box_color-select').addClass('d-none');
-                 }
-             });
-        })
-    </script>
-@endpush
+@extends('layouts.app')
+
+
+
+@section('content')
+
+    <div class="container-lg">
+
+        <!--aloldal fejléc-->
+
+        <div class="row align-items-center mb-2">
+
+            <div class="col text-md-start mb-3">
+
+                <h1>
+
+                    <div class="display-4">{{__("Create event")}}</div>
+
+                </h1>
+
+            </div>
+
+        </div>
+
+        <!--esemény-létrehozó form-->
+
+        <div class="card bg-light text-dark">
+
+            <!--esemény hozzáadása-->
+
+            <div class="card-header">
+
+                <div class="lead">
+
+                    {{__("Event")}}
+
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                {{Form::open(array('route' => 'event.store','enctype'=>"multipart/form-data"))}}
+
+                @if(session()->has('error'))
+
+                    <p class="alert d-block alert-danger">
+
+                        {{ session()->get('error') }}
+
+                    </p>
+
+                @endif
+
+
+
+                <div class="form-group">
+
+                    {{Form::label('title', __('Title'), array('class' => ' col-form-label text-md-right'))}}
+
+                    {{Form::text('title', old('title'),array('class'=>"form-control"))}}
+
+                    @error('title')
+
+                    <span class="alert d-block alert-danger fw-bold" role="alert">
+
+                    {{ $message }}
+
+                </span>
+
+                    @enderror
+
+                </div>
+
+                <div class="form-group">
+
+                    {{Form::label('location', __('Location'), array('class' => ' col-form-label text-md-right'))}}
+
+                    {{Form::text('location', old('location'),array('class'=>"form-control"))}}
+
+                    @error('location')
+
+                    <span class="alert d-block alert-danger fw-bold" role="alert">
+
+                    {{ $message }}
+
+                </span>
+
+                    @enderror
+
+                </div>
+
+                {{ Form::WyswygEditor(['id'=>'description','value'=>old('description'),'name'=>'description','label'=>__('Description')]) }}
+
+                @error('description')
+
+                <span class="alert d-block alert-danger" role="alert">
+
+                {{ $message }}
+
+            </span>
+
+                @enderror
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        {{Form::datePicker(['id'=>'dt_start','value'=>old('dt_start'),'name'=>'dt_start','label'=>__('Start Date'),'needTime'=>true,'valueTime'=>old('dt_start_time')])}}
+
+                        @error('dt_start_full')
+
+                        <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+
+                        @enderror
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        {{Form::datePicker(['id'=>'dt_end','value'=>old('dt_end'),'name'=>'dt_end','label'=>__('End Date'),'needTime'=>true,'valueTime'=>old('dt_end_time')])}}
+
+                        @error('dt_end_full')
+
+                        <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+
+                        @enderror
+
+                        <span class="alert alert-danger d-none minTimeDiffWarning" role="alert"><strong>Az esemény rövidebb lesz mint 30 perc!</strong> </span>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-4">
+
+                    <div class="col-md-3 form-group">
+
+                        {{Form::label('limit',__('Limit of tickets'))}}<span class="small"> (0 ha nincs limit)</span>
+
+                        {{Form::number('limit',old('limit',0),array('class'=>'form-control','min'=>0))}}
+
+                        @error('limit')
+
+                        <span class="alert alert-danger d-block" role="alert"><strong>{{ $message }}</strong> </span>
+
+                        @enderror
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        {{Form::radioList(['id'=>'is_public','name'=>'is_public','label'=>__('Event Type'),'radios'=>array(__('Public')=>1,__('Private')=>0),'checked'=>old('is_public',1)])}}
+
+                    </div>
+
+                    <div id="ticket_chose_box_draw" class="col-md-2 {{(old('is_public'))?'':'d-none'}}">
+
+                        {{Form::radioList(['id'=>'auto_ticket','name'=>'auto_ticket','label'=>__('Draw type'),'radios'=>array(__('Auto')=>1,__('Manual')=>0),'checked'=>old('auto_ticket',1)])}}
+
+                    </div>
+
+                    <div id="ticket_chose_box_color-check" class="col-md-2 {{(old('auto_ticket'))?'':'d-none'}}">
+
+                        {{Form::radioList(['id'=>'chosable_color','name'=>'chosable_color','label'=>__('Multiple colors'),'radios'=>array(__('Yes')=>1,__('No')=>0),'checked'=>old('chosable_color',0)])}}
+
+                    </div>
+
+                    <div id="ticket_chose_box_color-select" class="col-md-2 d-none">
+
+                        <div class="form-group">
+
+                            {{Form::label('colors',__('Colors'))}}
+
+                            {{Form::select('colors[]', $colors,old('colors'),array('class' => 'form-control','multiple'=>true))}}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--nyeremények hozzáadása-->
+
+                <div class="card" id="prizes">
+
+                    <div class="card-header">
+
+                        <div class="lead">
+
+                            {{__('Prizes')}}
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-md-3">{{__('Prize name')}}</div>
+
+                            <div class="col-md-3">{{__('Description')}}</div>
+
+                            <div class="col-md-6">{{__('Image')}}</div>
+
+                            <div class="col-md-3 form-group">
+
+                                <input type="text" class="form-control" id="prize_title_add" name="prize_title_add">
+
+                            </div>
+
+                            <div class="col-md-3 form-group">
+
+                                <textarea id="prize_description_add" class="form-control"
+
+                                          name="prize_description_add"></textarea>
+
+                            </div>
+
+                            <div class="col-md-4 form-group">
+
+                                <div class="input-group">
+
+                                    <div class="custom-file">
+
+                                        <input type="file" class="prize_image_add" id="prize_image_add" lang="hu_HU">
+
+                                        <label class="custom-file-label" for="prize_image_add" data-browse="asd"
+
+                                               aria-describedby="inputGroupFileAddon02">{{__('Choose')}}</label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group text-md-right col-md-2">
+
+                                <a href="#" id="add_prize" class="btn btn-secondary">{{__('Add')}}</a>
+
+                            </div>
+
+                            <span id="prize_error" class="invalid-feedback was-validated" role="alert"><strong></strong> </span>
+
+                        </div>
+
+                    </div>
+
+                    @if(session()->has('images'))
+
+                        @foreach (session()->get('images') as $image)
+
+                            <div class="prize_item card-body row col-md-12">
+
+                                <div class="col-md-3">
+
+                                    <p>{{$image['title']}}</p>
+
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <p>{{$image['description']}}</p>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <img style="max-width: 100px;" id="prize"
+
+                                         src="{{asset('temp/events/'.$image['image'])}}" alt="{{$image['title']}}"
+
+                                         title="{{$image['title']}}" width="250">
+
+                                </div>
+
+                                <div class="d-none">
+
+                                    <input type="text" name="prize_item_title_{{ $loop->index }}"
+
+                                           value="{{$image['title']}}">
+
+                                    <input type="text" name="prize_item_description_{{ $loop->index }}"
+
+                                           value="{{$image['description']}}">
+
+                                    <input type="text" name="prize_item_image_{{ $loop->index }}"
+
+                                           value="{{$image['image']}}">
+
+                                </div>
+
+                            </div>
+
+                        @endforeach
+
+                        <div class="d-none">
+
+                            <input name="update" value="1">
+
+                        </div>
+
+                    @endif
+
+                    @error('prize')
+
+                    <span class="alert alert-danger" role="alert"><strong>{{ $message }}</strong> </span>
+
+                    @enderror
+
+                </div>
+
+                <div class="form-group text-md-right mt-5">
+
+                    {{Form::submit(__('Save event'),array('class'=>'btn btn-primary'))}}
+
+                </div>
+
+                {{ Form::close() }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+@endsection
+
+@push('scripts')
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+
+    <script src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+<<<<<<< HEAD
+                $('#dt_end').on('change', checkDateDiff);
+
+                $('#dt_end_time').on('change', checkDateDiff);
+
+
+
+
+
+                function checkDateDiff() {
+
+
+
+                    $('.minTimeDiffWarning').addClass('d-none');
+
+                    if ($('#dt_end_time').val() === default_dt_end_time) return;
+
+                    if ($('#dt_end').val() > $('#dt_start').val()) return;
+
+                    let explodedStart = $('#dt_start_time').val().split(':');
+
+                    var date1 = new Date(2000, 0, 1, explodedStart[0], explodedStart[1]);
+
+                    let explodedEnd = $('#dt_end_time').val().split(':');
+
+                    var date2 = new Date(2000, 0, 1, explodedEnd[0], explodedEnd[1]); // 5:00 PM
+
+
+
+                    if (date2 < date1) {
+
+                        date2.setDate(date2.getDate() + 1);
+
+                    }
+
+
+
+                    var diff = date2 - date1;
+
+                    if ((diff / 1000 / 60) < 30) {
+
+                        console.log('smaller');
+
+
+
+                        $('.minTimeDiffWarning').removeClass('d-none');
+
+                    }
+
+                }
+
+
+
+
+
+                bsCustomFileInput.init();
+
+                $('#add_prize').on('click', function (e) {
+
+                    const idx = $('.prize_item').length;
+
+                    e.preventDefault();
+
+                    let img = null;
+
+                    let errorMsg = $("<ul></ul>");
+
+                    let isError = false;
+
+                    const file = $('#prize_image_add')[0].files[0];
+
+                    const title = $('#prize_title_add').val();
+
+                    const description = $('#prize_description_add').val();
+
+                    if (!file) {
+
+                        $('<li>Kép feltöltése kötelező!</li>').appendTo(errorMsg);
+
+                        isError = true;
+
+                    }
+
+                    if (!title.length) {
+
+                        $('<li>Cím kitöltése kötelező!</li>').appendTo(errorMsg);
+
+                        isError = true;
+
+                    }
+
+                    if (!description.length) {
+
+                        $('<li>Leírás kitöltése kötelező!</li>').appendTo(errorMsg);
+
+                        isError = true;
+
+                    }
+
+                    if (isError) {
+
+                        $('#prize_error').html(errorMsg);
+
+                        $('#prize_error').show();
+
+                    } else {
+
+                        const reader = new FileReader();
+
+                        reader.readAsDataURL(file);
+
+                        reader.onload = function (e) {
+
+
+
+                            img = $('<img />').attr({
+
+                                'id': 'prize',
+
+                                'src': e.target.result,
+
+                                'alt': title,
+
+                                'title': title,
+
+                                'width': 100
+
+                            });
+
+
+
+                            $('#prize_error').hide();
+
+                            const container = $('<div class="prize_item card-body row col-md-12"></div>');
+
+                            const titleGrid = $('<div class="col-md-3"><p>' + title + '</p><div class="d-none"><input name="prize_title_' + idx + '" value="' + title + '"></div></div>');
+
+                            titleGrid.appendTo(container);
+
+
+
+                            const descGrid = $('<div class="col-md-3"><p>' + description + '</p><div class="d-none"><input name="prize_description_' + idx + '" value="' + description + '"></div></div>');
+
+                            descGrid.appendTo(container);
+
+
+
+
+
+                            const fileInputCopy = $('#prize_image_add').clone();
+
+                            fileInputCopy.attr('name', 'prize_image_' + $('.prize_item').length);
+
+                            fileInputCopy.removeAttr('id');
+
+
+
+                            const imageGrid = $('<div class="col-md-6"></div>');
+
+                            img.appendTo(imageGrid);
+
+
+
+                            const hideContainer = $('<div class="d-none"></div>');
+
+                            fileInputCopy.appendTo(hideContainer);
+
+                            hideContainer.appendTo(imageGrid);
+
+
+
+                            imageGrid.appendTo(container);
+
+
+
+                            $('#prizes').append(container)
+
+
+
+                            $('#prizes').append($('<hr>'));
+
+
+
+                            $('#prize_image_add').next('label').html('{{__('Choose')}}');
+
+                            ;
+
+                            $('#prize_title_add').val("");
+
+                            $('#prize_description_add').val("");
+
+                        };
+
+                    }
+
+                });
+
+
+
+
+
+                //init
+
+                if ($('input[name=is_public]:checked').val() === '0') {
+
+                    $('#ticket_chose_box_draw').removeClass('d-none');
+
+                }
+
+                if ($('input[name=auto_ticket]:checked').val() === '0') {
+
+                    $('#ticket_chose_box_color-check').removeClass('d-none');
+
+                }
+
+                if ($('input[name=chosable_color]:checked').val() === '1') {
+
+                    $('#ticket_chose_box_color-select').removeClass('d-none');
+
+                }
+
+
+
+                $('input[name=is_public]').on('change', function () {
+
+                    if (this.value === '1') {
+
+                        $('#ticket_chose_box_draw').addClass('d-none');
+
+                    } else {
+
+                        $('#ticket_chose_box_draw').removeClass('d-none');
+
+                    }
+
+                });
+
+                $('input[name=auto_ticket]').on('change', function () {
+
+                    if (this.value === '1') {
+
+                        $('#ticket_chose_box_color-check').addClass('d-none');
+
+                    } else {
+
+                        $('#ticket_chose_box_color-check').removeClass('d-none');
+
+                    }
+
+                });
+
+                $('input[name=chosable_color]').on('change', function () {
+
+                    if (this.value === '1') {
+
+                        $('#ticket_chose_box_color-select').removeClass('d-none');
+
+                    } else {
+
+                        $('#ticket_chose_box_color-select').addClass('d-none');
+
+                    }
+
+                });
+
+            }
+
+        )
+
+=======
+            bsCustomFileInput.init();
+
+            $('#add_prize').on('click', function (e) {
+
+                const idx = $('.prize_item').length;
+
+                e.preventDefault();
+
+                let img = null;
+
+                let errorMsg = $("<ul></ul>");
+
+                let isError = false;
+
+                const file = $('#prize_image_add')[0].files[0];
+
+                const title = $('#prize_title_add').val();
+
+                const description = $('#prize_description_add').val();
+
+                if (!file) {
+
+                    $('<li>Kép feltöltése kötelező!</li>').appendTo(errorMsg);
+
+                    isError = true;
+
+                }
+
+                if (!title.length) {
+
+                    $('<li>Cím kitöltése kötelező!</li>').appendTo(errorMsg);
+
+                    isError = true;
+
+                }
+
+                if (!description.length) {
+
+                    $('<li>Leírás kitöltése kötelező!</li>').appendTo(errorMsg);
+
+                    isError = true;
+
+                }
+
+                if (isError) {
+
+                    $('#prize_error').html(errorMsg);
+
+                    $('#prize_error').show();
+
+                } else {
+
+                    const reader = new FileReader();
+
+                    reader.readAsDataURL(file);
+
+                    reader.onload = function (e) {
+
+
+
+                        img = $('<img />').attr({
+
+                            'id': 'prize',
+
+                            'src': e.target.result,
+
+                            'alt': title,
+
+                            'title': title,
+
+                            'width': 100
+
+                        });
+
+
+
+                        $('#prize_error').hide();
+
+                        const container = $('<div class="prize_item card-body row col-md-12"></div>');
+
+                        const titleGrid = $('<div class="col-md-3"><p>' + title + '</p><div class="d-none"><input name="prize_title_' + idx + '" value="' + title + '"></div></div>');
+
+                        titleGrid.appendTo(container);
+
+
+
+                        const descGrid = $('<div class="col-md-3"><p>' + description + '</p><div class="d-none"><input name="prize_description_' + idx + '" value="' + description + '"></div></div>');
+
+                        descGrid.appendTo(container);
+
+
+
+
+
+                        const fileInputCopy = $('#prize_image_add').clone();
+
+                        fileInputCopy.attr('name', 'prize_image_' + $('.prize_item').length);
+
+                        fileInputCopy.removeAttr('id');
+
+
+
+                        const imageGrid = $('<div class="col-md-6"></div>');
+
+                        img.appendTo(imageGrid);
+
+
+
+                        const hideContainer = $('<div class="d-none"></div>');
+
+                        fileInputCopy.appendTo(hideContainer);
+
+                        hideContainer.appendTo(imageGrid);
+
+
+
+                        imageGrid.appendTo(container);
+
+
+
+                        $('#prizes').append(container)
+
+
+
+                        $('#prizes').append($('<hr>'));
+
+
+
+                        $('#prize_image_add').next('label').html('{{__('Choose')}}');
+
+                        ;
+
+                        $('#prize_title_add').val("");
+
+                        $('#prize_description_add').val("");
+
+                    };
+
+                }
+
+
+
+                {{--let formData = new FormData();--}}
+
+                {{--formData.append('title',$('#prize_title_add').val())--}}
+
+                {{--formData.append('image',$('#prize_image_add')[0].files[0],'prize')--}}
+
+                {{--$.ajax({--}}
+
+                {{--    method: "POST",--}}
+
+                {{--    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},--}}
+
+                {{--    url: "{{route('prize.add')}}",--}}
+
+                {{--    data: formData,--}}
+
+                {{--    processData: false,--}}
+
+                {{--    contentType: false,--}}
+
+                {{--    success:function(data){--}}
+
+                {{--        console.log(data);--}}
+
+                {{--    }--}}
+
+                {{--})--}}
+
+
+
+            });
+
+
+
+
+
+            //init
+
+            if($('input[name=is_public]:checked').val() === '0') {
+
+                $('#ticket_chose_box_draw').removeClass('d-none');
+
+            }
+
+            if($('input[name=auto_ticket]:checked').val() === '0') {
+
+                $('#ticket_chose_box_color-check').removeClass('d-none');
+
+            }
+
+            if($('input[name=chosable_color]:checked').val() === '1') {
+
+                $('#ticket_chose_box_color-select').removeClass('d-none');
+
+            }
+
+
+
+            $('input[name=is_public]').on('change',function() {
+
+                if(this.value === '1') {
+
+                    $('#ticket_chose_box_draw').addClass('d-none');
+
+                }else {
+
+                    $('#ticket_chose_box_draw').removeClass('d-none');
+
+                }
+
+            });
+
+             $('input[name=auto_ticket]').on('change',function() {
+
+                 if(this.value === '1') {
+
+                     $('#ticket_chose_box_color-check').addClass('d-none');
+
+                 }else {
+
+                     $('#ticket_chose_box_color-check').removeClass('d-none');
+
+                 }
+
+             });
+
+             $('input[name=chosable_color]').on('change',function() {
+
+                 if(this.value === '1') {
+
+                     $('#ticket_chose_box_color-select').removeClass('d-none');
+
+                 }else {
+
+                     $('#ticket_chose_box_color-select').addClass('d-none');
+
+                 }
+
+             });
+
+        })
+
+>>>>>>> ada403e77bd11f038db0a6283b306e7c6eb2e7db
+    </script>
+
+@endpush
+
