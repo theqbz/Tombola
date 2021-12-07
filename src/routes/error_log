@@ -1,8 +1,0 @@
-[24-Nov-2021 23:10:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /cphome/nxt64274/ticketto_hu/teszt/src/routes/web.php:24
-Stack trace:
-#0 {main}
-  thrown in /cphome/nxt64274/ticketto_hu/teszt/src/routes/web.php on line 24
-[24-Nov-2021 23:10:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Artisan' not found in /cphome/nxt64274/ticketto_hu/teszt/src/routes/console.php:17
-Stack trace:
-#0 {main}
-  thrown in /cphome/nxt64274/ticketto_hu/teszt/src/routes/console.php on line 17
