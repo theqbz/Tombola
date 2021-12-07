@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResendEmailController;
@@ -31,35 +32,44 @@ Route::post('/resendemail/temp', [ResendEmailController::class, 'resendTempEmail
 Route::get('/verified', [PageController::class, 'getPage'])->name('verified');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
-    Route::get('/mytickets',[UserController::class,'myTickets'])->name('mytickets');
-    Route::get('/myprizes',[UserController::class,'myPrizes'])->name('myprizes');
+    Route::get('/mytickets', [UserController::class, 'myTickets'])->name('mytickets');
+    Route::get('/myprizes', [UserController::class, 'myPrizes'])->name('myprizes');
 
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
-    Route::get('/profile',[UserController::class,'index'])->name('profile.index');
-    Route::get('/profile/edit',[UserController::class,'edit'])->name('profile.edit');
-    Route::post('/profile/update',[UserController::class,'update'])->name('profile.update');
+    Route::get('/profile', [UserController::class, 'index'])->name('profile.index');
+    Route::get('/profile/edit', [UserController::class, 'edit'])->name('profile.edit');
+    Route::post('/profile/update', [UserController::class, 'update'])->name('profile.update');
 
-    Route::get('/events',[EventController::class,'index'])->name('event.index');
-    Route::get('/event/create',[EventController::class,'create'])->name('event.create');
-    Route::get('/event/edit/{id}',[EventController::class,'edit'])->name('event.edit');
-    Route::get('/event/myevents',[EventController::class,'myEvents'])->name('event.myevents');
+    Route::get('/events', [EventController::class, 'index'])->name('event.index');
+    Route::get('/event/create', [EventController::class, 'create'])->name('event.create');
+    Route::get('/event/edit/{id}', [EventController::class, 'edit'])->name('event.edit');
+    Route::get('/event/myevents', [EventController::class, 'myEvents'])->name('event.myevents');
 
-    Route::post('/event/store',[EventController::class,'store'])->name('event.store');
-    Route::post('/event/update/{id}',[EventController::class,'update'])->name('event.update');
+    Route::post('/event/store', [EventController::class, 'store'])->name('event.store');
+    Route::post('/event/update/{id}', [EventController::class, 'update'])->name('event.update');
 
-    Route::post('ckeditor/upload', [CKEditorController::class,'upload'])->name('ckeditor.image-upload');
+    Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.image-upload');
 
 
-    Route::get('/event/ticket/{id}',[EventController::class,'showTicketForm'])->name('event.ticket');
+    Route::get('/event/ticket/{id}', [EventController::class, 'showTicketForm'])->name('event.ticket');
 
-    Route::post('/event/addticket',[EventController::class,'addTicket'])->name('event.addticket');
+    Route::post('/event/addticket', [EventController::class, 'addTicket'])->name('event.addticket');
 
-    Route::post('/event/color',[EventController::class,'showTicketColorForm'])->name('event.color');
-    Route::post('/event/addcolor',[EventController::class,'addTicketColor'])->name('event.addcolor');
+    Route::post('/event/color', [EventController::class, 'showTicketColorForm'])->name('event.color');
+    Route::post('/event/addcolor', [EventController::class, 'addTicketColor'])->name('event.addcolor');
 
-    Route::post('/event/number',[EventController::class,'showTicketNumberForm'])->name('event.number');
+    Route::post('/event/number', [EventController::class, 'showTicketNumberForm'])->name('event.number');
+    Route::post('/event/qr', [EventController::class, 'redirectByHash'])->name('event.qr');
 
-    Route::get('/event/{id}',[EventController::class,'show'])->name('event.show')->where('id', '[0-9]+');
+    Route::get('/event/{id}', [EventController::class, 'show'])->name('event.show')->where('id', '[0-9]+');
+
+    Route::get('/connect', [EventController::class, 'connectToEvent'])->name('connect');
+
+    Route::get('/admin/users', [AdminController::class, 'actionUsers'])->name('admin.users');
+    Route::post('/admin/users/delete', [UserController::class, 'delete'])->name('admin.users.delete');
+    Route::post('/admin/users/addadmin', [UserController::class, 'setAsAdmin'])->name('admin.users.addadmin');
+    Route::get('/admin/events', [AdminController::class, 'actionEvents'])->name('admin.events');
+
 });
 
 Route::get('/event/landing/{hash}', [EventController::class, 'showByHash'])->name('event.show.hash');

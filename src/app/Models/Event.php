@@ -48,6 +48,11 @@ class Event extends Model
         return "https://ui-avatars.com/api/?name=Event+" . $titleParts[0];
     }
 
+    public function getStartDate()
+    {
+        return $this->dt_start->format('Y.m.d H:i');
+    }
+
     public function getEndDate()
     {
         return $this->dt_end->format('Y.m.d H:i');
@@ -68,6 +73,24 @@ class Event extends Model
         $eventTicketGroup = $this->eventTicketGroups->first();
         $limit = $eventTicketGroup->limit;
         return ($limit === 0 || $this->countTickets() < $limit);
+    }
+
+    public function ticketsLeft()
+    {
+        $eventTicketGroup = $this->eventTicketGroups->first();
+        $limit = $eventTicketGroup->limit;
+        if ($this->countTickets() < $limit) {
+            return $limit - $this->countTickets();
+        }
+        return 0;
+    }
+
+    public function hasLimit()
+    {
+        $eventTicketGroup = $this->eventTicketGroups->first();
+        $limit = $eventTicketGroup->limit;
+
+        return $limit !== 0;
     }
 
     public function isAvailable()
@@ -116,12 +139,48 @@ class Event extends Model
 
     }
 
-    public function getAvailableColors() {
+    public function getAvailableColors()
+    {
         $colors = array();
-        foreach ( $this->eventTicketGroups->pluck('ticket_color')->all() as $color) {
+        foreach ($this->eventTicketGroups->pluck('ticket_color')->all() as $color) {
             $colors[__($color)] = $color;
         }
         return $colors;
+    }
+
+    public function getAuthor()
+    {
+        $userEvent = $this->userEvents()->where(['access_type' => 1])->first();
+        if ($userEvent) {
+            $user = User::where('id', $userEvent->user_id)->first();
+            if ($user) {
+                return $user->email;
+            }
+            return "Asd";
+        }
+        return "Törölve";
+    }
+
+
+    public function getColor()
+    {
+
+        if ($this->isAvailable() && (strtotime($this->dt_end->toString()) <= strtotime(date('Y-m-d H:i', strtotime("+1 day"))))) {
+            return "activenow";
+        }
+
+        if (!$this->isAvailable()) {
+
+            return "expired";
+        }
+
+
+        return "active";
+    }
+
+    public function getAccessCode()
+    {
+        return $this->hash;
     }
 
     /**

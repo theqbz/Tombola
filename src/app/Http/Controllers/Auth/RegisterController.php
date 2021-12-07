@@ -99,7 +99,7 @@ class RegisterController extends Controller
             }
 
             if (!$user->dashboard_url) {
-                $user->dashboard_url = Hash::make($user->hash);
+                $user->dashboard_url = $this->sanitize_hash(Hash::make($user->hash));
                 $user->save();
             }
             event(new TemporaryRegistered($user));
@@ -219,6 +219,7 @@ class RegisterController extends Controller
         } else {
             $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), -3));
         }
+        $accessCode = strtr(utf8_decode($accessCode), utf8_decode('àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
         $user->hash = $accessCode;
         $user->save();
         $path = public_path('/qrcodes/users');
@@ -227,6 +228,17 @@ class RegisterController extends Controller
         }
         QrCode::generate($accessCode, $path . '/' . $user->id . '.svg');
 
+    }
+
+    private function sanitize_hash($hash)
+    {
+        $special_chars = array("?", "[", "]", "/", "\\", "=", "<", ">", '.', ":", ";", ",", "'", "\"", "&", "$", "#",
+            "*", "(", ")", "|", "~", "`", "!", "{", "}");
+        $hash = str_replace($special_chars, '', $hash);
+        $hash = preg_replace('/[\s-]+/', '-', $hash);
+        $hash = trim($hash, '.-_');
+
+        return $hash;
     }
 
 }

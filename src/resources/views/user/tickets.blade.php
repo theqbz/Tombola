@@ -1,40 +1,133 @@
 @extends('layouts.app')
 
-@section('content')
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h2>Szelvényeim - {{__($status)}}</h2>
-            </div>
-            <div class="card-body border-1">
 
-                <div class="row">
-                    <div class="col-md-12 mb-5">
-                    <a class="btn btn-secondary" href="{{route('mytickets',['status'=>'active'])}}">{{__('Active events')}}</a>
-                    <a class="btn btn-danger" href="{{route('mytickets',['status'=>'passive'])}}">{{__('Passive events')}}</a>
-                    </div>
-                    <div class="col-md-6">
-                        @if(!$eventTickets)
-                            <h2>{{__('No tickets yet!')}}</h2>
-                            @endif
-                @foreach($eventTickets as $eventTicket)
-                    @foreach($eventTicket['tickets'] as $ticket)
-                        <div class="row no-gutters mt-2 mb-2 p-2 bg-{{$ticket->getColor}}" style="border:1px solid;border-radius: 5px">
-                            <div class="col-md-9 ">
-                                <a href="{{route('event.show',$eventTicket['event']->id)}}"><strong>{{$eventTicket['event']->title}}</strong></a>
-                                <p class="mt-2">{{$eventTicket['event']->dt_end->format('Y-m-d h:i')}}</p>
-                            </div>
-                            <div class="col-md-3 d-flex align-items-center justify-content-center" style="border-left:1px dashed">
-                                <h3>
-                                    {{$ticket->value}}
-                                </h3>
-                            </div>
-                        </div>
-                    @endforeach
-                @endforeach
-                    </div>
-                </div>
+
+@section('content')
+
+    <div class="container-lg">
+
+        <!--aloldal fejléc-->
+
+        <div class="row align-middle mb-2">
+
+            <div class="col text-md-start">
+
+                <h1>
+
+                    <div class="display-4">{{__('My Tickets')}}</div>
+
+                </h1>
+
             </div>
+
+            <div class="col text-md-end">
+
+                <div class="dropdown">
+
+                    <button class="btn btn-lg btn-tgray dropdown-toggle" type="button" id="dropdownMenuButton1"
+
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                        {{__($status)}}
+
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                        <li>
+
+                            <a class="dropdown-item" href="{{route('mytickets',['status'=>'active'])}}">Érvényes
+
+                                szelvények</a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item" href="{{route('mytickets',['status'=>'passive'])}}">Lejárt
+
+                                szelvények</a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item" href="{{route('mytickets',['status'=>'winner'])}}">Nyertes
+
+                                szelvények</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </div>
+
+        <!--szelvények-->
+
+        <div class="row">
+
+            <div class="col-ld-9">
+
+                @if(!$eventTickets)
+
+                    <div class="lead">
+
+                        {{__('No tickets yet!')}}
+
+                    </div>
+
+                @endif
+
+                @foreach($eventTickets as $eventTicket)
+
+                    @foreach($eventTicket['tickets'] as $ticket)
+
+                        <div class="card bg-{{$ticket->getColor()}} text-dark mb-2">
+
+                            <div class="card-body p-1">
+
+                                <div class="row g-0 justify-content-center align-items-center">
+
+                                    <div class="col-sm-12 col-lg-8">
+
+                                        <a class="h4 card-title m-2 fw-bold"
+
+                                           href="{{route('event.show',$eventTicket['event']->id)}}">
+
+                                            {{$eventTicket['event']->title}}
+
+                                        </a>
+
+                                        <p class="card-text m-2">{{$eventTicket['event']->dt_end->formatLocalized('%Y. %b. %-e. %A, %H:%M')}}</p>
+
+                                    </div>
+
+                                    <div class="col-sm-12 col-lg-4 border-start border-2">
+
+                                        <p class="h3 card-title fw-bold text-center">{{strtoupper(substr($ticket->getColorName(), 0, 1))}}{{$ticket->value}}</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    @endforeach
+
+                @endforeach
+
+            </div>
+
+        </div>
+
     </div>
+
+
+
 @endsection

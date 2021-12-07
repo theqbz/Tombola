@@ -76,12 +76,12 @@ class FormMacros extends FormBuilder
         if (isset($this->attr['needTime'])) {
             $html .= '<input type="time" placeholder="' . date("H:i") . '" id="' . $this->attr['id'] . '_time" class="datepicker ' . $this->attr['class'] . '" name="' . $this->attr['name'] . '_time"/>';
             $value_time = (isset($this->attr['valueTime'])) ? $this->attr['valueTime'] : date('H:i');
-            $html .= '<script>$("#' . $this->attr['id'] . '_time").val("' . $value_time . '")</script>';
+            $html .= '<script>let default_' . $this->attr['id'] . '_time ="' . $value_time . '";$("#' . $this->attr['id'] . '_time").val("' . $value_time . '")</script>';
         }
         $html .= '</div></div>';
         $value = (isset($this->attr['value'])) ? $this->attr['value'] : date('Y-m-d');
 
-        $html .= '<script>$("#' . $this->attr['id'] . '").val("' . $value . '")</script>';
+        $html .= '<script>let default_' . $this->attr['id'] . ' ="' . $value . '"; $("#' . $this->attr['id'] . '").val("' . $value . '")</script>';
 
         return $this->toHtmlString($html);
     }
@@ -104,7 +104,7 @@ class FormMacros extends FormBuilder
             if (!is_null($checkedValue) && $checkedValue == $value) {
                 $checked = ' checked ';
             }
-            $html .= '<div class="form-control mb-1 '.(isset($this->attr['inline'])?"d-inline-block w-auto mr-2 mb-5":"").'"><span>' . $label . '</span>&nbsp;<input ' . $checked . ' id="' . ($this->attr["name"] . "_" . $idx) . '" class="radio-list-item" type="radio" name="' . $this->attr["name"] . '" value="' . $value . '"></div>';
+            $html .= '<div class="form-control mb-1 ' . (isset($this->attr['inline']) ? "d-inline-block w-auto mr-2 mb-5" : "") . '"><span>' . $label . '</span>&nbsp;<input ' . $checked . ' id="' . ($this->attr["name"] . "_" . $idx) . '" class="radio-list-item" type="radio" name="' . $this->attr["name"] . '" value="' . $value . '"></div>';
             $idx++;
         }
         $html .= '</div>';
@@ -119,30 +119,36 @@ class FormMacros extends FormBuilder
         $this->setData($attributes);
 
 
-        $html = '<script src='.asset('js/html5-qrcode.min.js').'></script>';
+        $html = '<script src=' . asset('js/html5-qrcode.min.js') . '></script>';
 
         $html .= '<div class="' . $this->attr['containerClass'] . '">';
         $html .= '<div style="width: 100%" id="reader"></div>';
 
-        if (isset($this->attr['label'])) {
+        if (isset($this->attr['label']) && !(isset($this->attr['hiddenField']))) {
             $html .= '<label for="' . $this->attr["name"] . '">' . $this->attr["label"] . '</label>';
         }
-        $html .= '<input type="text" id="' . $this->attr['id'] . '" class="' . $this->attr['class'] . '" name="' . $this->attr['name'] . '">';
-        $html .='</div>';
-        $html .= '<script>var html5QrcodeScanner = new Html5QrcodeScanner(
+        $inputtype = (isset($this->attr['hiddenField'])) ? "hidden" : "text";
+        $html .= '<input type="' . $inputtype . '" id="' . $this->attr['id'] . '" class="' . $this->attr['class'] . '" name="' . $this->attr['name'] . '">';
+        $html .= '</div>';
+
+        $html .= '<script>
+        var html5QrcodeScanner = new Html5QrcodeScanner(
                 "reader", { fps: 10, qrbox: 250 });
         
             function onScanSuccess(decodedText, decodedResult) {
                 document.getElementById("' . $this->attr['id'] . '").value = decodedText;
-                console.log(`Scan result: ${decodedText}`, decodedResult);
-                html5QrcodeScanner.clear();
-            }
-            
-            function onScanError(errorMessage) {
-                // handle on error condition, with error message
+                html5QrcodeScanner.clear();';
+        if (isset($this->attr['hiddenField'])) {
+            $html .= '$("form").submit();';
+        }
+        $html .= '}
+
+                function onScanError(errorMessage) {
+                    // handle on error condition, with error message
                 }
             
-            html5QrcodeScanner.render(onScanSuccess);</script>';
+            html5QrcodeScanner.render(onScanSuccess);
+</script>';
 
         return $this->toHtmlString($html);
     }

@@ -12,6 +12,9 @@ class PageController extends Controller
 
     public function index()
     {
+        if (Auth::user()) {
+            return view('pages.dashboard')->with('user', Auth::user());
+        }
         return view('pages.home');
     }
 
@@ -32,7 +35,7 @@ class PageController extends Controller
 
     public function dashboard()
     {
-        return view('pages.dashboard')->with('user',Auth::user());
+        return view('pages.dashboard')->with('user', Auth::user());
     }
 
     public function dashboardTemp(Request $request)

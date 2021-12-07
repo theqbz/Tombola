@@ -48,20 +48,29 @@ class EventController extends Controller
         }
     }
 
-    protected function validator(array $data)
+    protected function validator(array $data, $isUpdate = false)
     {
         $todayDate = date("Y-m-d H:i");
 
         $validationRules = array('title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
             'location' => ['required', 'string', 'max:255'],
             'dt_start_full' => ['required', 'date', 'max:255', 'after:' . $todayDate],
             'dt_end_full' => ['required', 'date', 'max:255', 'after:dt_start_full'],
-            'is_public' => ['required', 'boolean', 'max:255'],
-            'auto_ticket' => ['required', 'boolean', 'max:255']);
+        );
+
+        if (!$isUpdate) {
+            $validationRules = array_merge($validationRules, array(
+                'limit' => ['required', 'numeric', 'max:100'],
+                'is_public' => ['required', 'boolean', 'max:255'],
+                'auto_ticket' => ['required', 'boolean', 'max:255']
+            ));
+        }
 
         return Validator::make($data, $validationRules);
+
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -70,9 +79,9 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public
+    function store(Request $request)
     {
-
         $upladedFiles = array();
         $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
             'dt_end_full' => $request->input('dt_end') . ' ' . $request->input('dt_end_time')]);
@@ -114,7 +123,7 @@ class EventController extends Controller
                 $itemIdx = explode('_', $inputName);
                 $itemIdx = end($itemIdx);
                 $upladedFiles[$itemIdx] = ['title' => $request->input('prize_title_' . $itemIdx),
-                    'description' => $request->input('prize_title_' . $itemIdx),
+                    'description' => $request->input('prize_description_' . $itemIdx),
                     'image' => $fileNameToStore
 
                 ];
@@ -186,7 +195,8 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public
+    function show($id)
     {
         $event = Event::find($id);
         return view('event.show', ['event' => $event]);
@@ -204,9 +214,26 @@ class EventController extends Controller
         $hash = $request->route('hash');
         $event = Event::where('hash', $hash)->first();
         if ($event) {
-            return view('event.show')->with('event', $event);
+            return view('event.public')->with('event', $event);
         } else {
             return abort(404);
+        }
+    }
+
+    public function redirectByHash(Request $request)
+    {
+        $hash = $request->input('hash');
+        $hash = explode('/', $hash);
+        $hash = end($hash);
+        if ($hash) {
+            $event = Event::where('hash', $hash)->first();
+            if ($event) {
+                return redirect()->route('event.show', ['id' => $event->id])->with(['event' => $event]);
+            } else {
+                return back()->withErrors(['error' => _('No event found')]);
+            }
+        } else {
+            return back()->withErrors(['error' => _('No acces code')]);
         }
     }
 
@@ -217,7 +244,8 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public
+    function edit($id)
     {
         $event = Event::find($id);
 
@@ -237,20 +265,20 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public
+    function update(Request $request, $id)
     {
         $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
             'dt_end_full' => $request->input('dt_end') . ' ' . $request->input('dt_end_time')]);
-        $this->validator($request->all())->validate();
+        $this->validator($request->all(), true)->validate();
         try {
             $event = Event::find($id);
             $event->update(['title' => $request->input('title'),
                 'description' => $request->input('description'),
                 'location' => $request->input('location'),
                 'dt_start' => $request->input('dt_start_full'),
-                'dt_end' => $request->input('dt_end_full'),
-                'is_public' => $request->input('is_public'),
-                'auto_ticket' => $request->input('auto_ticket')]);
+                'dt_end' => $request->input('dt_end_full')]);
+            $event->save();
         } catch (Exception $e) {
             return back()->with(['error' => __('Failed Save')]);
         }
@@ -259,14 +287,22 @@ class EventController extends Controller
         return back()->with(['success' => __('Saved')]);
     }
 
-    public function myEvents()
+    public
+    function myEvents()
     {
         $events = Auth::user()->getOwnEvents();
-
-        return view('event.myevents', ['events' => $events]);
+        $passiveEvents = Auth::user()->getOwnEvents('passive');
+        return view('event.myevents', ['events' => $events, 'passiveEvents' => $passiveEvents]);
     }
 
-    public function showTicketForm($id)
+    public
+    function connectToEvent()
+    {
+        return view('event.connect');
+    }
+
+    public
+    function showTicketForm($id)
     {
         $event = Event::find($id);
 
@@ -279,7 +315,8 @@ class EventController extends Controller
 
     }
 
-    public function getEventAutoTicket($event)
+    public
+    function getEventAutoTicket($event)
     {
         $args = array();
         $eventTicketGroup = $event->eventTicketGroups->first();
@@ -293,7 +330,8 @@ class EventController extends Controller
         return $args;
     }
 
-    public function checkUnlimitedTicket($event, $number, $color = null)
+    public
+    function checkUnlimitedTicket($event, $number, $color = null)
     {
         $eventTicketGroup = $event->eventTicketGroups->first();
         $limit = $eventTicketGroup->limit;
@@ -313,14 +351,15 @@ class EventController extends Controller
         return true;
     }
 
-    public function nextAutoTicket($event, $color, $limit)
+    public
+    function nextAutoTicket($event, $color, $limit)
     {
         $tickets = array();
         $userEvents = $event->userEvents->all();
         foreach ($userEvents as $userEvent) {
             $tickets = array_merge($tickets, $userEvent->tickets->where('color', $color)->all());
         }
-        $lastValue = end($tickets) ? end($tickets)->value + 1 : 0;
+        $lastValue = end($tickets) ? end($tickets)->value + 1 : 1;
         if ($limit != 0 && $lastValue > $limit) {
             return null;
         } else {
@@ -329,7 +368,8 @@ class EventController extends Controller
 
     }
 
-    public function showTicketColorForm(Request $request)
+    public
+    function showTicketColorForm(Request $request)
     {
         $event = Event::find($request->input('id'));
 
@@ -346,7 +386,8 @@ class EventController extends Controller
         }
     }
 
-    public function addTicketColor(Request $request)
+    public
+    function addTicketColor(Request $request)
     {
         $event = Event::find($request->input('id'));
 
@@ -369,7 +410,8 @@ class EventController extends Controller
         }
     }
 
-    public function showTicketNumberForm(Request $request)
+    public
+    function showTicketNumberForm(Request $request)
     {
 
         $event = Event::find($request->input('id'));
@@ -387,7 +429,8 @@ class EventController extends Controller
 
     }
 
-    public function addTicket(Request $request)
+    public
+    function addTicket(Request $request)
     {
 
         $event = Event::find($request->input('id'));
@@ -409,9 +452,9 @@ class EventController extends Controller
                 if ($request->input('color')) {
                     $color = $request->input('color');
                     $args['color'] = $color;
-                }else {
+                } else {
                     $eventGroup = $event->eventTicketGroups->first();
-                    $args['color']= $eventGroup->ticket_color;
+                    $args['color'] = $eventGroup->ticket_color;
                 }
                 if ($this->checkUnlimitedTicket($event, $number, $color)) {
                     $args['value'] = $number;
@@ -446,7 +489,8 @@ class EventController extends Controller
     }
 
 
-    private function sanitize_file_name($filename)
+    private
+    function sanitize_file_name($filename)
     {
         $special_chars = array("?", "[", "]", "/", "\\", "=", "<", ">", '.', ":", ";", ",", "'", "\"", "&", "$", "#",
             "*", "(", ")", "|", "~", "`", "!", "{", "}");
@@ -457,16 +501,22 @@ class EventController extends Controller
         return $filename;
     }
 
-    private function generateAccesses(&$event)
+    function replaceAccents($str)
+    {
+        return utf8_decode(strtr(utf8_decode($str), utf8_decode('áéóöőűűíÁÉÓÖŐÜŰÍ'), 'aeooouuiAEOOOUUI'));
+    }
+
+    private
+    function generateAccesses(&$event)
     {
 
-        $accessCode = "U-" . strtolower(substr($event->title, 0, 3) . substr(time(), -1, 3));
+        $accessCode = "U-" . strtolower(substr($event->title, 0, 3) . substr(time(), -3));
         $event->hash = $accessCode;
         $event->save();
         $path = public_path('/qrcodes/events');
         if (!File::exists($path)) {
             File::makeDirectory($path, 0755, true, true);
         }
-        QrCode::generate(URL::to('/event/') . $accessCode, $path . '/' . $event->id . '.svg');
+        QrCode::generate(URL::to('/event/landing') . "/" . $accessCode, $path . '/' . $event->id . '.svg');
     }
 }
