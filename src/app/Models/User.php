@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable implements MustVerifyEmail
@@ -15,6 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
     const TEMPORARY = 0;
     const ACTIVE = 1;
     const FILLED = 2;
+    const ADMIN = 3;
 
     public $timestamps = false;
 
@@ -60,12 +62,28 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(UserEvent::class);
     }
 
-    public function getOwnEvents()
+    public function getOwnEvents($status = 'active', $access = 1, $limit = null)
     {
-        $userEvents = UserEvent::where(['user_id' => $this->id, 'access_type' => 1])->get();
+        $userEvents = UserEvent::where(['user_id' => $this->id, 'access_type' => $access])->get();
         $events = array();
         foreach ($userEvents as $userEvent) {
-            $events[] = Event::find($userEvent->event_id);
+            $event = Event::find($userEvent->event_id);
+            if ($status === 'all') {
+                $events[$event->id] = $event;
+            } else {
+                if ($status === 'active' && $event->isAvailable()) {
+
+                    $events[$event->id] = $event;
+                }
+                if ($status === 'passive' && !$event->isAvailable()) {
+                    $events[$event->id] = $event;
+                }
+            }
+
+        }
+
+        if (count($events) && !is_null($limit)) {
+            $events = array_splice($events, 0, $limit);
         }
         return $events;
     }
@@ -82,27 +100,49 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function canCreateEvent()
     {
-        return $this->status === self::FILLED;
+        return $this->status >= self::FILLED;
     }
 
-    public function listTickets($ticketStatus = 'active')
+    public function isAdmin()
     {
+        return $this->status === self::ADMIN;
+    }
 
+    public function listTickets($ticketStatus = 'active', $limit = null)
+    {
+        $userEvents = $this->userEvents()->where('access_type', 0)->get()->all();
         $tickets = array();
-        foreach ($this->userEvents()->get()->all() as $userEvent) {
+        $ticketcount = 0;
+        foreach ($userEvents as $userEvent) {
             switch ($ticketStatus) {
-                case 'active':
-                    $event = Event::find($userEvent->event_id)->whereDate('dt_end', '>', date('Y-m-d H:i'))->first();
+                case 'all':
+                    $event = Event::where('id', $userEvent->event_id)->first();
                     break;
+                case 'active':
+                    $event = Event::where('id', $userEvent->event_id)->where('dt_end', '>', Carbon::now('Europe/Budapest')->format('Y-m-d H:i'))->first();
+                    break;
+                case 'winner':
                 case 'passive':
-                    $event = Event::find($userEvent->event_id)->whereDate('dt_end', '<', date('Y-m-d H:i'))->first();
+                    $event = Event::where('id', $userEvent->event_id)->where('dt_end', '<', Carbon::now('Europe/Budapest')->format('Y-m-d H:i'))->first();
                     break;
             }
             if (isset($event)) {
-                $tickets[] = array(
-                    'event' => $event,
-                    'tickets' => $userEvent->tickets->all()
-                );
+                if ($ticketStatus === 'winner') {
+                    $_tickets = $userEvent->tickets->whereNotNull('won_prize_id')->all();
+                } else {
+                    $_tickets = $userEvent->tickets->all();
+                }
+                if (count($_tickets)) {
+                    $ticketcount += count($_tickets);
+                    if ($ticketcount > $limit) {
+                        array_splice($_tickets, 0, $limit);
+                    }
+                    $tickets[$event->id] = array(
+                        'event' => $event,
+                        'tickets' => $_tickets
+                    );
+
+                }
             }
         }
         return $tickets;
@@ -114,9 +154,10 @@ class User extends Authenticatable implements MustVerifyEmail
         foreach ($this->userEvents()->get()->all() as $userEvent) {
             $tickets = Ticket::where('user_event_id', $userEvent->id)->get()->all();
             foreach ($tickets as $ticket) {
-                if (isset($ticket->won_prize_id)) {
+                if (!is_null($ticket->won_prize_id)) {
                     $event = Event::find($userEvent->event_id);
-                    $prizes = Prize::find($ticket->won_prize_id)->get()->all();
+                    $prizes = Prize::where('winner_ticket_id', $ticket->id)->get()->all();
+
                     $eventPrizes[] = array(
                         'event' => $event,
                         'prizes' => $prizes

@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Mockery\Exception;
 
-class UserController extends Controller {
+class UserController extends Controller
+{
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
@@ -24,15 +27,17 @@ class UserController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index()
+    {
         return view('user.index', ['user' => Auth::user()]);
     }
 
-    protected function validator(array $data) {
-        $validationRules = array("email"      => ['required', 'string', 'email', 'max:255'],
-                                 "first_name" => ['required', 'string', 'max:255'],
-                                 "last_name"  => ['required', 'string', 'max:255'],
-                                 'address'    => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255']);
+    protected function validator(array $data)
+    {
+        $validationRules = array("email" => ['required', 'string', 'email', 'max:255'],
+            "first_name" => ['required', 'string', 'max:255'],
+            "last_name" => ['required', 'string', 'max:255'],
+            'address' => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255']);
 
         return Validator::make($data, $validationRules);
     }
@@ -45,7 +50,8 @@ class UserController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit() {
+    public function edit()
+    {
         return view('user.edit', ['user' => Auth::user()]);
     }
 
@@ -57,25 +63,27 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
 
-    public function authorValidation(array $data, $checkAuthor = false) {
+    public function authorValidation(array $data, $checkAuthor = false)
+    {
 
-        $validationMust = array("email"      => ['required', 'string', 'email', 'max:255'],
-                                "first_name" => ['required', 'string', 'max:255'],
-                                "last_name"  => ['required', 'string', 'max:255']);
-        $validationPlus = array('address'       => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255'],
-                                'date_of_birth' => ['nullable', 'date', 'max:255']);
+        $validationMust = array("email" => ['required', 'string', 'email', 'max:255'],
+            "first_name" => ['required', 'string', 'max:255'],
+            "last_name" => ['required', 'string', 'max:255']);
+        $validationPlus = array('address' => ['nullable', 'regex:/([- ,\/0-9a-zA-Z]+)/', 'string', 'max:255'],
+            'date_of_birth' => ['nullable', 'date', 'max:255']);
         if ($checkAuthor) {
-            $validationPlus = array_map( function ($item) {
+            $validationPlus = array_map(function ($item) {
                 $item[0] = 'required';
                 return $item;
-            },$validationPlus);
+            }, $validationPlus);
         }
 
         $validationRules = array_merge($validationMust, $validationPlus);
         return Validator::make($data, $validationRules);
     }
 
-    public function update(Request $request) {
+    public function update(Request $request)
+    {
         $this->validator($request->all())->validate();
         try {
             $user = Auth::user();
@@ -97,15 +105,52 @@ class UserController extends Controller {
 
     public function myTickets(Request $request)
     {
-        $status = (!is_null($request->input('status')))?$request->input('status'):'active';
+        $status = (!is_null($request->input('status'))) ? $request->input('status') : 'active';
         $eventTickets = Auth::user()->listTickets($status);
 
-        return view('user.tickets', ['eventTickets' => $eventTickets,'status'=>$status]);
+        return view('user.tickets', ['eventTickets' => $eventTickets, 'status' => $status]);
     }
 
-    public function myPrizes() {
+    public function myPrizes()
+    {
         $eventPrizes = Auth::user()->listPrizes();
         return view('user.prizes', ['eventPrizes' => $eventPrizes]);
     }
+
+    public function delete(Request $request)
+    {
+        if (Auth::user()->isAdmin()) {
+            $user = User::find($request->input('id'));
+            if ($user) {
+                try {
+                    $user->delete();
+                    return back()->with('message', 'Success');
+                } catch (\Exception $e) {
+                    return back()->with('message', $e->getMessage());
+                }
+            } else {
+                return back()->with('message', 'No user found');
+            }
+        }
+    }
+
+    public function setAsAdmin(Request $request)
+    {
+        if (Auth::user()->isAdmin()) {
+            $user = User::find($request->input('id'));
+            if ($user) {
+                try {
+                    $user->update(['status' => 3]);
+                    $user->save();
+                    return back()->with('message', 'Success');
+                } catch (\Exception $e) {
+                    return back()->with('message', $e->getMessage());
+                }
+            } else {
+                return back()->with('message', 'No user found');
+            }
+        }
+    }
+
 
 }
