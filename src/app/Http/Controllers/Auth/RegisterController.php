@@ -214,12 +214,16 @@ class RegisterController extends Controller
 
     private function generateAccesses(User &$user, $isTemp = false)
     {
+
         if ($isTemp) {
-            $accessCode = "U-" . strtolower(substr($user->email, 0, 3) . substr(time(), -3));
+            $code = strtolower(substr($user->email, 0, 3) . substr(time(), -3));
+            $accessCode = "U-" . $code;
         } else {
-            $accessCode = "U-" . strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), -3));
+            $code = strtolower(substr($user->first_name, 0, 3) . substr($user->last_name, 0, 3) . substr(time(), -3));
+            $accessCode = "U-" . $code;
         }
         $accessCode = strtr(utf8_decode($accessCode), utf8_decode('àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+        $accessCode = $this->replaceAccents($accessCode);
         $user->hash = $accessCode;
         $user->save();
         $path = public_path('/qrcodes/users');
@@ -228,6 +232,13 @@ class RegisterController extends Controller
         }
         QrCode::generate($accessCode, $path . '/' . $user->id . '.svg');
 
+    }
+
+    private function replaceAccents($string)
+    {
+        $noAccents = ['a', 'e', 'o', 'o', 'o', 'u', 'u', 'i', 'A', 'E', 'O', 'O', 'O', 'U', 'U', 'I'];
+
+        return preg_replace('/[?]/', $noAccents[rand(0, count($noAccents) - 1)], $string);
     }
 
     private function sanitize_hash($hash)

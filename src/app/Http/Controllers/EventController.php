@@ -680,9 +680,12 @@ class EventController extends Controller
         return $filename;
     }
 
-    function replaceAccents($str)
+    function replaceAccents($string)
     {
-        return utf8_decode(strtr(utf8_decode($str), utf8_decode('áéóöőűűíÁÉÓÖŐÜŰÍ'), 'aeooouuiAEOOOUUI'));
+
+        $noAccents = ['a', 'e', 'o', 'o', 'o', 'u', 'u', 'i', 'A', 'E', 'O', 'O', 'O', 'U', 'U', 'I'];
+
+        return preg_replace('/[?]/', $noAccents[rand(0, count($noAccents) - 1)], $string);
     }
 
     private
@@ -690,6 +693,7 @@ class EventController extends Controller
     {
 
         $accessCode = "U-" . strtolower(substr($event->title, 0, 3) . substr(time(), -3));
+        $accessCode = $this->replaceAccents($accessCode);
         $event->hash = $accessCode;
         $event->save();
         $path = public_path('/qrcodes/events');
