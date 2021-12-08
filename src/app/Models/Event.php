@@ -91,7 +91,7 @@ class Event extends Model
     {
         $colors = array();
         foreach ($this->eventTicketGroups->pluck('ticket_color')->all() as $color) {
-            if (count($this->getAvailableTickets($color)) > 0) {
+            if ($this->getAvailableTickets($color) && count($this->getAvailableTickets($color)) > 0) {
                 $colors[__($color)] = $color;
             }
         }

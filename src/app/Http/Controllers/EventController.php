@@ -577,12 +577,12 @@ class EventController extends Controller
     }
 
     public
-    function showTicketColorForm(Request $request)
+    function showTicketColorForm(Request $request, $user = null, $event = null, $error = "")
     {
-        $event = Event::find($request->input('id'));
-
-        $user = User::where('hash', $request->input('hash'))->first();
-
+        if (is_null($user) && is_null($event)) {
+            $event = Event::find($request->input('id'));
+            $user = User::where('hash', $request->input('hash'))->first();
+        }
         if (!$user || !$event) {
             return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
         }
@@ -590,7 +590,7 @@ class EventController extends Controller
             return redirect()->route('event.show', ['id' => $event->id])->with(['event' => $event]);
         } else {
             $colors = $event->getSelableTicketColors();
-            return view('event.ticketColor')->with(['event' => $event, 'uid' => $user->id, 'colors' => $colors]);
+            return view('event.ticketColor')->with(['event' => $event, 'uid' => $user->id, 'colors' => $colors])->withErrors(['error' => $error]);;
         }
     }
 
@@ -613,8 +613,11 @@ class EventController extends Controller
                 $tickets = $event->getAvailableTickets($color);
                 return view('event.ticketNumber')->with(['event' => $event, 'color' => $color, 'tickets' => $tickets, 'uid' => $user->id]);
             } else {
-                $tickets = $event->getAvailableTickets();
-                return view('event.ticketNumber')->with(['event' => $event, 'tickets' => $tickets, 'uid' => $user->id]);
+                //              dd($request->all());
+//                Validator::make($request->all(), ['color' => ['required']])->validate();
+                return $this->showTicketColorForm($request, $user, $event, "Szín megadása kötelező");
+                /*$tickets = $event->getAvailableTickets();
+                return view('event.ticketNumber')->with(['event' => $event, 'tickets' => $tickets, 'uid' => $user->id]);*/
             }
         }
     }
@@ -628,7 +631,7 @@ class EventController extends Controller
         $user = User::where('hash', $request->input('hash'))->first();
 
         if (!$user || !$event) {
-            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Error happened!Please try again!')]);
+            return redirect()->route('event.ticket', ['id' => $event->id])->withErrors(['error' => __('Felhasználó nem található!')]);
         }
 
         $tickets = $event->getAvailableTickets();
@@ -661,13 +664,27 @@ class EventController extends Controller
                 $args = $this->getEventAutoTicket($event);
             } else {
                 $number = $request->input('number');
+
                 $color = null;
                 if ($request->input('color')) {
+
                     $color = $request->input('color');
                     $args['color'] = $color;
+                    if (!isset($number)) {
+                        $tickets = $event->getAvailableTickets($request->input('color'));
+                        return view('event.ticketNumber')->with(['event' => $event, 'color' => $color, 'tickets' => $tickets, 'uid' => $user->id])->withErrors(['error' => __('Szám megadása kötelező!')]);
+                    }
+
                 } else {
+
                     $eventGroup = $event->eventTicketGroups->first();
                     $args['color'] = $eventGroup->ticket_color;
+                    
+                    if (!isset($number)) {
+                        $tickets = $event->getAvailableTickets();
+                        return view('event.ticketNumber')->with(['event' => $event, 'tickets' => $tickets, 'uid' => $user->id])->withErrors(['error' => __('Szám megadása kötelező!')]);
+                    }
+
                 }
                 if ($this->checkUnlimitedTicket($event, $number, $color)) {
                     $args['value'] = $number;

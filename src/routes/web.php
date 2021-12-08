@@ -72,10 +72,12 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
 });
 
+
 Route::get('/event/landing/{hash}', [EventController::class, 'showByHash'])->name('event.show.hash');
 
 Route::get('/dashboard/{hash}', [PageController::class, 'dashboardTemp'])->name('dashboardtemp');
-
+Route::get('dashboard/{hash}/connect', [EventController::class, 'connectToEventTemp'])->name('connect.temp');
+Route::post('/event/{hash}/qr', [EventController::class, 'redirectByHashTemp'])->name('qr.temp');
 
 Route::get('/qrcoderegister', [RegisterController::class, 'showTempRegistrationForm'])->name('qrcodereg');
 Route::post('/qrcoderegister', [RegisterController::class, 'registerTemp'])->name('registerTemp');
@@ -91,4 +93,11 @@ Route::get('initmigration', function () {
 
 });
 
+Route::get('cacheclear', function () {
+
+    \Artisan::call('config:clear');
+
+    dd("Cache clear succeded!");
+
+});
 
