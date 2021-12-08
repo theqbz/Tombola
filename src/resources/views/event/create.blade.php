@@ -228,7 +228,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <img style="max-width: 100px;" id="prize"
-                                         src="{{asset('temp/events/'.$image['image'])}}" alt="{{$image['title']}}"
+                                         src="{{($image['image'])?asset('temp/events/'.$image['image']):asset('uploads/events/mockimage.svg')}}"
+                                         alt="{{$image['title']}}"
                                          title="{{$image['title']}}" width="250">
                                 </div>
                                 <div class="d-none">
@@ -387,9 +388,11 @@
 
             function addImage(e, idx, title, description, img) {
                 let target = '{{asset('assets/mockimage.svg')}}';
-
+                let inputNameExt = "";
                 if (e) {
                     target = e.target.result;
+                } else {
+                    inputNameExt = "first_"
                 }
 
                 img = $('<img />').attr({
@@ -403,12 +406,12 @@
 
                 $('#prize_error').hide();
                 const container = $('<div class="prize_item card-body row col-md-12"></div>');
-                const titleGrid = $('<div class="col-md-3"><p>' + title + '</p><div class="d-none"><input name="prize_first_title_' + $('.prize_item').length + '" value="' + title + '"></div></div>');
+                const titleGrid = $('<div class="col-md-3"><p>' + title + '</p><div class="d-none"><input name="prize_' + inputNameExt + 'title_' + $('.prize_item').length + '" value="' + title + '"></div></div>');
 
                 titleGrid.appendTo(container);
 
 
-                const descGrid = $('<div class="col-md-3"><p>' + description + '</p><div class="d-none"><input name="prize_first_description_' + $('.prize_item').length + '" value="' + description + '"></div></div>');
+                const descGrid = $('<div class="col-md-3"><p>' + description + '</p><div class="d-none"><input name="prize_' + inputNameExt + 'description_' + $('.prize_item').length + '" value="' + description + '"></div></div>');
                 descGrid.appendTo(container);
 
                 const imageGrid = $('<div class="col-md-6"></div>');
@@ -420,7 +423,7 @@
                     fileInputCopy.removeAttr('id');
                     fileInputCopy.appendTo(hideContainer);
                     hideContainer.appendTo(imageGrid);
-
+                    $('#prize_image_add').val('')
 
                 }
 

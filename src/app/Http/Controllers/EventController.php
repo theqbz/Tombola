@@ -151,7 +151,7 @@ class EventController extends Controller
                 $extension = $file->getClientOriginalExtension();
 
                 //file to store
-                $fileNameToStore = $this->sanitize_file_name($fileName) . '_' . time() . '.' . $extension;
+                $fileNameToStore = $this->sanitize_file_name($fileName) . '_' . hash('md5', rand(0, 100)) . '.' . $extension;
 
                 //upload to store
                 $path = public_path('temp/events');
@@ -166,28 +166,37 @@ class EventController extends Controller
                 }
                 $itemIdx = explode('_', $inputName);
                 $itemIdx = end($itemIdx);
-                $upladedFiles[$itemIdx] = ['title' => $request->input('prize_first_title_' . $itemIdx),
-                    'description' => $request->input('prize_first_description_' . $itemIdx),
+                $upladedFiles[$itemIdx] = ['title' => $request->input('prize_title_' . $itemIdx),
+                    'description' => $request->input('prize_description_' . $itemIdx),
                     'image' => $fileNameToStore
                 ];
                 $exceptNames[] = $inputName;
             }
+        }
+
+        foreach ($request->all() as $label => $item) {
+            if (preg_match('/prize_first_\w+/', $label)) {
+                $itemIdx = explode('_', $label);
+                $matches[end($itemIdx)][$itemIdx[count($itemIdx) - 2]] = $item;
+            }
+        }
+
+
+        if (!empty($matches)) {
+            $upladedFiles = $upladedFiles + $matches;
+        }
+
+
+        if (empty($upladedFiles)) {
+            $errors = array_merge($errors, ['prize' => __('Legalább egy nyeremény kötelező')]);
         } else {
-            foreach ($request->all() as $label => $item) {
-                if (preg_match('/prize_first_\w+/', $label)) {
-                    $itemIdx = explode('_', $label);
-                    $matches[end($itemIdx)][$itemIdx[count($itemIdx) - 2]] = $item;
+            foreach ($upladedFiles as $idx => $file) {
+                if (!array_key_exists('image', $file)) {
+                    $upladedFiles[$idx]['image'] = '';
                 }
             }
         }
 
-        if (!empty($matches)) {
-            $upladedFiles = array_merge($upladedFiles, $matches);
-        }
-
-        if (empty($upladedFiles)) {
-            $errors = array_merge($errors, ['prize' => __('Legalább egy nyeremény kötelező')]);
-        }
 
         /*PERSONAL DATA*/
         $request->merge(['dt_start_full' => $request->input('dt_start') . ' ' . $request->input('dt_start_time'),
@@ -234,7 +243,7 @@ class EventController extends Controller
 
         foreach ($upladedFiles as $prize) {
 
-            if (isset($prize['image'])) {
+            if (isset($prize['image']) && $prize['image'] != '') {
                 File::move(public_path('temp/events') . "/" . $prize['image'], public_path('uploads/events') . "/" . $prize['image']);
                 $img_url = $prize['image'];
             } else {
@@ -411,6 +420,24 @@ class EventController extends Controller
         }
     }
 
+    public function redirectByHashTemp(Request $request)
+    {
+
+        $hash = $request->input('hash');
+        $hash = explode('/', $hash);
+        $hash = end($hash);
+        if ($hash) {
+            $event = Event::where('hash', $hash)->first();
+            if ($event) {
+                return redirect()->route('event.show.hash', ['id' => $event->hash])->with(['event' => $event]);
+            } else {
+                return back()->withErrors(['error' => _('No event found')]);
+            }
+        } else {
+            return back()->withErrors(['error' => _('No acces code')]);
+        }
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -473,6 +500,13 @@ class EventController extends Controller
     function connectToEvent()
     {
         return view('event.connect');
+    }
+
+    public
+    function connectToEventTemp(Request $request)
+    {
+        $hash = $request->route('hash');
+        return view('event.connect', ['hash' => $hash]);
     }
 
     public

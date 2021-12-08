@@ -130,25 +130,38 @@ class FormMacros extends FormBuilder
         $inputtype = (isset($this->attr['hiddenField'])) ? "hidden" : "text";
         $html .= '<input type="' . $inputtype . '" id="' . $this->attr['id'] . '" class="' . $this->attr['class'] . '" name="' . $this->attr['name'] . '">';
         $html .= '</div>';
-
+        $form = "";
+        if (isset($this->attr['hiddenField'])) {
+            $form = '$("form").submit();';
+        }
         $html .= '<script>
-        var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: 250 });
+Html5Qrcode.getCameras().then(devices => {
+  /**
+   * devices would be an array of objects of type:
+   * { id: "id", label: "label" }
+   */
+  if (devices && devices.length) {
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+                "reader", { fps: 10, qrbox: 250 },false);
         
             function onScanSuccess(decodedText, decodedResult) {
                 document.getElementById("' . $this->attr['id'] . '").value = decodedText;
-                html5QrcodeScanner.clear();';
-        if (isset($this->attr['hiddenField'])) {
-            $html .= '$("form").submit();';
-        }
-        $html .= '}
-
-                function onScanError(errorMessage) {
-                    // handle on error condition, with error message
+                html5QrcodeScanner.clear();
+                ' . $form . '
                 }
-            
-            html5QrcodeScanner.render(onScanSuccess);
-</script>';
+                
+                function onScanError(errorMessage) {
+                }
+                
+                html5QrcodeScanner.render(onScanSuccess,onScanError);
+  }
+}).catch(err => {
+    console.log(err);
+        $("#reader").replaceWith("<div class=\"alert alert-danger text-center\"><strong>Sajnos nem található kamera!</strong><br>Csatlakoztasson egy kamerát és frissítse az oldalt a QR kódos beolvasáshoz!</div>");
+});
+
+           
+                </script > ';
 
         return $this->toHtmlString($html);
     }
