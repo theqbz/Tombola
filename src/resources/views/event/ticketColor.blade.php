@@ -28,7 +28,7 @@
                             {{Form::model($event,array('route' => array('event.addcolor')))}}
                             {{Form::hidden('id',$event->id)}}
                             {{Form::hidden('uid',$uid)}}
-                            {{Form::radioList(['id'=>'color','name'=>'color','label'=>__('Colors'),'radios'=>$event->getAvailableColors(),'inline'=>true])}}
+                            {{Form::radioList(['id'=>'color','name'=>'color','label'=>__('Colors'),'radios'=>$colors,'inline'=>true])}}
                             {{Form::submit(__('Next'),array('class'=>'btn btn-primary'))}}
                         </div>
                         {{ Form::close() }}

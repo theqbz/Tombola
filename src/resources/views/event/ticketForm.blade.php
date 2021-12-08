@@ -23,7 +23,7 @@
                             <strong>{{ $message }}</strong>
                         </div>
                         @enderror
-                        @if(empty($errors->any() && $event->hasMoreTicket()))
+                        @if($event->hasMoreTickets())
                             <p>Olvassa be a játékos qr kódját, vagy írja be az azonosítóját!</p>
                             @php
                                 $text = 'Add Ticket';
@@ -32,8 +32,6 @@
                                         $text = 'Next';
                                         if($event->hasMultipleColors()) {
                                             $route = 'event.color';
-                                        }else {
-                                            $route = 'event.number';
                                         }
                                     }
                             @endphp
@@ -47,7 +45,7 @@
                                 {{ Form::close() }}
                             </div>
                         @endif
-                        @if(!$event->hasMoreTicket())
+                        @if(!$event->hasMoreTickets())
                             <h2>A tombolák elfogytak</h2>
                         @endif
                     </div>
