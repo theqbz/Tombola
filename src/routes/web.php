@@ -69,15 +69,15 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/admin/users/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     Route::post('/admin/users/addadmin', [UserController::class, 'setAsAdmin'])->name('admin.users.addadmin');
     Route::get('/admin/events', [AdminController::class, 'actionEvents'])->name('admin.events');
-
+    Route::get('/event/landing/{hash}', [EventController::class, 'showByHash'])->name('event.show.hash');
 });
 
 
-Route::get('/event/landing/{hash}', [EventController::class, 'showByHash'])->name('event.show.hash');
+Route::get('/dashboard/{hash}/event/{id}', [EventController::class, 'showByHashTemp'])->name('event.show.hash.temp');
 
+Route::post('/dashboard/{hash}/qr', [EventController::class, 'redirectByHashTemp'])->name('qr.temp');
 Route::get('/dashboard/{hash}', [PageController::class, 'dashboardTemp'])->name('dashboardtemp');
 Route::get('dashboard/{hash}/connect', [EventController::class, 'connectToEventTemp'])->name('connect.temp');
-Route::post('/event/{hash}/qr', [EventController::class, 'redirectByHashTemp'])->name('qr.temp');
 
 Route::get('/qrcoderegister', [RegisterController::class, 'showTempRegistrationForm'])->name('qrcodereg');
 Route::post('/qrcoderegister', [RegisterController::class, 'registerTemp'])->name('registerTemp');

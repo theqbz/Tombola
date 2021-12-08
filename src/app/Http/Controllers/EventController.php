@@ -403,6 +403,17 @@ class EventController extends Controller
         }
     }
 
+    public function showByHashTemp(Request $request)
+    {
+        $hash = $request->route('id');
+        $event = Event::where('hash', $hash)->first();
+        if ($event) {
+            return view('event.public')->with('event', $event);
+        } else {
+            return abort(404);
+        }
+    }
+
     public function redirectByHash(Request $request)
     {
         $hash = $request->input('hash');
@@ -423,13 +434,15 @@ class EventController extends Controller
     public function redirectByHashTemp(Request $request)
     {
 
+        $userHash = $request->route('hash');
         $hash = $request->input('hash');
         $hash = explode('/', $hash);
         $hash = end($hash);
+
         if ($hash) {
             $event = Event::where('hash', $hash)->first();
             if ($event) {
-                return redirect()->route('event.show.hash', ['id' => $event->hash])->with(['event' => $event]);
+                return redirect()->route('event.show.hash.temp', ['hash' => $userHash, 'id' => $event->hash])->with(['event' => $event]);
             } else {
                 return back()->withErrors(['error' => _('No event found')]);
             }
@@ -506,7 +519,7 @@ class EventController extends Controller
     function connectToEventTemp(Request $request)
     {
         $hash = $request->route('hash');
-        return view('event.connect', ['hash' => $hash]);
+        return view('event.connectTemp', ['hash' => $hash]);
     }
 
     public
@@ -679,7 +692,7 @@ class EventController extends Controller
 
                     $eventGroup = $event->eventTicketGroups->first();
                     $args['color'] = $eventGroup->ticket_color;
-                    
+
                     if (!isset($number)) {
                         $tickets = $event->getAvailableTickets();
                         return view('event.ticketNumber')->with(['event' => $event, 'tickets' => $tickets, 'uid' => $user->id])->withErrors(['error' => __('Szám megadása kötelező!')]);
